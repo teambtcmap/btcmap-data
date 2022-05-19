@@ -1,0 +1,7 @@
+[out:json][timeout:300];
+(
+    node["payment:bitcoin"="yes"];
+    way["payment:bitcoin"="yes"];
+    relation["payment:bitcoin"="yes"];
+);
+out center meta;
