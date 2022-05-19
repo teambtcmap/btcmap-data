@@ -4,4 +4,4 @@
     way["payment:bitcoin"="yes"];
     relation["payment:bitcoin"="yes"];
 );
-out center meta;
+out meta geom center;
