@@ -1,0 +1,25 @@
+name: Refresh data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  refresh-data:
+    name: Refresh data
+    runs-on: ubuntu-latest
+    steps:
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Fetch data
+        id: fetch-data
+        run: |
+          curl -X POST -d "@query" https://overpass-api.de/api/interpreter
+      - name: Add and commit the report
+        uses: EndBug/add-and-commit@2d7c2e89fcb436f8e139cc80813bd030bdd40c4b
+        with:
+          default_author: github_actions
+          message: 'Refresh data'
+          add: data.json
