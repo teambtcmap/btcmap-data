@@ -14,9 +14,8 @@ jobs:
         id: fetch-data
         run: |
           curl -X POST -d "@query.txt" -o data.json https://overpass-api.de/api/interpreter
-      - name: Add and commit OSM data
-        uses: EndBug/add-and-commit@2d7c2e89fcb436f8e139cc80813bd030bdd40c4b
+      - uses: EndBug/add-and-commit@v9
         with:
+          add: data.json
           default_author: github_actions
           message: 'Refresh data'
-          add: data.json
