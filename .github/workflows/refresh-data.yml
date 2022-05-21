@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Fetch data
-        id: fetch-data
-        run: |
+      - run: |
           curl -X POST -d "@query.txt" -o data.json https://overpass-api.de/api/interpreter
       - uses: EndBug/add-and-commit@v9
         with:
