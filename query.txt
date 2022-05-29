@@ -1,5 +1,14 @@
 [out:json][timeout:300];
 (
+    // Correct tags
+    node["currency:XBT"="yes"];
+    way["currency:XBT"="yes"];
+    relation["currency:XBT"="yes"];
+	// Incorrect tags, but widely used
+    node["currency:BTC"="yes"];
+    way["currency:BTC"="yes"];
+    relation["currency:BTC"="yes"];
+	// Incorrect tags, but widely used
     node["payment:bitcoin"="yes"];
     way["payment:bitcoin"="yes"];
     relation["payment:bitcoin"="yes"];
