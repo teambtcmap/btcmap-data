@@ -4,17 +4,19 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 ## Contributing
 
-[Locations ready for Shadowy Supertaggers 📍](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned)
+[New locations ready for Shadowy Supertaggers 📍](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned)
 
-All location submissions from [btcmap.org](https://btcmap.org/add-location) that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission` and no `assigned` label.
+[Oudated info ready for Shadowy Supertaggers 📍](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3A%22outdated+info%22+-label%3Aassigned)
 
-You can filter the issues by these labels (see link above).
+All location submissions from [btcmap.org](https://btcmap.org/add-location) that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission`. Locations that have been reported to have outdated information will have a `outdated-info` label.
 
-Please comment on an open issue indicating that you are working on this and we will add the `assigned` label. 
+You can filter the issues by these labels (see links above for issues that have yet to be assigned).
 
-When completed paste the newly added OSM link into the issue so others can verify it was added successfully. 
+Please comment on an open issue indicating that you are working on this and an `assigned` label will be added. 
 
-Once verified we will close the issue.
+When completed paste the newly added OSM link into the issue so others can verify it was updated successfully. 
+
+Once verified the issue will be closed.
 
 You can check out the [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more details on how to add locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
 
