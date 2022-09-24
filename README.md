@@ -26,4 +26,4 @@ Thanks for your contribution to the bitcoin mapping community!
 
 - You can follow the [BTC Map Noob Bot](https://github.com/BTCMap-NoobBot) account.
 
-- There is also a Discord channel which the submissions are posted: [https://discord.gg/kMJa88Aq8t](https://discord.gg/kMJa88Aq8t)
+- You can join the [Discord channel](https://discord.gg/kMJa88Aq8t) where the submissions are posted.
