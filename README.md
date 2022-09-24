@@ -19,3 +19,9 @@ Once verified we will close the issue.
 You can check out the [Wiki](https://github.com/teambtcmap/btcmap.org/wiki/Tagging-Instructions#shadowy-supertaggers) for more details on how to add locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
 
 Thanks for your contribution to the bitcoin mapping community!
+
+## Be notified of new submissions
+
+You can be notified of new submissions by setting `Watch` on this repo to `Custom` > `Issues`.
+
+There is also a Discord channel which the submissions are posted: [https://discord.gg/kMJa88Aq8t](https://discord.gg/kMJa88Aq8t)
