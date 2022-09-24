@@ -4,13 +4,13 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 ## Contributing
 
-[Locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+no%3Aassignee)
+[Locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned)
 
-All location submissions that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission`.
+All location submissions that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission` and no `assigned` label.
 
-You can filter the issues by this label and by issues that are not assigned to anybody.
+You can filter the issues by these labels (see link above).
 
-Please assign yourself to the issue indicating that you are working on this. 
+Please comment on an open issue indicating that you are working on this and we will add the `assigned` label. 
 
 When completed paste the newly added OSM link into the issue so others can verify it was added successfully. 
 
