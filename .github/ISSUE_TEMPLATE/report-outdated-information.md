@@ -7,6 +7,11 @@ assignees: ''
 
 ---
 
+**Merchant location**
+BTC Map URL: 
+
+<!-- URL can be found with the Share button on the location popup on btcmap.org -->
+
 **Outdated information**
 
 <!-- Provide what info is incorrect -->
