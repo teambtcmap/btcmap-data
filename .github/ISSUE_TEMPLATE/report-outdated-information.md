@@ -2,7 +2,7 @@
 name: Report outdated information
 about: Merchant no longer accepts bitcoin or other data is incorrect.
 title: ''
-labels: outdated info
+labels: good first issue, help wanted, outdated info
 assignees: ''
 
 ---
