@@ -22,6 +22,8 @@ Thanks for your contribution to the bitcoin mapping community!
 
 ## Be notified of new submissions
 
-You can be notified of new submissions by setting `Watch` on this repo to `Custom` > `Issues`.
+- You can be notified of new submissions by setting `Watch` on this repo to `Custom` > `Issues`.
 
-There is also a Discord channel which the submissions are posted: [https://discord.gg/kMJa88Aq8t](https://discord.gg/kMJa88Aq8t)
+- You can follow the [BTC Map Noob Bot](https://github.com/BTCMap-NoobBot) account.
+
+- There is also a Discord channel which the submissions are posted: [https://discord.gg/kMJa88Aq8t](https://discord.gg/kMJa88Aq8t)
