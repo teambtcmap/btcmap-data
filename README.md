@@ -6,7 +6,7 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 [Locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned)
 
-All location submissions that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission` and no `assigned` label.
+All location submissions from btcmap.org that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission` and no `assigned` label.
 
 You can filter the issues by these labels (see link above).
 
