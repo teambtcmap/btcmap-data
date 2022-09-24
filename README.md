@@ -4,9 +4,9 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 ## Contributing
 
-[New locations ready for Shadowy Supertaggers 📍](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned)
+[New locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3Alocation-submission+-label%3Aassigned) 🆕
 
-[Oudated info ready for Shadowy Supertaggers 📍](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3A%22outdated+info%22+-label%3Aassigned)
+[Oudated info ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3A%22outdated+info%22+-label%3Aassigned) 📍
 
 All location submissions from [btcmap.org](https://btcmap.org/add-location) that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission`. Locations that have been reported to have outdated information will have an `outdated-info` label.
 
