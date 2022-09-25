@@ -1,8 +1,6 @@
 name: Report outdated information
 description: Merchant no longer accepts bitcoin or other data is incorrect.
-title: ""
 labels: ["good first issue", "help wanted", "outdated info"]
-assignees: ""
 body:
   - type: markdown
     attributes:
