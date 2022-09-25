@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Add location
+    url: https://btcmap.org/add-location
+    about: Please use the form on our website.

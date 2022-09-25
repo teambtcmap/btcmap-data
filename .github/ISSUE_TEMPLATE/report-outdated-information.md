@@ -1,25 +1,39 @@
----
 name: Report outdated information
-about: Merchant no longer accepts bitcoin or other data is incorrect.
-title: ''
-labels: good first issue, help wanted, outdated info
-assignees: ''
-
----
-
-**Merchant location**
-BTC Map URL: 
-
-<!-- URL can be found with the Share button on the location popup at btcmap.org/map -->
-
-**Outdated information**
-
-<!-- Provide what info is incorrect -->
-
-**Current information**
-
-<!-- Provide the updated info on this location -->
-
-**How did you verify this**
-
-<!-- Please provide additional info here -->
+description: Merchant no longer accepts bitcoin or other data is incorrect.
+title: ""
+labels: ["good first issue", "help wanted", "outdated info"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: input
+    id: location
+    attributes:
+      label: Merchant location
+      description: URL can be found with the Share button on the location popup at btcmap.org/map
+      placeholder: ex. https://btcmap.org/map?lat=69.3319548&long=88.2216992
+    validations:
+      required: true
+  - type: textarea
+    id: outdated
+    attributes:
+      label: Outdated information
+      description: Provide what info is incorrect
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current information
+      description: Provide the updated info on this location
+    validations:
+      required: true
+  - type: textarea
+    id: verify
+    attributes:
+      label: How did you verify this?
+      description: Please provide additional info here
+    validations:
+      required: true
