@@ -5,8 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this report! 
-        Did you know you can update this data yourself on [OpenStreetMap](https://www.openstreetmap.org)? 
+        Thanks for taking the time to fill out this report!
+        Did you know you can update this data yourself on [OpenStreetMap](https://www.openstreetmap.org)?
         Check out our [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more intructions.
   - type: input
     id: location
@@ -16,6 +16,14 @@ body:
       placeholder: ex. https://btcmap.org/map?lat=69.3319548&long=88.2216992
     validations:
       required: true
+  - type: input
+    id: edit
+    attributes:
+      label: Edit link
+      description: URL can be found with the Edit button on the location popup at btcmap.org/map
+      placeholder: ex. https://www.openstreetmap.org/edit?node=5745276694
+    validations:
+      required: false
   - type: textarea
     id: outdated
     attributes:
