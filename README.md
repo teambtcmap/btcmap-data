@@ -4,7 +4,7 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 ## Contributing
 
-[New locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc+label%3Alocation-submission+-label%3Aassigned) 🆕
+[New locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc+label%3Alocation-submission+-label%3Aassigned+no%3Aassignee) 🆕
 
 [Oudated info ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3A%22outdated+info%22+-label%3Aassigned+sort%3Acreated-asc) 📍
 
