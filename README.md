@@ -18,7 +18,7 @@ When completed paste the newly added OSM link into the issue so others can verif
 
 Once verified the issue will be closed.
 
-You can check out the [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more details on how to add locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
+You can check out the [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more details on how to add/edit locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
 
 Thanks for your contribution to the bitcoin mapping community!
 
