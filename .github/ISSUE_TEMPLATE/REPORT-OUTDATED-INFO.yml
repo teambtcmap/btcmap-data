@@ -7,7 +7,7 @@ body:
       value: |
         Thanks for taking the time to fill out this report!
         Did you know you can update this data yourself on [OpenStreetMap](https://www.openstreetmap.org)?
-        You can check out our [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more intructions.
+        You can check out our [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more instructions.
   - type: input
     id: location
     attributes:
