@@ -29,3 +29,13 @@ Thanks for your contribution to the bitcoin mapping community!
 - You can follow the [BTC Map Noob Bot](https://github.com/BTCMap-NoobBot) account.
 
 - You can join the [location-submissions](https://discord.gg/kMJa88Aq8t) and [outdated-info](https://discord.gg/JqKuePkj8U) Discord channels where the submissions are posted.
+
+## Tagging stats
+
+`currency:XBT` https://taginfo.openstreetmap.org/keys/currency:XBT#chronology
+
+`payment:onchain` https://taginfo.openstreetmap.org/keys/payment:onchain#chronology
+
+`payment:lightning` https://taginfo.openstreetmap.org/keys/payment:lightning#chronology
+
+`payment:lightning_contactless` https://taginfo.openstreetmap.org/keys/payment:lightning_contactless#chronology
