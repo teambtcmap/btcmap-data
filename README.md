@@ -32,6 +32,8 @@ Thanks for your contribution to the bitcoin mapping community!
 
 ## Tagging stats
 
+[BTC Map Dashboard](https://btcmap.org/dashboard)
+
 `currency:XBT` https://taginfo.openstreetmap.org/keys/currency:XBT#chronology
 
 `payment:onchain` https://taginfo.openstreetmap.org/keys/payment:onchain#chronology
