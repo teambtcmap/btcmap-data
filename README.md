@@ -16,7 +16,7 @@ Please comment on an open issue indicating that you are working on this and an `
 
 When completed paste the newly added OSM link into the issue so others can verify it was updated successfully. 
 
-Once verified the issue will be closed by one of the [Shadowy Supertagger Team](https://github.com/orgs/teambtcmap/teams/shadowy-supertaggers).
+Once verified the issue will be closed by one of the [Shadowy Supertagger Team](https://github.com/orgs/teambtcmap/teams/shadowy-supertaggers) members.
 
 You can check out the [Wiki](https://github.com/teambtcmap/btcmap-data/wiki/Tagging-Instructions) for more details on how to add/edit locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
 
