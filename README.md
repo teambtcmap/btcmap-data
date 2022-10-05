@@ -41,3 +41,7 @@ Thanks for your contribution to the bitcoin mapping community!
 `payment:lightning` https://taginfo.openstreetmap.org/keys/payment:lightning#chronology
 
 `payment:lightning_contactless` https://taginfo.openstreetmap.org/keys/payment:lightning_contactless#chronology
+
+---
+
+![Untitled](https://user-images.githubusercontent.com/85003930/194117128-2f96bafd-2379-407a-a584-6c03396a42cc.png)
