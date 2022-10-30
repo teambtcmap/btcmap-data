@@ -3,6 +3,6 @@ contact_links:
   - name: Add location
     url: https://btcmap.org/add-location
     about: Please use the form on our website.
-  - name: Report outdated information
-    url: https://btcmap.org/report-outdated-info
+  - name: Verify location
+    url: https://btcmap.org/verify-location
     about: Please use the form on our website.
