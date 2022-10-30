@@ -8,7 +8,7 @@ Bitcoin location data is pulled from [OpenStreetMap](https://www.openstreetmap.o
 
 [Verified locations ready for Shadowy Supertaggers](https://github.com/teambtcmap/btcmap-data/issues?q=is%3Aopen+is%3Aissue+label%3A%22verify-submission%22+-label%3Aassigned+no%3Aassignee) 📍
 
-All location submissions from [btcmap.org/add-location](https://btcmap.org/add-location) that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission`. Locations that have had a verified submission from [btcmap.org/verify-location](https://btcmap.org/verify-location) will have a `verify-submission` label.
+All location submissions from [btcmap.org/add-location](https://btcmap.org/add-location) that still need to be added to [OpenStreetMap](http://openstreetmap.com) have an open issue in this repository with the label `location-submission`. Locations that have had a verified submission from [btcmap.org/verify-location](https://btcmap.org/verify-location) will have a `verify-submission` label. These need to have their `survey:date` tag and any other additional information updated on OSM.
 
 You can filter the issues by these labels (see links above for issues that have yet to be assigned).
 
