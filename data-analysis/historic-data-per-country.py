@@ -7,6 +7,7 @@
 ###TODO
 ### 1) The overpass query currently only selects nodes as the history API calls are element type specific and this code currenlty only returns history for nodes.
 ### 2) Add charting via matplotlib
+### 3) Add in culmative count to CSV
 
 import requests
 import csv
