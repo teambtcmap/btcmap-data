@@ -1,4 +1,8 @@
-### Writes a CSV containing a list of locations that currently accept BTC and the date we first saw them.
+### Writes a CSV containing all the places *currently* accepting Bitcoin and then looks at the change history for each location to see when we *first* saw that location accepting bitcoin.
+### CAVEATS
+### a) Only shows merchants that were added to OSM. Pre BTC Map, this is not representative.
+### b) Only shows growth of tagging, not when those locations really started accepting Bitcoin. Tagging begin in earnest in September 2022.
+### c) Does not show merchants that have stopped accepting bitcoin.
 
 ###TODO
 ### 1) The overpass query currently only selects nodes as the history API calls are element type specific and this code currenlty only returns history for nodes.
