@@ -1,3 +1,9 @@
+### Writes a CSV containing a list of locations that currently accept BTC and the date we first saw them.
+
+###TODO
+### 1) The overpass query currently only selects nodes as the history API calls are element type specific and this code currenlty only returns history for nodes.
+### 2) Add charting via matplotlib
+
 import requests
 import csv
 import xml.etree.ElementTree as ET
@@ -6,12 +12,12 @@ from datetime import datetime
 #Enter country *name* as defined https://wiki.openstreetmap.org/wiki/Nominatim/Country_Codes
 country = "Italia"
 
-# Define your Overpass query to select nodes with your criteria
+# Build Overpass query to select nodes with your criteria
 overpass_query = f"""
 [out:json];
 area["name"={country}]->.boundaryarea;
 (
-  nwr["currency:XBT"="yes"](area.boundaryarea);
+  n["currency:XBT"="yes"](area.boundaryarea);
 );
 out ids;
 """
@@ -25,8 +31,6 @@ if response.status_code == 200:
     
     # Extract the list of node IDs
     node_ids = [element["id"] for element in data["elements"]]
-
-    #nodes ways and relations are different, this only treats nodes
     
     # Initialize a list to store timestamps
     timestamps = []
