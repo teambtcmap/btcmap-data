@@ -60,7 +60,7 @@ if response.status_code == 200:
             for element in root.iter("node"):
                 for tag in element.findall("tag"):
                     if (
-                        tag.get("k") in ["currency:bitcoin", "currency:XBT"]
+                        tag.get("k") in ["payment:bitcoin", "currency:XBT"]
                         and tag.get("v") == "yes"
                     ):
                         timestamp_str = element.get("timestamp")
