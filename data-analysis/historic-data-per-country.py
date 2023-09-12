@@ -22,7 +22,7 @@ overpass_query = f"""
 [out:json];
 area["name"={country}]->.boundaryarea;
 (
-  n["currency:XBT"="yes"](area.boundaryarea);
+  node["currency:XBT"="yes"](area.boundaryarea);
 );
 out ids;
 """
