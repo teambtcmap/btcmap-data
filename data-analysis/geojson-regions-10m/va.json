@@ -1,0 +1,59 @@
+{
+  "id": "va",
+  "tags": {
+    "iso_a2": "VA",
+    "iso_a3": "VAT",
+    "wikidataid": "Q237",
+    "formal_en": "State of the Vatican City",
+    "type": "Sovereign country",
+    "sovereignt": "Vatican",
+    "continent": "Europe",
+    "region_un": "Europe",
+    "subregion": "Southern Europe",
+    "region_wb": "Europe & Central Asia",
+    "lon": 12.453418,
+    "lat": 41.903323,
+    "pop_est": 825,
+    "pop_rank": 2,
+    "pop_year": 2019,
+    "gdp_md": -99,
+    "gdp_year": 2019,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            12.45313691700008,
+            41.90275194100009
+          ],
+          [
+            12.452714082000085,
+            41.903016213000015
+          ],
+          [
+            12.452766936000103,
+            41.903439049
+          ],
+          [
+            12.45303120800014,
+            41.903914738000125
+          ],
+          [
+            12.453982588000144,
+            41.903861884
+          ],
+          [
+            12.454035442000077,
+            41.90275194100009
+          ],
+          [
+            12.45313691700008,
+            41.90275194100009
+          ]
+        ]
+      ]
+    }
+  }
+}
