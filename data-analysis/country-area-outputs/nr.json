@@ -1,0 +1,67 @@
+{
+  "id": "nr",
+  "tags": {
+    "iso_a2": "NR",
+    "iso_a3": "NRU",
+    "wikidataid": "Q697",
+    "formal_en": "Republic of Nauru",
+    "type": "Sovereign country",
+    "sovereignt": "Nauru",
+    "continent": "Oceania",
+    "region_un": "Oceania",
+    "subregion": "Micronesia",
+    "region_wb": "East Asia & Pacific",
+    "lat": -0.520261,
+    "lon": 166.932644,
+    "pop_est": 12581,
+    "pop_rank": 6,
+    "pop_year": 2019,
+    "gdp_md": 118,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "4. Lower middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            166.938812696,
+            -0.490411065999922
+          ],
+          [
+            166.9555770190001,
+            -0.497979424999926
+          ],
+          [
+            166.95826256600003,
+            -0.517673434999949
+          ],
+          [
+            166.95134524800005,
+            -0.539157809999949
+          ],
+          [
+            166.938812696,
+            -0.551853122999944
+          ],
+          [
+            166.916351759,
+            -0.547539971999925
+          ],
+          [
+            166.90699303500003,
+            -0.524834893999923
+          ],
+          [
+            166.913422071,
+            -0.500176690999922
+          ],
+          [
+            166.938812696,
+            -0.490411065999922
+          ]
+        ]
+      ]
+    }
+  }
+}

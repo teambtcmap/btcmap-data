@@ -5,8 +5,11 @@ import json
 script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
-# Now you can use a relative path to access the GeoJSON file
-directory_path = 'geojson-regions-10m'
+# Specify the input directory containing the GeoJSON files
+input_directory_path = 'geojson-regions-10m'
+
+# Specify the output directory where you want to save the JSON files
+output_directory_path = 'country-area-outputs'
 
 # Function to extract elements from a GeoJSON feature
 def extract_elements(feature):
@@ -42,9 +45,9 @@ def extract_elements(feature):
     return extracted_feature
 
 # Iterate through files in the directory
-for filename in os.listdir(directory_path):
+for filename in os.listdir(input_directory_path):
     if filename.endswith(".geojson"):
-        file_path = os.path.join(directory_path, filename)
+        file_path = os.path.join(input_directory_path, filename)
         
         # Load the GeoJSON file
         with open(file_path, 'r') as file:
@@ -61,7 +64,7 @@ for filename in os.listdir(directory_path):
                 output_filename = f"{id_lower}.json"
                 
                 # Write the extracted feature to a separate JSON file
-                output_file_path = os.path.join(directory_path, output_filename)
+                output_file_path = os.path.join(output_directory_path, output_filename)
                 with open(output_file_path, 'w') as output_file:
                     json.dump(extracted_feature, output_file, indent=2)
         else:
@@ -72,9 +75,9 @@ for filename in os.listdir(directory_path):
             # Create an output filename in the format id.json
             output_filename = f"{id_lower}.json"
             
-            # Write the extracted feature to a separate JSON file
-            output_file_path = os.path.join(directory_path, output_filename)
+           # Write the extracted feature to a separate JSON file in the output directory
+            output_file_path = os.path.join(output_directory_path, output_filename)
             with open(output_file_path, 'w') as output_file:
                 json.dump(extracted_feature, output_file, indent=2)
 
-print("Separate JSON files created.")
+print("Separate JSON files created in the specified output directory.")
