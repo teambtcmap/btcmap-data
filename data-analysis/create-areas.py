@@ -1,5 +1,3 @@
-#Python Script for creating areas in BTC Map API
-
 import requests
 import json
 import sys
@@ -12,32 +10,38 @@ if not btcmap_api_token:
     print("Please set the BTCMAP_API_TOKEN environment variable.")
     sys.exit(1)
 
-url = "https://api.btcmap.org/areas"
+# Set the working directory to the script's directory
+script_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_directory)
 
-headers = {
-    'Authorization':f'Bearer {btcmap_api_token}',
-    'Content-Type':'application/json'
-}
+data_directory = "upload"
 
-area_data = {
-    "id": "uk",
-    "tags": {
-        "type": "country",
-        "name": "United Kingdom",
-        "continent": "europe"
+# Loop through each file in the directory
+for filename in os.listdir(data_directory):
+    # Construct the full path to the file
+    file_path = os.path.join(data_directory, filename)
+
+    # Check if the item in the directory is a file (not a subdirectory)
+    if os.path.isfile(file_path):
+        # Read the content of the file
+        with open(file_path, "r") as file:
+            area_data = json.load(file)  # Load data from the file
+
+        # Define the API URL and headers
+        url = "https://api.btcmap.org/areas"
+        headers = {
+            'Authorization': f'Bearer {btcmap_api_token}',
+            'Content-Type': 'application/json'
         }
-}
 
-json_payload = json.dumps(area_data)
-print(json_payload)
-sys.exit()
+        # Convert the area_data to JSON payload
+        json_payload = json.dumps(area_data)
 
-# Send the query to the Overpass API to get a list of node IDs
-response = requests.post(url,headers=headers, data=json_payload)
+        # Send the query to the BTC Map API to create the area
+        response = requests.post(url, headers=headers, data=json_payload)
 
-# Check if the request was successful
-if response.status_code == 200:
-    print("Created")
-
-else:
-    print(f"Error: {response.text}")
+        # Check if the request was successful
+        if response.status_code == 200:
+            print(f"Created area from file: {filename}")
+        else:
+            print(f"Error creating area from file {filename}: {response.text}")
