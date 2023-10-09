@@ -1,5 +1,6 @@
 import os
 import json
+from area import area
 
 # Set the working directory to the script's directory
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -9,12 +10,16 @@ os.chdir(script_directory)
 input_directory_path = 'geojson-regions-10m'
 
 # Specify the output directory where you want to save the JSON files
-output_directory_path = 'country-area-outputs'
+output_directory_path = 'country-area-outputs
 
 # Function to extract elements from a GeoJSON feature
 def extract_elements(feature):
     # Convert "id" to lowercase
     id_lower = feature["properties"].get("iso_a2", "").lower()
+
+    # Calculate the area of the geometry
+    area_m2 = area(feature["geometry"])
+    area_km2 = round(area_m2 / 1_000_000)
     
     extracted_feature = {
         "id": id_lower,
@@ -33,6 +38,7 @@ def extract_elements(feature):
             "region_un": feature["properties"].get("region_un", ""),
             "lat": feature["properties"].get("label_y", ""),
             "lon": feature["properties"].get("label_x", ""),
+            "area_km2": area_km2,  # Include the area in square meters
             "population": feature["properties"].get("pop_est", ""),
             "population:rank": feature["properties"].get("pop_rank", ""),
             "population:year": feature["properties"].get("pop_year", ""),
@@ -40,7 +46,7 @@ def extract_elements(feature):
             "gdp_year": feature["properties"].get("gdp_year", ""),
             "economy": feature["properties"].get("economy", ""),
             "income_grp": feature["properties"].get("income_grp", ""),
-            "geo_json": feature["geometry"]
+            "geo_json": feature["geometry"]  # Include the full geometry in the output
         }
     }
     
@@ -77,7 +83,7 @@ for filename in os.listdir(input_directory_path):
             # Create an output filename in the format id.json
             output_filename = f"{id_lower}.json"
             
-           # Write the extracted feature to a separate JSON file in the output directory
+            # Write the extracted feature to a separate JSON file in the output directory
             output_file_path = os.path.join(output_directory_path, output_filename)
             with open(output_file_path, 'w') as output_file:
                 json.dump(extracted_feature, output_file, indent=2)
