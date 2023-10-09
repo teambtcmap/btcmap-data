@@ -1,11 +1,12 @@
 {
   "id": "tl",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TL",
     "iso_a3": "TLS",
     "wikidataid": "Q574",
     "name": "East Timor",
+    "country_type": "Sovereign country",
     "sovereignt": "East Timor",
     "continent": "Asia",
     "region_un": "Asia",

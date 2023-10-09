@@ -1,11 +1,12 @@
 {
   "id": "et",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ET",
     "iso_a3": "ETH",
     "wikidataid": "Q115",
     "name": "Ethiopia",
+    "country_type": "Sovereign country",
     "sovereignt": "Ethiopia",
     "continent": "Africa",
     "region_un": "Africa",

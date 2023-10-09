@@ -1,11 +1,12 @@
 {
   "id": "ms",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "MS",
     "iso_a3": "MSR",
     "wikidataid": "Q13353",
     "name": "Montserrat",
+    "country_type": "Dependency",
     "sovereignt": "United Kingdom",
     "continent": "North America",
     "region_un": "Americas",

@@ -1,11 +1,12 @@
 {
   "id": "gh",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GH",
     "iso_a3": "GHA",
     "wikidataid": "Q117",
     "name": "Ghana",
+    "country_type": "Sovereign country",
     "sovereignt": "Ghana",
     "continent": "Africa",
     "region_un": "Africa",

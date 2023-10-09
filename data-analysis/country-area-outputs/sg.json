@@ -1,11 +1,12 @@
 {
   "id": "sg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SG",
     "iso_a3": "SGP",
     "wikidataid": "Q334",
     "name": "Singapore",
+    "country_type": "Sovereign country",
     "sovereignt": "Singapore",
     "continent": "Asia",
     "region_un": "Asia",

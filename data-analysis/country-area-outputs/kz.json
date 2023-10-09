@@ -1,11 +1,12 @@
 {
   "id": "kz",
   "tags": {
-    "type": "Sovereignty",
+    "type": "country",
     "iso_a2": "KZ",
     "iso_a3": "KAZ",
     "wikidataid": "Q232",
     "name": "Kazakhstan",
+    "country_type": "Sovereignty",
     "sovereignt": "Kazakhstan",
     "continent": "Asia",
     "region_un": "Asia",

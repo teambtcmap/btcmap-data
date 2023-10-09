@@ -1,11 +1,12 @@
 {
   "id": "km",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KM",
     "iso_a3": "COM",
     "wikidataid": "Q970",
     "name": "Comoros",
+    "country_type": "Sovereign country",
     "sovereignt": "Comoros",
     "continent": "Africa",
     "region_un": "Africa",

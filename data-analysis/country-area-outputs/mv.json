@@ -1,11 +1,12 @@
 {
   "id": "mv",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MV",
     "iso_a3": "MDV",
     "wikidataid": "Q826",
     "name": "Maldives",
+    "country_type": "Sovereign country",
     "sovereignt": "Maldives",
     "continent": "Seven seas (open ocean)",
     "region_un": "Asia",

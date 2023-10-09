@@ -1,11 +1,12 @@
 {
   "id": "gm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GM",
     "iso_a3": "GMB",
     "wikidataid": "Q1005",
     "name": "Gambia",
+    "country_type": "Sovereign country",
     "sovereignt": "Gambia",
     "continent": "Africa",
     "region_un": "Africa",

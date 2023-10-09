@@ -1,11 +1,12 @@
 {
   "id": "ye",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "YE",
     "iso_a3": "YEM",
     "wikidataid": "Q805",
     "name": "Yemen",
+    "country_type": "Sovereign country",
     "sovereignt": "Yemen",
     "continent": "Asia",
     "region_un": "Asia",

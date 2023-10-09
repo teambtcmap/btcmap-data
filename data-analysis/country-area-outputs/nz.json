@@ -1,11 +1,12 @@
 {
   "id": "nz",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "NZ",
     "iso_a3": "NZL",
     "wikidataid": "Q664",
     "name": "New Zealand",
+    "country_type": "Country",
     "sovereignt": "New Zealand",
     "continent": "Oceania",
     "region_un": "Oceania",

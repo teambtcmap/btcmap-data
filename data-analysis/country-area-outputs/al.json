@@ -1,11 +1,12 @@
 {
   "id": "al",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AL",
     "iso_a3": "ALB",
     "wikidataid": "Q222",
     "name": "Albania",
+    "country_type": "Sovereign country",
     "sovereignt": "Albania",
     "continent": "Europe",
     "region_un": "Europe",

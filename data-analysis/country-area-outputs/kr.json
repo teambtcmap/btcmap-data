@@ -1,11 +1,12 @@
 {
   "id": "kr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KR",
     "iso_a3": "KOR",
     "wikidataid": "Q884",
     "name": "South Korea",
+    "country_type": "Sovereign country",
     "sovereignt": "South Korea",
     "continent": "Asia",
     "region_un": "Asia",

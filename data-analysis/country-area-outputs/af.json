@@ -1,11 +1,12 @@
 {
   "id": "af",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AF",
     "iso_a3": "AFG",
     "wikidataid": "Q889",
     "name": "Afghanistan",
+    "country_type": "Sovereign country",
     "sovereignt": "Afghanistan",
     "continent": "Asia",
     "region_un": "Asia",

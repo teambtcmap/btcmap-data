@@ -1,11 +1,12 @@
 {
   "id": "ma",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MA",
     "iso_a3": "MAR",
     "wikidataid": "Q1028",
     "name": "Morocco",
+    "country_type": "Sovereign country",
     "sovereignt": "Morocco",
     "continent": "Africa",
     "region_un": "Africa",

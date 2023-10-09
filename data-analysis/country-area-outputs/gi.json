@@ -1,11 +1,12 @@
 {
   "id": "gi",
   "tags": {
-    "type": "Disputed",
+    "type": "country",
     "iso_a2": "GI",
     "iso_a3": "GIB",
     "wikidataid": "Q1410",
     "name": "Gibraltar",
+    "country_type": "Disputed",
     "sovereignt": "United Kingdom",
     "continent": "Europe",
     "region_un": "Europe",

@@ -1,11 +1,12 @@
 {
   "id": "dm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "DM",
     "iso_a3": "DMA",
     "wikidataid": "Q784",
     "name": "Dominica",
+    "country_type": "Sovereign country",
     "sovereignt": "Dominica",
     "continent": "North America",
     "region_un": "Americas",

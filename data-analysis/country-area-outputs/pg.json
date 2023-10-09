@@ -1,11 +1,12 @@
 {
   "id": "pg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PG",
     "iso_a3": "PNG",
     "wikidataid": "Q691",
     "name": "Papua New Guinea",
+    "country_type": "Sovereign country",
     "sovereignt": "Papua New Guinea",
     "continent": "Oceania",
     "region_un": "Oceania",

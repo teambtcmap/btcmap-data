@@ -1,11 +1,12 @@
 {
   "id": "de",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "DE",
     "iso_a3": "DEU",
     "wikidataid": "Q183",
     "name": "Germany",
+    "country_type": "Sovereign country",
     "sovereignt": "Germany",
     "continent": "Europe",
     "region_un": "Europe",

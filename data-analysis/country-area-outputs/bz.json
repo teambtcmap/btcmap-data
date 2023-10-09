@@ -1,11 +1,12 @@
 {
   "id": "bz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BZ",
     "iso_a3": "BLZ",
     "wikidataid": "Q242",
     "name": "Belize",
+    "country_type": "Sovereign country",
     "sovereignt": "Belize",
     "continent": "North America",
     "region_un": "Americas",

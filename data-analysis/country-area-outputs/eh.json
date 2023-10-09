@@ -1,11 +1,12 @@
 {
   "id": "eh",
   "tags": {
-    "type": "Indeterminate",
+    "type": "country",
     "iso_a2": "EH",
     "iso_a3": "ESH",
     "wikidataid": "Q6250",
     "name": "Western Sahara",
+    "country_type": "Indeterminate",
     "sovereignt": "Western Sahara",
     "continent": "Africa",
     "region_un": "Africa",

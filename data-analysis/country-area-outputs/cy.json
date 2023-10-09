@@ -1,11 +1,12 @@
 {
   "id": "cy",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CY",
     "iso_a3": "CYP",
     "wikidataid": "Q229",
     "name": "Cyprus",
+    "country_type": "Sovereign country",
     "sovereignt": "Cyprus",
     "continent": "Asia",
     "region_un": "Asia",

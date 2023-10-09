@@ -1,11 +1,12 @@
 {
   "id": "mc",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MC",
     "iso_a3": "MCO",
     "wikidataid": "Q235",
     "name": "Monaco",
+    "country_type": "Sovereign country",
     "sovereignt": "Monaco",
     "continent": "Europe",
     "region_un": "Europe",

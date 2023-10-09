@@ -1,11 +1,12 @@
 {
   "id": "me",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ME",
     "iso_a3": "MNE",
     "wikidataid": "Q236",
     "name": "Montenegro",
+    "country_type": "Sovereign country",
     "sovereignt": "Montenegro",
     "continent": "Europe",
     "region_un": "Europe",

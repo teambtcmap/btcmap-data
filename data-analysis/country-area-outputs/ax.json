@@ -1,11 +1,12 @@
 {
   "id": "ax",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "AX",
     "iso_a3": "ALA",
     "wikidataid": "Q5689",
     "name": "Aland",
+    "country_type": "Country",
     "sovereignt": "Finland",
     "continent": "Europe",
     "region_un": "Europe",

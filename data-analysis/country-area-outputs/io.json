@@ -1,11 +1,12 @@
 {
   "id": "io",
   "tags": {
-    "type": "Disputed",
+    "type": "country",
     "iso_a2": "IO",
     "iso_a3": "IOT",
     "wikidataid": "Q43448",
     "name": "British Indian Ocean Territory",
+    "country_type": "Disputed",
     "sovereignt": "United Kingdom",
     "continent": "Seven seas (open ocean)",
     "region_un": "Africa",

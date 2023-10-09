@@ -1,11 +1,12 @@
 {
   "id": "pe",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PE",
     "iso_a3": "PER",
     "wikidataid": "Q419",
     "name": "Peru",
+    "country_type": "Sovereign country",
     "sovereignt": "Peru",
     "continent": "South America",
     "region_un": "Americas",

@@ -1,11 +1,12 @@
 {
   "id": "mt",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MT",
     "iso_a3": "MLT",
     "wikidataid": "Q233",
     "name": "Malta",
+    "country_type": "Sovereign country",
     "sovereignt": "Malta",
     "continent": "Europe",
     "region_un": "Europe",

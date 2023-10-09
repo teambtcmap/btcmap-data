@@ -1,11 +1,12 @@
 {
   "id": "kn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KN",
     "iso_a3": "KNA",
     "wikidataid": "Q763",
     "name": "Saint Kitts and Nevis",
+    "country_type": "Sovereign country",
     "sovereignt": "Saint Kitts and Nevis",
     "continent": "North America",
     "region_un": "Americas",

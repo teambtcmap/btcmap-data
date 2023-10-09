@@ -1,11 +1,12 @@
 {
   "id": "zw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ZW",
     "iso_a3": "ZWE",
     "wikidataid": "Q954",
     "name": "Zimbabwe",
+    "country_type": "Sovereign country",
     "sovereignt": "Zimbabwe",
     "continent": "Africa",
     "region_un": "Africa",

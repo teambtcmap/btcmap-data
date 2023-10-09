@@ -1,11 +1,12 @@
 {
   "id": "pt",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PT",
     "iso_a3": "PRT",
     "wikidataid": "Q45",
     "name": "Portugal",
+    "country_type": "Sovereign country",
     "sovereignt": "Portugal",
     "continent": "Europe",
     "region_un": "Europe",

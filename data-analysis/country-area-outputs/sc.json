@@ -1,11 +1,12 @@
 {
   "id": "sc",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SC",
     "iso_a3": "SYC",
     "wikidataid": "Q1042",
     "name": "Seychelles",
+    "country_type": "Sovereign country",
     "sovereignt": "Seychelles",
     "continent": "Seven seas (open ocean)",
     "region_un": "Africa",

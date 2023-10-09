@@ -1,11 +1,12 @@
 {
   "id": "bg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BG",
     "iso_a3": "BGR",
     "wikidataid": "Q219",
     "name": "Bulgaria",
+    "country_type": "Sovereign country",
     "sovereignt": "Bulgaria",
     "continent": "Europe",
     "region_un": "Europe",

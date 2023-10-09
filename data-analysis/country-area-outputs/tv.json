@@ -1,11 +1,12 @@
 {
   "id": "tv",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TV",
     "iso_a3": "TUV",
     "wikidataid": "Q672",
     "name": "Tuvalu",
+    "country_type": "Sovereign country",
     "sovereignt": "Tuvalu",
     "continent": "Oceania",
     "region_un": "Oceania",

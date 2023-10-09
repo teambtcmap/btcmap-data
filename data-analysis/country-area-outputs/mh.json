@@ -1,11 +1,12 @@
 {
   "id": "mh",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MH",
     "iso_a3": "MHL",
     "wikidataid": "Q709",
     "name": "Marshall Islands",
+    "country_type": "Sovereign country",
     "sovereignt": "Marshall Islands",
     "continent": "Oceania",
     "region_un": "Oceania",

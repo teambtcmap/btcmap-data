@@ -1,11 +1,12 @@
 {
   "id": "hk",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "HK",
     "iso_a3": "HKG",
     "wikidataid": "Q8646",
     "name": "Hong Kong S.A.R.",
+    "country_type": "Country",
     "sovereignt": "China",
     "continent": "Asia",
     "region_un": "Asia",

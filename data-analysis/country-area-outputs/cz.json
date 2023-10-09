@@ -1,11 +1,12 @@
 {
   "id": "cz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CZ",
     "iso_a3": "CZE",
     "wikidataid": "Q213",
     "name": "Czechia",
+    "country_type": "Sovereign country",
     "sovereignt": "Czechia",
     "continent": "Europe",
     "region_un": "Europe",

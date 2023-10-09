@@ -1,11 +1,12 @@
 {
   "id": "ga",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GA",
     "iso_a3": "GAB",
     "wikidataid": "Q1000",
     "name": "Gabon",
+    "country_type": "Sovereign country",
     "sovereignt": "Gabon",
     "continent": "Africa",
     "region_un": "Africa",

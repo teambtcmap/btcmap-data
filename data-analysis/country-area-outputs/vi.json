@@ -1,11 +1,12 @@
 {
   "id": "vi",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "VI",
     "iso_a3": "VIR",
     "wikidataid": "Q11703",
     "name": "United States Virgin Islands",
+    "country_type": "Dependency",
     "sovereignt": "United States of America",
     "continent": "North America",
     "region_un": "Americas",

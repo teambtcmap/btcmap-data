@@ -1,11 +1,12 @@
 {
   "id": "dj",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "DJ",
     "iso_a3": "DJI",
     "wikidataid": "Q977",
     "name": "Djibouti",
+    "country_type": "Sovereign country",
     "sovereignt": "Djibouti",
     "continent": "Africa",
     "region_un": "Africa",

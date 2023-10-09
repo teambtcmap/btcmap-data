@@ -1,11 +1,12 @@
 {
   "id": "za",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ZA",
     "iso_a3": "ZAF",
     "wikidataid": "Q258",
     "name": "South Africa",
+    "country_type": "Sovereign country",
     "sovereignt": "South Africa",
     "continent": "Africa",
     "region_un": "Africa",

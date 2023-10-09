@@ -1,11 +1,12 @@
 {
   "id": "ro",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "RO",
     "iso_a3": "ROU",
     "wikidataid": "Q218",
     "name": "Romania",
+    "country_type": "Sovereign country",
     "sovereignt": "Romania",
     "continent": "Europe",
     "region_un": "Europe",

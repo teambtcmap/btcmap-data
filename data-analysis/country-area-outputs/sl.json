@@ -1,11 +1,12 @@
 {
   "id": "sl",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SL",
     "iso_a3": "SLE",
     "wikidataid": "Q1044",
     "name": "Sierra Leone",
+    "country_type": "Sovereign country",
     "sovereignt": "Sierra Leone",
     "continent": "Africa",
     "region_un": "Africa",

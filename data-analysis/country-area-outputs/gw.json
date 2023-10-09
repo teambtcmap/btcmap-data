@@ -1,11 +1,12 @@
 {
   "id": "gw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GW",
     "iso_a3": "GNB",
     "wikidataid": "Q1007",
     "name": "Guinea-Bissau",
+    "country_type": "Sovereign country",
     "sovereignt": "Guinea-Bissau",
     "continent": "Africa",
     "region_un": "Africa",

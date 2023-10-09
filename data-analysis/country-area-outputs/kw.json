@@ -1,11 +1,12 @@
 {
   "id": "kw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KW",
     "iso_a3": "KWT",
     "wikidataid": "Q817",
     "name": "Kuwait",
+    "country_type": "Sovereign country",
     "sovereignt": "Kuwait",
     "continent": "Asia",
     "region_un": "Asia",

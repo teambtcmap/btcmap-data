@@ -1,11 +1,12 @@
 {
   "id": "ir",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IR",
     "iso_a3": "IRN",
     "wikidataid": "Q794",
     "name": "Iran",
+    "country_type": "Sovereign country",
     "sovereignt": "Iran",
     "continent": "Asia",
     "region_un": "Asia",

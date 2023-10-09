@@ -1,11 +1,12 @@
 {
   "id": "bw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BW",
     "iso_a3": "BWA",
     "wikidataid": "Q963",
     "name": "Botswana",
+    "country_type": "Sovereign country",
     "sovereignt": "Botswana",
     "continent": "Africa",
     "region_un": "Africa",

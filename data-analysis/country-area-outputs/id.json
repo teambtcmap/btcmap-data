@@ -1,11 +1,12 @@
 {
   "id": "id",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ID",
     "iso_a3": "IDN",
     "wikidataid": "Q252",
     "name": "Indonesia",
+    "country_type": "Sovereign country",
     "sovereignt": "Indonesia",
     "continent": "Asia",
     "region_un": "Asia",

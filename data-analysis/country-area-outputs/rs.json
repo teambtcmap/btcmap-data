@@ -1,11 +1,12 @@
 {
   "id": "rs",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "RS",
     "iso_a3": "SRB",
     "wikidataid": "Q403",
     "name": "Republic of Serbia",
+    "country_type": "Sovereign country",
     "sovereignt": "Republic of Serbia",
     "continent": "Europe",
     "region_un": "Europe",

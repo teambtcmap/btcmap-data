@@ -1,11 +1,12 @@
 {
   "id": "jp",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "JP",
     "iso_a3": "JPN",
     "wikidataid": "Q17",
     "name": "Japan",
+    "country_type": "Sovereign country",
     "sovereignt": "Japan",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "ug",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "UG",
     "iso_a3": "UGA",
     "wikidataid": "Q1036",
     "name": "Uganda",
+    "country_type": "Sovereign country",
     "sovereignt": "Uganda",
     "continent": "Africa",
     "region_un": "Africa",

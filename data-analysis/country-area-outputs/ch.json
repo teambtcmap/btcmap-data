@@ -1,11 +1,12 @@
 {
   "id": "ch",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CH",
     "iso_a3": "CHE",
     "wikidataid": "Q39",
     "name": "Switzerland",
+    "country_type": "Sovereign country",
     "sovereignt": "Switzerland",
     "continent": "Europe",
     "region_un": "Europe",

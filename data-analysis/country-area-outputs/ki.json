@@ -1,11 +1,12 @@
 {
   "id": "ki",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KI",
     "iso_a3": "KIR",
     "wikidataid": "Q710",
     "name": "Kiribati",
+    "country_type": "Sovereign country",
     "sovereignt": "Kiribati",
     "continent": "Oceania",
     "region_un": "Oceania",

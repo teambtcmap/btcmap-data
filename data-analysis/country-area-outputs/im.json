@@ -1,11 +1,12 @@
 {
   "id": "im",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "IM",
     "iso_a3": "IMN",
     "wikidataid": "Q9676",
     "name": "Isle of Man",
+    "country_type": "Country",
     "sovereignt": "United Kingdom",
     "continent": "Europe",
     "region_un": "Europe",

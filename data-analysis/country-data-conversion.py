@@ -29,7 +29,7 @@ def extract_elements(feature):
             "iso_a3": feature["properties"].get("iso_a3", ""),
             "wikidataid": feature["properties"].get("wikidataid", ""),
             "name": feature["properties"].get("admin", ""),
-            "type": feature["properties"].get("type", ""),
+            "country_type": feature["properties"].get("type", ""),
             "sovereignt": feature["properties"].get("sovereignt", ""),
             "continent": feature["properties"].get("continent", ""),
             "region_un": feature["properties"].get("region_un", ""),

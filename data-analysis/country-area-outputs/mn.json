@@ -1,11 +1,12 @@
 {
   "id": "mn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MN",
     "iso_a3": "MNG",
     "wikidataid": "Q711",
     "name": "Mongolia",
+    "country_type": "Sovereign country",
     "sovereignt": "Mongolia",
     "continent": "Asia",
     "region_un": "Asia",

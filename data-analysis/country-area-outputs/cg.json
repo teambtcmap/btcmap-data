@@ -1,11 +1,12 @@
 {
   "id": "cg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CG",
     "iso_a3": "COG",
     "wikidataid": "Q971",
     "name": "Republic of the Congo",
+    "country_type": "Sovereign country",
     "sovereignt": "Republic of the Congo",
     "continent": "Africa",
     "region_un": "Africa",

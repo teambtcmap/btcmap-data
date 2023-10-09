@@ -1,11 +1,12 @@
 {
   "id": "vn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "VN",
     "iso_a3": "VNM",
     "wikidataid": "Q881",
     "name": "Vietnam",
+    "country_type": "Sovereign country",
     "sovereignt": "Vietnam",
     "continent": "Asia",
     "region_un": "Asia",

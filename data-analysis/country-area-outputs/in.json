@@ -1,11 +1,12 @@
 {
   "id": "in",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IN",
     "iso_a3": "IND",
     "wikidataid": "Q668",
     "name": "India",
+    "country_type": "Sovereign country",
     "sovereignt": "India",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "mz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MZ",
     "iso_a3": "MOZ",
     "wikidataid": "Q1029",
     "name": "Mozambique",
+    "country_type": "Sovereign country",
     "sovereignt": "Mozambique",
     "continent": "Africa",
     "region_un": "Africa",

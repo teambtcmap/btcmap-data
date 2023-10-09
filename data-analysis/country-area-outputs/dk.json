@@ -1,11 +1,12 @@
 {
   "id": "dk",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "DK",
     "iso_a3": "DNK",
     "wikidataid": "Q35",
     "name": "Denmark",
+    "country_type": "Country",
     "sovereignt": "Denmark",
     "continent": "Europe",
     "region_un": "Europe",

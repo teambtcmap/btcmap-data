@@ -1,11 +1,12 @@
 {
   "id": "si",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SI",
     "iso_a3": "SVN",
     "wikidataid": "Q215",
     "name": "Slovenia",
+    "country_type": "Sovereign country",
     "sovereignt": "Slovenia",
     "continent": "Europe",
     "region_un": "Europe",

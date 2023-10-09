@@ -1,11 +1,12 @@
 {
   "id": "sd",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SD",
     "iso_a3": "SDN",
     "wikidataid": "Q1049",
     "name": "Sudan",
+    "country_type": "Sovereign country",
     "sovereignt": "Sudan",
     "continent": "Africa",
     "region_un": "Africa",

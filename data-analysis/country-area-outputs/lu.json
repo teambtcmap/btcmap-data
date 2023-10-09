@@ -1,11 +1,12 @@
 {
   "id": "lu",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LU",
     "iso_a3": "LUX",
     "wikidataid": "Q32",
     "name": "Luxembourg",
+    "country_type": "Sovereign country",
     "sovereignt": "Luxembourg",
     "continent": "Europe",
     "region_un": "Europe",

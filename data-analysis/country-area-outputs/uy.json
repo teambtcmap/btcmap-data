@@ -1,11 +1,12 @@
 {
   "id": "uy",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "UY",
     "iso_a3": "URY",
     "wikidataid": "Q77",
     "name": "Uruguay",
+    "country_type": "Sovereign country",
     "sovereignt": "Uruguay",
     "continent": "South America",
     "region_un": "Americas",

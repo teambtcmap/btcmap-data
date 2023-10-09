@@ -1,11 +1,12 @@
 {
   "id": "dz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "DZ",
     "iso_a3": "DZA",
     "wikidataid": "Q262",
     "name": "Algeria",
+    "country_type": "Sovereign country",
     "sovereignt": "Algeria",
     "continent": "Africa",
     "region_un": "Africa",

@@ -1,11 +1,12 @@
 {
   "id": "vc",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "VC",
     "iso_a3": "VCT",
     "wikidataid": "Q757",
     "name": "Saint Vincent and the Grenadines",
+    "country_type": "Sovereign country",
     "sovereignt": "Saint Vincent and the Grenadines",
     "continent": "North America",
     "region_un": "Americas",

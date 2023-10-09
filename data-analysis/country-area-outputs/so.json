@@ -1,11 +1,12 @@
 {
   "id": "so",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SO",
     "iso_a3": "SOM",
     "wikidataid": "Q1045",
     "name": "Somalia",
+    "country_type": "Sovereign country",
     "sovereignt": "Somalia",
     "continent": "Africa",
     "region_un": "Africa",

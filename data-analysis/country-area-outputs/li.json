@@ -1,11 +1,12 @@
 {
   "id": "li",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LI",
     "iso_a3": "LIE",
     "wikidataid": "Q347",
     "name": "Liechtenstein",
+    "country_type": "Sovereign country",
     "sovereignt": "Liechtenstein",
     "continent": "Europe",
     "region_un": "Europe",

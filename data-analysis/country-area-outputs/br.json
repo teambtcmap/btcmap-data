@@ -1,11 +1,12 @@
 {
   "id": "br",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BR",
     "iso_a3": "BRA",
     "wikidataid": "Q155",
     "name": "Brazil",
+    "country_type": "Sovereign country",
     "sovereignt": "Brazil",
     "continent": "South America",
     "region_un": "Americas",

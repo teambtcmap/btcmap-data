@@ -1,11 +1,12 @@
 {
   "id": "th",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TH",
     "iso_a3": "THA",
     "wikidataid": "Q869",
     "name": "Thailand",
+    "country_type": "Sovereign country",
     "sovereignt": "Thailand",
     "continent": "Asia",
     "region_un": "Asia",

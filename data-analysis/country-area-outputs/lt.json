@@ -1,11 +1,12 @@
 {
   "id": "lt",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LT",
     "iso_a3": "LTU",
     "wikidataid": "Q37",
     "name": "Lithuania",
+    "country_type": "Sovereign country",
     "sovereignt": "Lithuania",
     "continent": "Europe",
     "region_un": "Europe",

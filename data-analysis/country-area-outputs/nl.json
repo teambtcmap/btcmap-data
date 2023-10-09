@@ -1,11 +1,12 @@
 {
   "id": "nl",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "NL",
     "iso_a3": "NLD",
     "wikidataid": "Q55",
     "name": "Netherlands",
+    "country_type": "Country",
     "sovereignt": "Netherlands",
     "continent": "Europe",
     "region_un": "Europe",

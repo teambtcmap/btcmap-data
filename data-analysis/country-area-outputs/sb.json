@@ -1,11 +1,12 @@
 {
   "id": "sb",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SB",
     "iso_a3": "SLB",
     "wikidataid": "Q685",
     "name": "Solomon Islands",
+    "country_type": "Sovereign country",
     "sovereignt": "Solomon Islands",
     "continent": "Oceania",
     "region_un": "Oceania",

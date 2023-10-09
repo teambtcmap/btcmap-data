@@ -1,11 +1,12 @@
 {
   "id": "be",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BE",
     "iso_a3": "BEL",
     "wikidataid": "Q31",
     "name": "Belgium",
+    "country_type": "Sovereign country",
     "sovereignt": "Belgium",
     "continent": "Europe",
     "region_un": "Europe",

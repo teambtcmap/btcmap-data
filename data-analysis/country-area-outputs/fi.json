@@ -1,11 +1,12 @@
 {
   "id": "fi",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "FI",
     "iso_a3": "FIN",
     "wikidataid": "Q33",
     "name": "Finland",
+    "country_type": "Country",
     "sovereignt": "Finland",
     "continent": "Europe",
     "region_un": "Europe",

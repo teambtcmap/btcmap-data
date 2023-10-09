@@ -1,11 +1,12 @@
 {
   "id": "tn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TN",
     "iso_a3": "TUN",
     "wikidataid": "Q948",
     "name": "Tunisia",
+    "country_type": "Sovereign country",
     "sovereignt": "Tunisia",
     "continent": "Africa",
     "region_un": "Africa",

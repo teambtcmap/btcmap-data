@@ -1,11 +1,12 @@
 {
   "id": "sz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SZ",
     "iso_a3": "SWZ",
     "wikidataid": "Q1050",
     "name": "eSwatini",
+    "country_type": "Sovereign country",
     "sovereignt": "eSwatini",
     "continent": "Africa",
     "region_un": "Africa",

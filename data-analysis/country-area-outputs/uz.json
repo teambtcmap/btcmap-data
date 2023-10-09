@@ -1,11 +1,12 @@
 {
   "id": "uz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "UZ",
     "iso_a3": "UZB",
     "wikidataid": "Q265",
     "name": "Uzbekistan",
+    "country_type": "Sovereign country",
     "sovereignt": "Uzbekistan",
     "continent": "Asia",
     "region_un": "Asia",

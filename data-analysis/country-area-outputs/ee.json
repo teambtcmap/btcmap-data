@@ -1,11 +1,12 @@
 {
   "id": "ee",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "EE",
     "iso_a3": "EST",
     "wikidataid": "Q191",
     "name": "Estonia",
+    "country_type": "Sovereign country",
     "sovereignt": "Estonia",
     "continent": "Europe",
     "region_un": "Europe",

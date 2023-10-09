@@ -1,11 +1,12 @@
 {
   "id": "sk",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SK",
     "iso_a3": "SVK",
     "wikidataid": "Q214",
     "name": "Slovakia",
+    "country_type": "Sovereign country",
     "sovereignt": "Slovakia",
     "continent": "Europe",
     "region_un": "Europe",

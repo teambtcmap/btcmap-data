@@ -1,11 +1,12 @@
 {
   "id": "mg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MG",
     "iso_a3": "MDG",
     "wikidataid": "Q1019",
     "name": "Madagascar",
+    "country_type": "Sovereign country",
     "sovereignt": "Madagascar",
     "continent": "Africa",
     "region_un": "Africa",

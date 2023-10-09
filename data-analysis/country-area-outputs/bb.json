@@ -1,11 +1,12 @@
 {
   "id": "bb",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BB",
     "iso_a3": "BRB",
     "wikidataid": "Q244",
     "name": "Barbados",
+    "country_type": "Sovereign country",
     "sovereignt": "Barbados",
     "continent": "North America",
     "region_un": "Americas",

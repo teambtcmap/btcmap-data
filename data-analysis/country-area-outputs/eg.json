@@ -1,11 +1,12 @@
 {
   "id": "eg",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "EG",
     "iso_a3": "EGY",
     "wikidataid": "Q79",
     "name": "Egypt",
+    "country_type": "Sovereign country",
     "sovereignt": "Egypt",
     "continent": "Africa",
     "region_un": "Africa",

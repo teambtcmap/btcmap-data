@@ -1,11 +1,12 @@
 {
   "id": "pa",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PA",
     "iso_a3": "PAN",
     "wikidataid": "Q804",
     "name": "Panama",
+    "country_type": "Sovereign country",
     "sovereignt": "Panama",
     "continent": "North America",
     "region_un": "Americas",

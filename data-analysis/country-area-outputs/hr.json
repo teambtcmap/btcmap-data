@@ -1,11 +1,12 @@
 {
   "id": "hr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "HR",
     "iso_a3": "HRV",
     "wikidataid": "Q224",
     "name": "Croatia",
+    "country_type": "Sovereign country",
     "sovereignt": "Croatia",
     "continent": "Europe",
     "region_un": "Europe",

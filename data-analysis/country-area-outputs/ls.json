@@ -1,11 +1,12 @@
 {
   "id": "ls",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LS",
     "iso_a3": "LSO",
     "wikidataid": "Q1013",
     "name": "Lesotho",
+    "country_type": "Sovereign country",
     "sovereignt": "Lesotho",
     "continent": "Africa",
     "region_un": "Africa",

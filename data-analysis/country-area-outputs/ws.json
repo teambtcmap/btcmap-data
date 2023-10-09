@@ -1,11 +1,12 @@
 {
   "id": "ws",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "WS",
     "iso_a3": "WSM",
     "wikidataid": "Q683",
     "name": "Samoa",
+    "country_type": "Sovereign country",
     "sovereignt": "Samoa",
     "continent": "Oceania",
     "region_un": "Oceania",

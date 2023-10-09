@@ -1,11 +1,12 @@
 {
   "id": "sn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SN",
     "iso_a3": "SEN",
     "wikidataid": "Q1041",
     "name": "Senegal",
+    "country_type": "Sovereign country",
     "sovereignt": "Senegal",
     "continent": "Africa",
     "region_un": "Africa",

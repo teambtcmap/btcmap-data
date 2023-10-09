@@ -1,11 +1,12 @@
 {
   "id": "it",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IT",
     "iso_a3": "ITA",
     "wikidataid": "Q38",
     "name": "Italy",
+    "country_type": "Sovereign country",
     "sovereignt": "Italy",
     "continent": "Europe",
     "region_un": "Europe",

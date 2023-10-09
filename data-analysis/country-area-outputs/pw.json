@@ -1,11 +1,12 @@
 {
   "id": "pw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PW",
     "iso_a3": "PLW",
     "wikidataid": "Q695",
     "name": "Palau",
+    "country_type": "Sovereign country",
     "sovereignt": "Palau",
     "continent": "Oceania",
     "region_un": "Oceania",

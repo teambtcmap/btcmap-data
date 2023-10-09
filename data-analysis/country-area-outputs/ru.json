@@ -1,11 +1,12 @@
 {
   "id": "ru",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "RU",
     "iso_a3": "RUS",
     "wikidataid": "Q159",
     "name": "Russia",
+    "country_type": "Sovereign country",
     "sovereignt": "Russia",
     "continent": "Europe",
     "region_un": "Europe",

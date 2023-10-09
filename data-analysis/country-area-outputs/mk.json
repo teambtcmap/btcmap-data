@@ -1,11 +1,12 @@
 {
   "id": "mk",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MK",
     "iso_a3": "MKD",
     "wikidataid": "Q221",
     "name": "North Macedonia",
+    "country_type": "Sovereign country",
     "sovereignt": "North Macedonia",
     "continent": "Europe",
     "region_un": "Europe",

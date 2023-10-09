@@ -1,11 +1,12 @@
 {
   "id": "ke",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KE",
     "iso_a3": "KEN",
     "wikidataid": "Q114",
     "name": "Kenya",
+    "country_type": "Sovereign country",
     "sovereignt": "Kenya",
     "continent": "Africa",
     "region_un": "Africa",

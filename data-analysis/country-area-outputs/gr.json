@@ -1,11 +1,12 @@
 {
   "id": "gr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GR",
     "iso_a3": "GRC",
     "wikidataid": "Q41",
     "name": "Greece",
+    "country_type": "Sovereign country",
     "sovereignt": "Greece",
     "continent": "Europe",
     "region_un": "Europe",

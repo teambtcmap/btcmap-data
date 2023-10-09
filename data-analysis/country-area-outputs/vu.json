@@ -1,11 +1,12 @@
 {
   "id": "vu",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "VU",
     "iso_a3": "VUT",
     "wikidataid": "Q686",
     "name": "Vanuatu",
+    "country_type": "Sovereign country",
     "sovereignt": "Vanuatu",
     "continent": "Oceania",
     "region_un": "Oceania",

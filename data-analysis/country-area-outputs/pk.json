@@ -1,11 +1,12 @@
 {
   "id": "pk",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PK",
     "iso_a3": "PAK",
     "wikidataid": "Q843",
     "name": "Pakistan",
+    "country_type": "Sovereign country",
     "sovereignt": "Pakistan",
     "continent": "Asia",
     "region_un": "Asia",

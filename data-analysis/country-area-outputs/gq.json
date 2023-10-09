@@ -1,11 +1,12 @@
 {
   "id": "gq",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GQ",
     "iso_a3": "GNQ",
     "wikidataid": "Q983",
     "name": "Equatorial Guinea",
+    "country_type": "Sovereign country",
     "sovereignt": "Equatorial Guinea",
     "continent": "Africa",
     "region_un": "Africa",

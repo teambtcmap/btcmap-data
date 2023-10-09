@@ -1,11 +1,12 @@
 {
   "id": "sv",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SV",
     "iso_a3": "SLV",
     "wikidataid": "Q792",
     "name": "El Salvador",
+    "country_type": "Sovereign country",
     "sovereignt": "El Salvador",
     "continent": "North America",
     "region_un": "Americas",

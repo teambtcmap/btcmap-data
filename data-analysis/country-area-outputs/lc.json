@@ -1,11 +1,12 @@
 {
   "id": "lc",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LC",
     "iso_a3": "LCA",
     "wikidataid": "Q760",
     "name": "Saint Lucia",
+    "country_type": "Sovereign country",
     "sovereignt": "Saint Lucia",
     "continent": "North America",
     "region_un": "Americas",

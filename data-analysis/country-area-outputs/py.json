@@ -1,11 +1,12 @@
 {
   "id": "py",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PY",
     "iso_a3": "PRY",
     "wikidataid": "Q733",
     "name": "Paraguay",
+    "country_type": "Sovereign country",
     "sovereignt": "Paraguay",
     "continent": "South America",
     "region_un": "Americas",

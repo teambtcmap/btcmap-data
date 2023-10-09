@@ -1,11 +1,12 @@
 {
   "id": "bd",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BD",
     "iso_a3": "BGD",
     "wikidataid": "Q902",
     "name": "Bangladesh",
+    "country_type": "Sovereign country",
     "sovereignt": "Bangladesh",
     "continent": "Asia",
     "region_un": "Asia",

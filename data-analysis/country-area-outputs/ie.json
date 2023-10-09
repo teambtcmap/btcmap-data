@@ -1,11 +1,12 @@
 {
   "id": "ie",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IE",
     "iso_a3": "IRL",
     "wikidataid": "Q27",
     "name": "Ireland",
+    "country_type": "Sovereign country",
     "sovereignt": "Ireland",
     "continent": "Europe",
     "region_un": "Europe",

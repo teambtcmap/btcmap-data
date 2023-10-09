@@ -1,11 +1,12 @@
 {
   "id": "mf",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "MF",
     "iso_a3": "MAF",
     "wikidataid": "Q126125",
     "name": "Saint Martin",
+    "country_type": "Dependency",
     "sovereignt": "France",
     "continent": "North America",
     "region_un": "Americas",

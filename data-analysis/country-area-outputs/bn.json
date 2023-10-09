@@ -1,11 +1,12 @@
 {
   "id": "bn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BN",
     "iso_a3": "BRN",
     "wikidataid": "Q921",
     "name": "Brunei",
+    "country_type": "Sovereign country",
     "sovereignt": "Brunei",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "do",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "DO",
     "iso_a3": "DOM",
     "wikidataid": "Q786",
     "name": "Dominican Republic",
+    "country_type": "Sovereign country",
     "sovereignt": "Dominican Republic",
     "continent": "North America",
     "region_un": "Americas",

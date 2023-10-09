@@ -1,11 +1,12 @@
 {
   "id": "gg",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "GG",
     "iso_a3": "GGY",
     "wikidataid": "Q25230",
     "name": "Guernsey",
+    "country_type": "Country",
     "sovereignt": "United Kingdom",
     "continent": "Europe",
     "region_un": "Europe",

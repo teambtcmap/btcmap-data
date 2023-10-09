@@ -1,11 +1,12 @@
 {
   "id": "qa",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "QA",
     "iso_a3": "QAT",
     "wikidataid": "Q846",
     "name": "Qatar",
+    "country_type": "Sovereign country",
     "sovereignt": "Qatar",
     "continent": "Asia",
     "region_un": "Asia",

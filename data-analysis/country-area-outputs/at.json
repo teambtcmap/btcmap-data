@@ -1,11 +1,12 @@
 {
   "id": "at",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AT",
     "iso_a3": "AUT",
     "wikidataid": "Q40",
     "name": "Austria",
+    "country_type": "Sovereign country",
     "sovereignt": "Austria",
     "continent": "Europe",
     "region_un": "Europe",

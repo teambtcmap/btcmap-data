@@ -1,11 +1,12 @@
 {
   "id": "cn-tw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CN-TW",
     "iso_a3": "TWN",
     "wikidataid": "Q865",
     "name": "Taiwan",
+    "country_type": "Sovereign country",
     "sovereignt": "Taiwan",
     "continent": "Asia",
     "region_un": "Asia",

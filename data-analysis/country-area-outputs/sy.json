@@ -1,11 +1,12 @@
 {
   "id": "sy",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SY",
     "iso_a3": "SYR",
     "wikidataid": "Q858",
     "name": "Syria",
+    "country_type": "Sovereign country",
     "sovereignt": "Syria",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "my",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MY",
     "iso_a3": "MYS",
     "wikidataid": "Q833",
     "name": "Malaysia",
+    "country_type": "Sovereign country",
     "sovereignt": "Malaysia",
     "continent": "Asia",
     "region_un": "Asia",

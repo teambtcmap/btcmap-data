@@ -1,11 +1,12 @@
 {
   "id": "cu",
   "tags": {
-    "type": "Sovereignty",
+    "type": "country",
     "iso_a2": "CU",
     "iso_a3": "CUB",
     "wikidataid": "Q241",
     "name": "Cuba",
+    "country_type": "Sovereignty",
     "sovereignt": "Cuba",
     "continent": "North America",
     "region_un": "Americas",

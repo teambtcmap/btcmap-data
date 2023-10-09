@@ -1,11 +1,12 @@
 {
   "id": "es",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ES",
     "iso_a3": "ESP",
     "wikidataid": "Q29",
     "name": "Spain",
+    "country_type": "Sovereign country",
     "sovereignt": "Spain",
     "continent": "Europe",
     "region_un": "Europe",

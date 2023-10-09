@@ -1,11 +1,12 @@
 {
   "id": "lv",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LV",
     "iso_a3": "LVA",
     "wikidataid": "Q211",
     "name": "Latvia",
+    "country_type": "Sovereign country",
     "sovereignt": "Latvia",
     "continent": "Europe",
     "region_un": "Europe",

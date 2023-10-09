@@ -1,11 +1,12 @@
 {
   "id": "se",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SE",
     "iso_a3": "SWE",
     "wikidataid": "Q34",
     "name": "Sweden",
+    "country_type": "Sovereign country",
     "sovereignt": "Sweden",
     "continent": "Europe",
     "region_un": "Europe",

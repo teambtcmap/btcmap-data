@@ -1,11 +1,12 @@
 {
   "id": "rw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "RW",
     "iso_a3": "RWA",
     "wikidataid": "Q1037",
     "name": "Rwanda",
+    "country_type": "Sovereign country",
     "sovereignt": "Rwanda",
     "continent": "Africa",
     "region_un": "Africa",

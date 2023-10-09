@@ -1,11 +1,12 @@
 {
   "id": "cn",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "CN",
     "iso_a3": "CHN",
     "wikidataid": "Q148",
     "name": "China",
+    "country_type": "Country",
     "sovereignt": "China",
     "continent": "Asia",
     "region_un": "Asia",

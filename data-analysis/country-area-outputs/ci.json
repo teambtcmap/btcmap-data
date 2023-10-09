@@ -1,11 +1,12 @@
 {
   "id": "ci",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CI",
     "iso_a3": "CIV",
     "wikidataid": "Q1008",
     "name": "Ivory Coast",
+    "country_type": "Sovereign country",
     "sovereignt": "Ivory Coast",
     "continent": "Africa",
     "region_un": "Africa",

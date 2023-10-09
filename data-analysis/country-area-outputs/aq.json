@@ -1,11 +1,12 @@
 {
   "id": "aq",
   "tags": {
-    "type": "Indeterminate",
+    "type": "country",
     "iso_a2": "AQ",
     "iso_a3": "ATA",
     "wikidataid": "Q51",
     "name": "Antarctica",
+    "country_type": "Indeterminate",
     "sovereignt": "Antarctica",
     "continent": "Antarctica",
     "region_un": "Antarctica",

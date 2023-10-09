@@ -1,11 +1,12 @@
 {
   "id": "hn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "HN",
     "iso_a3": "HND",
     "wikidataid": "Q783",
     "name": "Honduras",
+    "country_type": "Sovereign country",
     "sovereignt": "Honduras",
     "continent": "North America",
     "region_un": "Americas",

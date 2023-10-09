@@ -1,11 +1,12 @@
 {
   "id": "cw",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "CW",
     "iso_a3": "CUW",
     "wikidataid": "Q25279",
     "name": "Cura\u00e7ao",
+    "country_type": "Country",
     "sovereignt": "Netherlands",
     "continent": "North America",
     "region_un": "Americas",

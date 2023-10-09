@@ -1,11 +1,12 @@
 {
   "id": "nr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "NR",
     "iso_a3": "NRU",
     "wikidataid": "Q697",
     "name": "Nauru",
+    "country_type": "Sovereign country",
     "sovereignt": "Nauru",
     "continent": "Oceania",
     "region_un": "Oceania",

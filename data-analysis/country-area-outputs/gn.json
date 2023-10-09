@@ -1,11 +1,12 @@
 {
   "id": "gn",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GN",
     "iso_a3": "GIN",
     "wikidataid": "Q1006",
     "name": "Guinea",
+    "country_type": "Sovereign country",
     "sovereignt": "Guinea",
     "continent": "Africa",
     "region_un": "Africa",

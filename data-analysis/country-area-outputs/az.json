@@ -1,11 +1,12 @@
 {
   "id": "az",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AZ",
     "iso_a3": "AZE",
     "wikidataid": "Q227",
     "name": "Azerbaijan",
+    "country_type": "Sovereign country",
     "sovereignt": "Azerbaijan",
     "continent": "Asia",
     "region_un": "Asia",

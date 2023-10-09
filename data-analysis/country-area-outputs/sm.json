@@ -1,11 +1,12 @@
 {
   "id": "sm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SM",
     "iso_a3": "SMR",
     "wikidataid": "Q238",
     "name": "San Marino",
+    "country_type": "Sovereign country",
     "sovereignt": "San Marino",
     "continent": "Europe",
     "region_un": "Europe",

@@ -1,11 +1,12 @@
 {
   "id": "ec",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "EC",
     "iso_a3": "ECU",
     "wikidataid": "Q736",
     "name": "Ecuador",
+    "country_type": "Sovereign country",
     "sovereignt": "Ecuador",
     "continent": "South America",
     "region_un": "Americas",

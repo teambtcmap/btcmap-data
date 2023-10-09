@@ -1,11 +1,12 @@
 {
   "id": "jm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "JM",
     "iso_a3": "JAM",
     "wikidataid": "Q766",
     "name": "Jamaica",
+    "country_type": "Sovereign country",
     "sovereignt": "Jamaica",
     "continent": "North America",
     "region_un": "Americas",

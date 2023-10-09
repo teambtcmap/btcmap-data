@@ -1,11 +1,12 @@
 {
   "id": "cm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CM",
     "iso_a3": "CMR",
     "wikidataid": "Q1009",
     "name": "Cameroon",
+    "country_type": "Sovereign country",
     "sovereignt": "Cameroon",
     "continent": "Africa",
     "region_un": "Africa",

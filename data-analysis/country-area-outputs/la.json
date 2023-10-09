@@ -1,11 +1,12 @@
 {
   "id": "la",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LA",
     "iso_a3": "LAO",
     "wikidataid": "Q819",
     "name": "Laos",
+    "country_type": "Sovereign country",
     "sovereignt": "Laos",
     "continent": "Asia",
     "region_un": "Asia",

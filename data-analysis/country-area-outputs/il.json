@@ -1,11 +1,12 @@
 {
   "id": "il",
   "tags": {
-    "type": "Disputed",
+    "type": "country",
     "iso_a2": "IL",
     "iso_a3": "ISR",
     "wikidataid": "Q801",
     "name": "Israel",
+    "country_type": "Disputed",
     "sovereignt": "Israel",
     "continent": "Asia",
     "region_un": "Asia",

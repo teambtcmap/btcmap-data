@@ -1,11 +1,12 @@
 {
   "id": "jo",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "JO",
     "iso_a3": "JOR",
     "wikidataid": "Q810",
     "name": "Jordan",
+    "country_type": "Sovereign country",
     "sovereignt": "Jordan",
     "continent": "Asia",
     "region_un": "Asia",

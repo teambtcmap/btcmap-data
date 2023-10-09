@@ -1,11 +1,12 @@
 {
   "id": "mr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MR",
     "iso_a3": "MRT",
     "wikidataid": "Q1025",
     "name": "Mauritania",
+    "country_type": "Sovereign country",
     "sovereignt": "Mauritania",
     "continent": "Africa",
     "region_un": "Africa",

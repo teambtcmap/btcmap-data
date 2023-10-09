@@ -1,11 +1,12 @@
 {
   "id": "kh",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KH",
     "iso_a3": "KHM",
     "wikidataid": "Q424",
     "name": "Cambodia",
+    "country_type": "Sovereign country",
     "sovereignt": "Cambodia",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "je",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "JE",
     "iso_a3": "JEY",
     "wikidataid": "Q785",
     "name": "Jersey",
+    "country_type": "Country",
     "sovereignt": "United Kingdom",
     "continent": "Europe",
     "region_un": "Europe",

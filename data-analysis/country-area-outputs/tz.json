@@ -1,11 +1,12 @@
 {
   "id": "tz",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TZ",
     "iso_a3": "TZA",
     "wikidataid": "Q924",
     "name": "United Republic of Tanzania",
+    "country_type": "Sovereign country",
     "sovereignt": "United Republic of Tanzania",
     "continent": "Africa",
     "region_un": "Africa",

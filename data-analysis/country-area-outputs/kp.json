@@ -1,11 +1,12 @@
 {
   "id": "kp",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "KP",
     "iso_a3": "PRK",
     "wikidataid": "Q423",
     "name": "North Korea",
+    "country_type": "Sovereign country",
     "sovereignt": "North Korea",
     "continent": "Asia",
     "region_un": "Asia",

@@ -1,11 +1,12 @@
 {
   "id": "mm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MM",
     "iso_a3": "MMR",
     "wikidataid": "Q836",
     "name": "Myanmar",
+    "country_type": "Sovereign country",
     "sovereignt": "Myanmar",
     "continent": "Asia",
     "region_un": "Asia",

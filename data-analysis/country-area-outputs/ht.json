@@ -1,11 +1,12 @@
 {
   "id": "ht",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "HT",
     "iso_a3": "HTI",
     "wikidataid": "Q790",
     "name": "Haiti",
+    "country_type": "Sovereign country",
     "sovereignt": "Haiti",
     "continent": "North America",
     "region_un": "Americas",

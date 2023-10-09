@@ -1,11 +1,12 @@
 {
   "id": "am",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AM",
     "iso_a3": "ARM",
     "wikidataid": "Q399",
     "name": "Armenia",
+    "country_type": "Sovereign country",
     "sovereignt": "Armenia",
     "continent": "Asia",
     "region_un": "Asia",

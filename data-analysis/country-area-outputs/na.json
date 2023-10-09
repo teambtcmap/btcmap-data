@@ -1,11 +1,12 @@
 {
   "id": "na",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "NA",
     "iso_a3": "NAM",
     "wikidataid": "Q1030",
     "name": "Namibia",
+    "country_type": "Sovereign country",
     "sovereignt": "Namibia",
     "continent": "Africa",
     "region_un": "Africa",

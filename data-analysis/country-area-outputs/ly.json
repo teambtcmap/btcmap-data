@@ -1,11 +1,12 @@
 {
   "id": "ly",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LY",
     "iso_a3": "LBY",
     "wikidataid": "Q1016",
     "name": "Libya",
+    "country_type": "Sovereign country",
     "sovereignt": "Libya",
     "continent": "Africa",
     "region_un": "Africa",

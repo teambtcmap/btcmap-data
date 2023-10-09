@@ -1,11 +1,12 @@
 {
   "id": "ml",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ML",
     "iso_a3": "MLI",
     "wikidataid": "Q912",
     "name": "Mali",
+    "country_type": "Sovereign country",
     "sovereignt": "Mali",
     "continent": "Africa",
     "region_un": "Africa",

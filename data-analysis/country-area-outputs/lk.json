@@ -1,11 +1,12 @@
 {
   "id": "lk",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LK",
     "iso_a3": "LKA",
     "wikidataid": "Q854",
     "name": "Sri Lanka",
+    "country_type": "Sovereign country",
     "sovereignt": "Sri Lanka",
     "continent": "Asia",
     "region_un": "Asia",

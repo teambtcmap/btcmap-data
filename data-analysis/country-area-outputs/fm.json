@@ -1,11 +1,12 @@
 {
   "id": "fm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "FM",
     "iso_a3": "FSM",
     "wikidataid": "Q702",
     "name": "Federated States of Micronesia",
+    "country_type": "Sovereign country",
     "sovereignt": "Federated States of Micronesia",
     "continent": "Oceania",
     "region_un": "Oceania",

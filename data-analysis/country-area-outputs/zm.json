@@ -1,11 +1,12 @@
 {
   "id": "zm",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ZM",
     "iso_a3": "ZMB",
     "wikidataid": "Q953",
     "name": "Zambia",
+    "country_type": "Sovereign country",
     "sovereignt": "Zambia",
     "continent": "Africa",
     "region_un": "Africa",

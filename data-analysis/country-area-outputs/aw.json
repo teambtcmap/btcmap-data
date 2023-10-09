@@ -1,11 +1,12 @@
 {
   "id": "aw",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "AW",
     "iso_a3": "ABW",
     "wikidataid": "Q21203",
     "name": "Aruba",
+    "country_type": "Country",
     "sovereignt": "Netherlands",
     "continent": "North America",
     "region_un": "Americas",

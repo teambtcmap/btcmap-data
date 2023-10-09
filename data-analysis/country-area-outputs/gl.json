@@ -1,11 +1,12 @@
 {
   "id": "gl",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "GL",
     "iso_a3": "GRL",
     "wikidataid": "Q223",
     "name": "Greenland",
+    "country_type": "Country",
     "sovereignt": "Denmark",
     "continent": "North America",
     "region_un": "Americas",

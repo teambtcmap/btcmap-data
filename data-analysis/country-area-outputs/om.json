@@ -1,11 +1,12 @@
 {
   "id": "om",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "OM",
     "iso_a3": "OMN",
     "wikidataid": "Q842",
     "name": "Oman",
+    "country_type": "Sovereign country",
     "sovereignt": "Oman",
     "continent": "Asia",
     "region_un": "Asia",

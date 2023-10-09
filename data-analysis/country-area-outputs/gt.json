@@ -1,11 +1,12 @@
 {
   "id": "gt",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GT",
     "iso_a3": "GTM",
     "wikidataid": "Q774",
     "name": "Guatemala",
+    "country_type": "Sovereign country",
     "sovereignt": "Guatemala",
     "continent": "North America",
     "region_un": "Americas",

@@ -1,11 +1,12 @@
 {
   "id": "ao",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AO",
     "iso_a3": "AGO",
     "wikidataid": "Q916",
     "name": "Angola",
+    "country_type": "Sovereign country",
     "sovereignt": "Angola",
     "continent": "Africa",
     "region_un": "Africa",

@@ -1,11 +1,12 @@
 {
   "id": "co",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CO",
     "iso_a3": "COL",
     "wikidataid": "Q739",
     "name": "Colombia",
+    "country_type": "Sovereign country",
     "sovereignt": "Colombia",
     "continent": "South America",
     "region_un": "Americas",

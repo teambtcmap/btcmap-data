@@ -1,11 +1,12 @@
 {
   "id": "ge",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GE",
     "iso_a3": "GEO",
     "wikidataid": "Q230",
     "name": "Georgia",
+    "country_type": "Sovereign country",
     "sovereignt": "Georgia",
     "continent": "Asia",
     "region_un": "Asia",

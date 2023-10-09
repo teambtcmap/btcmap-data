@@ -1,11 +1,12 @@
 {
   "id": "fk",
   "tags": {
-    "type": "Disputed",
+    "type": "country",
     "iso_a2": "FK",
     "iso_a3": "FLK",
     "wikidataid": "Q9648",
     "name": "Falkland Islands",
+    "country_type": "Disputed",
     "sovereignt": "United Kingdom",
     "continent": "South America",
     "region_un": "Americas",

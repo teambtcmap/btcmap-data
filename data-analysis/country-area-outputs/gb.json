@@ -1,11 +1,12 @@
 {
   "id": "gb",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "GB",
     "iso_a3": "GBR",
     "wikidataid": "Q145",
     "name": "United Kingdom",
+    "country_type": "Country",
     "sovereignt": "United Kingdom",
     "continent": "Europe",
     "region_un": "Europe",

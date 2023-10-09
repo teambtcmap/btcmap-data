@@ -1,11 +1,12 @@
 {
   "id": "ba",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BA",
     "iso_a3": "BIH",
     "wikidataid": "Q225",
     "name": "Bosnia and Herzegovina",
+    "country_type": "Sovereign country",
     "sovereignt": "Bosnia and Herzegovina",
     "continent": "Europe",
     "region_un": "Europe",

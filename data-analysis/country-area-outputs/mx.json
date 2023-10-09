@@ -1,11 +1,12 @@
 {
   "id": "mx",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MX",
     "iso_a3": "MEX",
     "wikidataid": "Q96",
     "name": "Mexico",
+    "country_type": "Sovereign country",
     "sovereignt": "Mexico",
     "continent": "North America",
     "region_un": "Americas",

@@ -1,11 +1,12 @@
 {
   "id": "ng",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "NG",
     "iso_a3": "NGA",
     "wikidataid": "Q1033",
     "name": "Nigeria",
+    "country_type": "Sovereign country",
     "sovereignt": "Nigeria",
     "continent": "Africa",
     "region_un": "Africa",

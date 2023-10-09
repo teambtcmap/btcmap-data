@@ -1,11 +1,12 @@
 {
   "id": "gs",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "GS",
     "iso_a3": "SGS",
     "wikidataid": "Q35086",
     "name": "South Georgia and the Islands",
+    "country_type": "Dependency",
     "sovereignt": "United Kingdom",
     "continent": "Seven seas (open ocean)",
     "region_un": "Americas",

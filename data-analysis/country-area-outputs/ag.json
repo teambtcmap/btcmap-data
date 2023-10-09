@@ -1,11 +1,12 @@
 {
   "id": "ag",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AG",
     "iso_a3": "ATG",
     "wikidataid": "Q781",
     "name": "Antigua and Barbuda",
+    "country_type": "Sovereign country",
     "sovereignt": "Antigua and Barbuda",
     "continent": "North America",
     "region_un": "Americas",

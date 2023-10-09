@@ -1,11 +1,12 @@
 {
   "id": "ad",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AD",
     "iso_a3": "AND",
     "wikidataid": "Q228",
     "name": "Andorra",
+    "country_type": "Sovereign country",
     "sovereignt": "Andorra",
     "continent": "Europe",
     "region_un": "Europe",

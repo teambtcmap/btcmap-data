@@ -1,11 +1,12 @@
 {
   "id": "sx",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "SX",
     "iso_a3": "SXM",
     "wikidataid": "Q26273",
     "name": "Sint Maarten",
+    "country_type": "Country",
     "sovereignt": "Netherlands",
     "continent": "North America",
     "region_un": "Americas",

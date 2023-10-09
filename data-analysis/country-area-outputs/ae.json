@@ -1,11 +1,12 @@
 {
   "id": "ae",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AE",
     "iso_a3": "ARE",
     "wikidataid": "Q878",
     "name": "United Arab Emirates",
+    "country_type": "Sovereign country",
     "sovereignt": "United Arab Emirates",
     "continent": "Asia",
     "region_un": "Asia",

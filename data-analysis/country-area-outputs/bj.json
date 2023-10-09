@@ -1,11 +1,12 @@
 {
   "id": "bj",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BJ",
     "iso_a3": "BEN",
     "wikidataid": "Q962",
     "name": "Benin",
+    "country_type": "Sovereign country",
     "sovereignt": "Benin",
     "continent": "Africa",
     "region_un": "Africa",

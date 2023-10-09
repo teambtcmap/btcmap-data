@@ -1,11 +1,12 @@
 {
   "id": "iq",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IQ",
     "iso_a3": "IRQ",
     "wikidataid": "Q796",
     "name": "Iraq",
+    "country_type": "Sovereign country",
     "sovereignt": "Iraq",
     "continent": "Asia",
     "region_un": "Asia",

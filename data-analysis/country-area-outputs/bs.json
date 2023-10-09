@@ -1,11 +1,12 @@
 {
   "id": "bs",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BS",
     "iso_a3": "BHS",
     "wikidataid": "Q778",
     "name": "The Bahamas",
+    "country_type": "Sovereign country",
     "sovereignt": "The Bahamas",
     "continent": "North America",
     "region_un": "Americas",

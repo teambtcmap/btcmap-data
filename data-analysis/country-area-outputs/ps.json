@@ -1,11 +1,12 @@
 {
   "id": "ps",
   "tags": {
-    "type": "Indeterminate",
+    "type": "country",
     "iso_a2": "PS",
     "iso_a3": "PSE",
     "wikidataid": "Q23792",
     "name": "Palestine",
+    "country_type": "Indeterminate",
     "sovereignt": "Israel",
     "continent": "Asia",
     "region_un": "Asia",

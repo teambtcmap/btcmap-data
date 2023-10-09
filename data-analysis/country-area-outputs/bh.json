@@ -1,11 +1,12 @@
 {
   "id": "bh",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BH",
     "iso_a3": "BHR",
     "wikidataid": "Q398",
     "name": "Bahrain",
+    "country_type": "Sovereign country",
     "sovereignt": "Bahrain",
     "continent": "Asia",
     "region_un": "Asia",

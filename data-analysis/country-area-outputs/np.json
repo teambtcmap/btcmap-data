@@ -1,11 +1,12 @@
 {
   "id": "np",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "NP",
     "iso_a3": "NPL",
     "wikidataid": "Q837",
     "name": "Nepal",
+    "country_type": "Sovereign country",
     "sovereignt": "Nepal",
     "continent": "Asia",
     "region_un": "Asia",

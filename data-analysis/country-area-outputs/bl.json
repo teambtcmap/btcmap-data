@@ -1,11 +1,12 @@
 {
   "id": "bl",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "BL",
     "iso_a3": "BLM",
     "wikidataid": "Q25362",
     "name": "Saint Barthelemy",
+    "country_type": "Dependency",
     "sovereignt": "France",
     "continent": "North America",
     "region_un": "Americas",

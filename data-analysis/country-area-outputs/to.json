@@ -1,11 +1,12 @@
 {
   "id": "to",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TO",
     "iso_a3": "TON",
     "wikidataid": "Q678",
     "name": "Tonga",
+    "country_type": "Sovereign country",
     "sovereignt": "Tonga",
     "continent": "Oceania",
     "region_un": "Oceania",

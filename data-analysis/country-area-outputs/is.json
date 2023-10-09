@@ -1,11 +1,12 @@
 {
   "id": "is",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "IS",
     "iso_a3": "ISL",
     "wikidataid": "Q189",
     "name": "Iceland",
+    "country_type": "Sovereign country",
     "sovereignt": "Iceland",
     "continent": "Europe",
     "region_un": "Europe",

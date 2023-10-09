@@ -1,11 +1,12 @@
 {
   "id": "ve",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "VE",
     "iso_a3": "VEN",
     "wikidataid": "Q717",
     "name": "Venezuela",
+    "country_type": "Sovereign country",
     "sovereignt": "Venezuela",
     "continent": "South America",
     "region_un": "Americas",

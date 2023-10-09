@@ -1,11 +1,12 @@
 {
   "id": "cd",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CD",
     "iso_a3": "COD",
     "wikidataid": "Q974",
     "name": "Democratic Republic of the Congo",
+    "country_type": "Sovereign country",
     "sovereignt": "Democratic Republic of the Congo",
     "continent": "Africa",
     "region_un": "Africa",

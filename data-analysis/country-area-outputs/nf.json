@@ -1,11 +1,12 @@
 {
   "id": "nf",
   "tags": {
-    "type": "Dependency",
+    "type": "country",
     "iso_a2": "NF",
     "iso_a3": "NFK",
     "wikidataid": "Q31057",
     "name": "Norfolk Island",
+    "country_type": "Dependency",
     "sovereignt": "Australia",
     "continent": "Oceania",
     "region_un": "Oceania",

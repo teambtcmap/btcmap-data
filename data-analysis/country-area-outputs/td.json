@@ -1,11 +1,12 @@
 {
   "id": "td",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TD",
     "iso_a3": "TCD",
     "wikidataid": "Q657",
     "name": "Chad",
+    "country_type": "Sovereign country",
     "sovereignt": "Chad",
     "continent": "Africa",
     "region_un": "Africa",

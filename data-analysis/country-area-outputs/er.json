@@ -1,11 +1,12 @@
 {
   "id": "er",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "ER",
     "iso_a3": "ERI",
     "wikidataid": "Q986",
     "name": "Eritrea",
+    "country_type": "Sovereign country",
     "sovereignt": "Eritrea",
     "continent": "Africa",
     "region_un": "Africa",

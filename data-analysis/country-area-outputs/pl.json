@@ -1,11 +1,12 @@
 {
   "id": "pl",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "PL",
     "iso_a3": "POL",
     "wikidataid": "Q36",
     "name": "Poland",
+    "country_type": "Sovereign country",
     "sovereignt": "Poland",
     "continent": "Europe",
     "region_un": "Europe",

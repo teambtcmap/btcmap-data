@@ -1,11 +1,12 @@
 {
   "id": "tj",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TJ",
     "iso_a3": "TJK",
     "wikidataid": "Q863",
     "name": "Tajikistan",
+    "country_type": "Sovereign country",
     "sovereignt": "Tajikistan",
     "continent": "Asia",
     "region_un": "Asia",

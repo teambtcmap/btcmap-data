@@ -1,11 +1,12 @@
 {
   "id": "au",
   "tags": {
-    "type": "Country",
+    "type": "country",
     "iso_a2": "AU",
     "iso_a3": "AUS",
     "wikidataid": "Q408",
     "name": "Australia",
+    "country_type": "Country",
     "sovereignt": "Australia",
     "continent": "Oceania",
     "region_un": "Oceania",

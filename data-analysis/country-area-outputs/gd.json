@@ -1,11 +1,12 @@
 {
   "id": "gd",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "GD",
     "iso_a3": "GRD",
     "wikidataid": "Q769",
     "name": "Grenada",
+    "country_type": "Sovereign country",
     "sovereignt": "Grenada",
     "continent": "North America",
     "region_un": "Americas",

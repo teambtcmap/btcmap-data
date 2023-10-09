@@ -1,11 +1,12 @@
 {
   "id": "md",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MD",
     "iso_a3": "MDA",
     "wikidataid": "Q217",
     "name": "Moldova",
+    "country_type": "Sovereign country",
     "sovereignt": "Moldova",
     "continent": "Europe",
     "region_un": "Europe",

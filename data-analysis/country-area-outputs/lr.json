@@ -1,11 +1,12 @@
 {
   "id": "lr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "LR",
     "iso_a3": "LBR",
     "wikidataid": "Q1014",
     "name": "Liberia",
+    "country_type": "Sovereign country",
     "sovereignt": "Liberia",
     "continent": "Africa",
     "region_un": "Africa",

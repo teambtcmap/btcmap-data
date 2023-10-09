@@ -1,11 +1,12 @@
 {
   "id": "ua",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "UA",
     "iso_a3": "UKR",
     "wikidataid": "Q212",
     "name": "Ukraine",
+    "country_type": "Sovereign country",
     "sovereignt": "Ukraine",
     "continent": "Europe",
     "region_un": "Europe",

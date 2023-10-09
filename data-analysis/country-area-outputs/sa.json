@@ -1,11 +1,12 @@
 {
   "id": "sa",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "SA",
     "iso_a3": "SAU",
     "wikidataid": "Q851",
     "name": "Saudi Arabia",
+    "country_type": "Sovereign country",
     "sovereignt": "Saudi Arabia",
     "continent": "Asia",
     "region_un": "Asia",

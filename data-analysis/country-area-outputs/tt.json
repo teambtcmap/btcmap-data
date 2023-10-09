@@ -1,11 +1,12 @@
 {
   "id": "tt",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TT",
     "iso_a3": "TTO",
     "wikidataid": "Q754",
     "name": "Trinidad and Tobago",
+    "country_type": "Sovereign country",
     "sovereignt": "Trinidad and Tobago",
     "continent": "North America",
     "region_un": "Americas",

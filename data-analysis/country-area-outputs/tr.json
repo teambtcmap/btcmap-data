@@ -1,11 +1,12 @@
 {
   "id": "tr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "TR",
     "iso_a3": "TUR",
     "wikidataid": "Q43",
     "name": "Turkey",
+    "country_type": "Sovereign country",
     "sovereignt": "Turkey",
     "continent": "Asia",
     "region_un": "Asia",

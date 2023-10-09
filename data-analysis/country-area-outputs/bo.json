@@ -1,11 +1,12 @@
 {
   "id": "bo",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BO",
     "iso_a3": "BOL",
     "wikidataid": "Q750",
     "name": "Bolivia",
+    "country_type": "Sovereign country",
     "sovereignt": "Bolivia",
     "continent": "South America",
     "region_un": "Americas",

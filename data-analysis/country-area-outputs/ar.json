@@ -1,11 +1,12 @@
 {
   "id": "ar",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "AR",
     "iso_a3": "ARG",
     "wikidataid": "Q414",
     "name": "Argentina",
+    "country_type": "Sovereign country",
     "sovereignt": "Argentina",
     "continent": "South America",
     "region_un": "Americas",

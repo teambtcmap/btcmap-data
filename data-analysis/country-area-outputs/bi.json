@@ -1,11 +1,12 @@
 {
   "id": "bi",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BI",
     "iso_a3": "BDI",
     "wikidataid": "Q967",
     "name": "Burundi",
+    "country_type": "Sovereign country",
     "sovereignt": "Burundi",
     "continent": "Africa",
     "region_un": "Africa",

@@ -1,11 +1,12 @@
 {
   "id": "mu",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MU",
     "iso_a3": "MUS",
     "wikidataid": "Q1027",
     "name": "Mauritius",
+    "country_type": "Sovereign country",
     "sovereignt": "Mauritius",
     "continent": "Seven seas (open ocean)",
     "region_un": "Africa",

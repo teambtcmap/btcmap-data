@@ -1,11 +1,12 @@
 {
   "id": "mw",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "MW",
     "iso_a3": "MWI",
     "wikidataid": "Q1020",
     "name": "Malawi",
+    "country_type": "Sovereign country",
     "sovereignt": "Malawi",
     "continent": "Africa",
     "region_un": "Africa",

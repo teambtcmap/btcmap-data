@@ -1,11 +1,12 @@
 {
   "id": "by",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BY",
     "iso_a3": "BLR",
     "wikidataid": "Q184",
     "name": "Belarus",
+    "country_type": "Sovereign country",
     "sovereignt": "Belarus",
     "continent": "Europe",
     "region_un": "Europe",

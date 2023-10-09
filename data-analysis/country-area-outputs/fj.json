@@ -1,11 +1,12 @@
 {
   "id": "fj",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "FJ",
     "iso_a3": "FJI",
     "wikidataid": "Q712",
     "name": "Fiji",
+    "country_type": "Sovereign country",
     "sovereignt": "Fiji",
     "continent": "Oceania",
     "region_un": "Oceania",

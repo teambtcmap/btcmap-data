@@ -1,11 +1,12 @@
 {
   "id": "cf",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CF",
     "iso_a3": "CAF",
     "wikidataid": "Q929",
     "name": "Central African Republic",
+    "country_type": "Sovereign country",
     "sovereignt": "Central African Republic",
     "continent": "Africa",
     "region_un": "Africa",

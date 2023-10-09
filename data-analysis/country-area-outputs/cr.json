@@ -1,11 +1,12 @@
 {
   "id": "cr",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CR",
     "iso_a3": "CRI",
     "wikidataid": "Q800",
     "name": "Costa Rica",
+    "country_type": "Sovereign country",
     "sovereignt": "Costa Rica",
     "continent": "North America",
     "region_un": "Americas",

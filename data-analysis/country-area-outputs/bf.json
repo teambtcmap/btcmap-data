@@ -1,11 +1,12 @@
 {
   "id": "bf",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "BF",
     "iso_a3": "BFA",
     "wikidataid": "Q965",
     "name": "Burkina Faso",
+    "country_type": "Sovereign country",
     "sovereignt": "Burkina Faso",
     "continent": "Africa",
     "region_un": "Africa",

@@ -1,11 +1,12 @@
 {
   "id": "cl",
   "tags": {
-    "type": "Sovereign country",
+    "type": "country",
     "iso_a2": "CL",
     "iso_a3": "CHL",
     "wikidataid": "Q298",
     "name": "Chile",
+    "country_type": "Sovereign country",
     "sovereignt": "Chile",
     "continent": "South America",
     "region_un": "Americas",
