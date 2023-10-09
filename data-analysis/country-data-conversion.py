@@ -10,7 +10,7 @@ os.chdir(script_directory)
 input_directory_path = 'geojson-regions-10m'
 
 # Specify the output directory where you want to save the JSON files
-output_directory_path = 'country-area-outputs
+output_directory_path = 'country-area-outputs'
 
 # Function to extract elements from a GeoJSON feature
 def extract_elements(feature):
