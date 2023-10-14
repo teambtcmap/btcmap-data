@@ -1,0 +1,77 @@
+{
+  "id": "bl",
+  "tags": {
+    "type": "country",
+    "iso_a2": "BL",
+    "iso_a3": "BLM",
+    "wikidataid": "Q25362",
+    "name": "Saint Barthelemy",
+    "country_type": "Dependency",
+    "sovereignt": "France",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 17.901987,
+    "lon": -62.833193,
+    "area_km2": 25,
+    "population": 9961,
+    "population:rank": 5,
+    "population:year": 2017,
+    "gdp_md": 255,
+    "gdp_year": 2016,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "1. High income: OECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.831933593749994,
+            17.87646484375
+          ],
+          [
+            -62.846923828125,
+            17.875195312499997
+          ],
+          [
+            -62.85893554687499,
+            17.88364257812499
+          ],
+          [
+            -62.869384765625,
+            17.898583984374994
+          ],
+          [
+            -62.875439453125,
+            17.91357421875
+          ],
+          [
+            -62.87421875,
+            17.922265625
+          ],
+          [
+            -62.8654296875,
+            17.918261718750003
+          ],
+          [
+            -62.799707031249994,
+            17.90869140625
+          ],
+          [
+            -62.80703125,
+            17.89765625
+          ],
+          [
+            -62.81816406249999,
+            17.885449218749997
+          ],
+          [
+            -62.831933593749994,
+            17.87646484375
+          ]
+        ]
+      ]
+    }
+  }
+}

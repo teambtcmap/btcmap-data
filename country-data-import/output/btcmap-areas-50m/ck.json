@@ -1,0 +1,77 @@
+{
+  "id": "ck",
+  "tags": {
+    "type": "country",
+    "iso_a2": "CK",
+    "iso_a3": "COK",
+    "wikidataid": "Q26988",
+    "name": "Cook Islands",
+    "country_type": "Dependency",
+    "sovereignt": "New Zealand",
+    "continent": "Oceania",
+    "region_un": "Oceania",
+    "subregion": "Polynesia",
+    "region_wb": "East Asia & Pacific",
+    "lat": -21.215993,
+    "lon": -159.785675,
+    "area_km2": 61,
+    "population": 17459,
+    "population:rank": 6,
+    "population:year": 2016,
+    "gdp_md": 244,
+    "gdp_year": 2010,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -159.74052734375,
+            -21.24921875000001
+          ],
+          [
+            -159.77255859375,
+            -21.24951171875
+          ],
+          [
+            -159.8130859375,
+            -21.24208984375001
+          ],
+          [
+            -159.839599609375,
+            -21.238085937500003
+          ],
+          [
+            -159.84248046875,
+            -21.229101562500006
+          ],
+          [
+            -159.83203125,
+            -21.200488281250003
+          ],
+          [
+            -159.810595703125,
+            -21.18642578125001
+          ],
+          [
+            -159.768359375,
+            -21.1884765625
+          ],
+          [
+            -159.739501953125,
+            -21.208105468750006
+          ],
+          [
+            -159.736865234375,
+            -21.240625
+          ],
+          [
+            -159.74052734375,
+            -21.24921875000001
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gq",
+  "tags": {
+    "type": "country",
+    "iso_a2": "GQ",
+    "iso_a3": "GNQ",
+    "wikidataid": "Q983",
+    "name": "Equatorial Guinea",
+    "country_type": "Sovereign country",
+    "sovereignt": "Equatorial Guinea",
+    "continent": "Africa",
+    "region_un": "Africa",
+    "subregion": "Middle Africa",
+    "region_wb": "Sub-Saharan Africa",
+    "lat": 2.333,
+    "lon": 8.9902,
+    "area_km2": 27300,
+    "population": 1355986,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 11026,
+    "gdp_year": 2019,
+    "economy": "7. Least developed region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.649158155972628,
+            2.283866075037736
+          ],
+          [
+            11.276449008843713,
+            2.261050930180872
+          ],
+          [
+            11.285078973036462,
+            1.057661851400013
+          ],
+          [
+            9.830284051155644,
+            1.067893784993799
+          ],
+          [
+            9.492888624721985,
+            1.010119533691494
+          ],
+          [
+            9.305613234096256,
+            1.160911363119183
+          ],
+          [
+            9.649158155972628,
+            2.283866075037736
+          ]
+        ]
+      ]
+    }
+  }
+}

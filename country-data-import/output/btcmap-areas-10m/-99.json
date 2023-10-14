@@ -1,0 +1,53 @@
+{
+  "id": "-99",
+  "tags": {
+    "type": "country",
+    "iso_a2": "-99",
+    "iso_a3": "-99",
+    "wikidataid": "Q2093778",
+    "name": "Brazilian Island",
+    "country_type": "Indeterminate",
+    "sovereignt": "Brazilian Island",
+    "continent": "South America",
+    "region_un": "Americas",
+    "subregion": "South America",
+    "region_wb": "Latin America & Caribbean",
+    "lat": -30.187555,
+    "lon": -57.623042,
+    "area_km2": 3,
+    "population": 0,
+    "population:rank": 1,
+    "population:year": 2019,
+    "gdp_md": 0,
+    "gdp_year": 2019,
+    "economy": "3. Emerging region: BRIC",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -57.64246584634791,
+            -30.193092102762034
+          ],
+          [
+            -57.63397090699996,
+            -30.183582864999906
+          ],
+          [
+            -57.61169836499991,
+            -30.182962747999937
+          ],
+          [
+            -57.602792548565105,
+            -30.190516953885325
+          ],
+          [
+            -57.64246584634791,
+            -30.193092102762034
+          ]
+        ]
+      ]
+    }
+  }
+}

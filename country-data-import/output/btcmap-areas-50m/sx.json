@@ -1,0 +1,61 @@
+{
+  "id": "sx",
+  "tags": {
+    "type": "country",
+    "iso_a2": "SX",
+    "iso_a3": "SXM",
+    "wikidataid": "Q26273",
+    "name": "Sint Maarten",
+    "country_type": "Country",
+    "sovereignt": "Netherlands",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 18.04088,
+    "lon": -63.070133,
+    "area_km2": 42,
+    "population": 40733,
+    "population:rank": 7,
+    "population:year": 2019,
+    "gdp_md": 1185,
+    "gdp_year": 2018,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -63.123046875,
+            18.06894531249999
+          ],
+          [
+            -63.011181640625,
+            18.06894531249999
+          ],
+          [
+            -63.01230468749999,
+            18.04541015625
+          ],
+          [
+            -63.023046875,
+            18.019189453124994
+          ],
+          [
+            -63.09042968749999,
+            18.04140625
+          ],
+          [
+            -63.12470703125,
+            18.06430664062499
+          ],
+          [
+            -63.123046875,
+            18.06894531249999
+          ]
+        ]
+      ]
+    }
+  }
+}

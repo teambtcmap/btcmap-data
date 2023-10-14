@@ -1,0 +1,73 @@
+{
+  "id": "lk",
+  "tags": {
+    "type": "country",
+    "iso_a2": "LK",
+    "iso_a3": "LKA",
+    "wikidataid": "Q854",
+    "name": "Sri Lanka",
+    "country_type": "Sovereign country",
+    "sovereignt": "Sri Lanka",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Southern Asia",
+    "region_wb": "South Asia",
+    "lat": 7.581097,
+    "lon": 80.704823,
+    "area_km2": 65783,
+    "population": 21803000,
+    "population:rank": 15,
+    "population:year": 2019,
+    "gdp_md": 84008,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "4. Lower middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            81.7879590188914,
+            7.523055324733164
+          ],
+          [
+            81.63732221876059,
+            6.481775214051922
+          ],
+          [
+            81.21801964714433,
+            6.197141424988288
+          ],
+          [
+            80.34835696810441,
+            5.968369859232155
+          ],
+          [
+            79.87246870312853,
+            6.76346344647493
+          ],
+          [
+            79.69516686393513,
+            8.200843410673386
+          ],
+          [
+            80.14780073437964,
+            9.824077663609557
+          ],
+          [
+            80.83881798698656,
+            9.268426825391188
+          ],
+          [
+            81.30431928907177,
+            8.56420624433369
+          ],
+          [
+            81.7879590188914,
+            7.523055324733164
+          ]
+        ]
+      ]
+    }
+  }
+}

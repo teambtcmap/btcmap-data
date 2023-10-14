@@ -1,0 +1,61 @@
+{
+  "id": "gg",
+  "tags": {
+    "type": "country",
+    "iso_a2": "GG",
+    "iso_a3": "GGY",
+    "wikidataid": "Q25230",
+    "name": "Guernsey",
+    "country_type": "Country",
+    "sovereignt": "United Kingdom",
+    "continent": "Europe",
+    "region_un": "Europe",
+    "subregion": "Northern Europe",
+    "region_wb": "Europe & Central Asia",
+    "lat": 49.463533,
+    "lon": -2.561736,
+    "area_km2": 48,
+    "population": 62792,
+    "population:rank": 8,
+    "population:year": 2019,
+    "gdp_md": 3465,
+    "gdp_year": 2015,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2.512304687499977,
+            49.49453125
+          ],
+          [
+            -2.54736328125,
+            49.4287109375
+          ],
+          [
+            -2.639013671874977,
+            49.450927734375
+          ],
+          [
+            -2.646142578124994,
+            49.468212890625
+          ],
+          [
+            -2.542187499999983,
+            49.506591796875
+          ],
+          [
+            -2.520898437499994,
+            49.506298828125
+          ],
+          [
+            -2.512304687499977,
+            49.49453125
+          ]
+        ]
+      ]
+    }
+  }
+}

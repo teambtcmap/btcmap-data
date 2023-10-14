@@ -1,0 +1,127 @@
+{
+  "id": "bs",
+  "tags": {
+    "type": "country",
+    "iso_a2": "BS",
+    "iso_a3": "BHS",
+    "wikidataid": "Q778",
+    "name": "The Bahamas",
+    "country_type": "Sovereign country",
+    "sovereignt": "The Bahamas",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 26.401789,
+    "lon": -77.146688,
+    "area_km2": 15650,
+    "population": 389482,
+    "population:rank": 10,
+    "population:year": 2019,
+    "gdp_md": 13578,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -78.98,
+              26.79
+            ],
+            [
+              -78.51,
+              26.87
+            ],
+            [
+              -77.85,
+              26.84
+            ],
+            [
+              -77.82,
+              26.58
+            ],
+            [
+              -78.91,
+              26.42
+            ],
+            [
+              -78.98,
+              26.79
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -77.79,
+              27.04
+            ],
+            [
+              -77,
+              26.59
+            ],
+            [
+              -77.17255,
+              25.87918
+            ],
+            [
+              -77.35641,
+              26.00735
+            ],
+            [
+              -77.34,
+              26.53
+            ],
+            [
+              -77.78802,
+              26.92516
+            ],
+            [
+              -77.79,
+              27.04
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -78.19087,
+              25.2103
+            ],
+            [
+              -77.89,
+              25.17
+            ],
+            [
+              -77.54,
+              24.34
+            ],
+            [
+              -77.53466,
+              23.75975
+            ],
+            [
+              -77.78,
+              23.71
+            ],
+            [
+              -78.03405,
+              24.28615
+            ],
+            [
+              -78.40848,
+              24.57564
+            ],
+            [
+              -78.19087,
+              25.2103
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+}

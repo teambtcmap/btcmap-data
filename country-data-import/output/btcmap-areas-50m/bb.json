@@ -1,0 +1,69 @@
+{
+  "id": "bb",
+  "tags": {
+    "type": "country",
+    "iso_a2": "BB",
+    "iso_a3": "BRB",
+    "wikidataid": "Q244",
+    "name": "Barbados",
+    "country_type": "Sovereign country",
+    "sovereignt": "Barbados",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 13.163709,
+    "lon": -59.568966,
+    "area_km2": 390,
+    "population": 287025,
+    "population:rank": 10,
+    "population:year": 2019,
+    "gdp_md": 5209,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -59.493310546874994,
+            13.081982421874997
+          ],
+          [
+            -59.521875,
+            13.062207031249997
+          ],
+          [
+            -59.611328125,
+            13.102099609374989
+          ],
+          [
+            -59.6427734375,
+            13.150292968749994
+          ],
+          [
+            -59.6466796875,
+            13.303125
+          ],
+          [
+            -59.59160156249999,
+            13.317675781250003
+          ],
+          [
+            -59.487890625,
+            13.196826171874989
+          ],
+          [
+            -59.427636718749994,
+            13.152783203124997
+          ],
+          [
+            -59.493310546874994,
+            13.081982421874997
+          ]
+        ]
+      ]
+    }
+  }
+}

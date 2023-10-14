@@ -1,0 +1,69 @@
+{
+  "id": "kw",
+  "tags": {
+    "type": "country",
+    "iso_a2": "KW",
+    "iso_a3": "KWT",
+    "wikidataid": "Q817",
+    "name": "Kuwait",
+    "country_type": "Sovereign country",
+    "sovereignt": "Kuwait",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Western Asia",
+    "region_wb": "Middle East & North Africa",
+    "lat": 29.413628,
+    "lon": 47.313999,
+    "area_km2": 16691,
+    "population": 4207083,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 134628,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            47.974519077349896,
+            29.975819200148504
+          ],
+          [
+            48.18318851094449,
+            29.534476630159762
+          ],
+          [
+            48.09394331237642,
+            29.306299343375002
+          ],
+          [
+            48.416094191283946,
+            28.55200429942667
+          ],
+          [
+            47.708850538937384,
+            28.526062730416143
+          ],
+          [
+            47.45982181172283,
+            29.002519436147224
+          ],
+          [
+            46.568713413281756,
+            29.09902517345229
+          ],
+          [
+            47.30262210469096,
+            30.059069932570722
+          ],
+          [
+            47.974519077349896,
+            29.975819200148504
+          ]
+        ]
+      ]
+    }
+  }
+}

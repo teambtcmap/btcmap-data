@@ -1,0 +1,65 @@
+{
+  "id": "sc",
+  "tags": {
+    "type": "country",
+    "iso_a2": "SC",
+    "iso_a3": "SYC",
+    "wikidataid": "Q1042",
+    "name": "Seychelles",
+    "country_type": "Sovereign country",
+    "sovereignt": "Seychelles",
+    "continent": "Seven seas (open ocean)",
+    "region_un": "Africa",
+    "subregion": "Eastern Africa",
+    "region_wb": "Sub-Saharan Africa",
+    "lat": -4.676659,
+    "lon": 55.480175,
+    "area_km2": 175,
+    "population": 97625,
+    "population:rank": 8,
+    "population:year": 2019,
+    "gdp_md": 1703,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            55.54033203125002,
+            -4.693066406250011
+          ],
+          [
+            55.54296875,
+            -4.785546875
+          ],
+          [
+            55.494726562500006,
+            -4.754589843750011
+          ],
+          [
+            55.48125,
+            -4.69482421875
+          ],
+          [
+            55.41679687500002,
+            -4.650292968750009
+          ],
+          [
+            55.383398437500006,
+            -4.609277343750009
+          ],
+          [
+            55.45576171875001,
+            -4.558789062500011
+          ],
+          [
+            55.54033203125002,
+            -4.693066406250011
+          ]
+        ]
+      ]
+    }
+  }
+}

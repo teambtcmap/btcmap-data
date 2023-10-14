@@ -1,0 +1,77 @@
+{
+  "id": "lb",
+  "tags": {
+    "type": "country",
+    "iso_a2": "LB",
+    "iso_a3": "LBN",
+    "wikidataid": "Q822",
+    "name": "Lebanon",
+    "country_type": "Sovereign country",
+    "sovereignt": "Lebanon",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Western Asia",
+    "region_wb": "Middle East & North Africa",
+    "lat": 34.133368,
+    "lon": 35.992892,
+    "area_km2": 10114,
+    "population": 6855713,
+    "population:rank": 13,
+    "population:year": 2019,
+    "gdp_md": 51991,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.82110070165024,
+            33.2774264592763
+          ],
+          [
+            35.55279666519081,
+            33.26427480725802
+          ],
+          [
+            35.460709262846706,
+            33.08904002535628
+          ],
+          [
+            35.126052687324545,
+            33.09090037691878
+          ],
+          [
+            35.48220665868013,
+            33.90545014091944
+          ],
+          [
+            35.9795923194894,
+            34.61005829521913
+          ],
+          [
+            35.99840254084364,
+            34.644914048800004
+          ],
+          [
+            36.4481942075121,
+            34.59393524834407
+          ],
+          [
+            36.61175011571589,
+            34.20178864189718
+          ],
+          [
+            36.066460402172055,
+            33.82491242119255
+          ],
+          [
+            35.82110070165024,
+            33.2774264592763
+          ]
+        ]
+      ]
+    }
+  }
+}

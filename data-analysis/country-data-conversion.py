@@ -1,3 +1,9 @@
+#This script takes GeoJSON country definitions sourced from https://github.com/AshKyd/geojson-regions and converts them to the BTC Map format.
+#The area of the GeoJSON is calculated in KM^2 at the same time.
+
+#TODO
+# Switch to the https://public.opendatasoft.com/explore/dataset/ne_10m_admin_0_countries/api/ dataset.
+
 import os
 import json
 from area import area
@@ -5,12 +11,13 @@ from area import area
 # Set the working directory to the script's directory
 script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
+print(script_directory)
 
 # Specify the input directory containing the GeoJSON files
-input_directory_path = 'geojson-regions-10m'
+input_directory_path = 'input/geojson-regions-110m'
 
 # Specify the output directory where you want to save the JSON files
-output_directory_path = 'country-area-outputs'
+output_directory_path = 'output/btcmap-areas-110m'
 
 # Function to extract elements from a GeoJSON feature
 def extract_elements(feature):

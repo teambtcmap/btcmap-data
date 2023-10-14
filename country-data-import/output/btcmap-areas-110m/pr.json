@@ -1,0 +1,69 @@
+{
+  "id": "pr",
+  "tags": {
+    "type": "country",
+    "iso_a2": "PR",
+    "iso_a3": "PRI",
+    "wikidataid": "Q1183",
+    "name": "Puerto Rico",
+    "country_type": "Dependency",
+    "sovereignt": "United States of America",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 18.234668,
+    "lon": -66.481065,
+    "area_km2": 9275,
+    "population": 3193694,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 104988,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -66.28243445500821,
+            18.514761664295364
+          ],
+          [
+            -65.7713028632093,
+            18.426679185453878
+          ],
+          [
+            -65.59100379094295,
+            18.228034979723915
+          ],
+          [
+            -65.84716386581377,
+            17.97590566657186
+          ],
+          [
+            -66.59993445500949,
+            17.981822618069273
+          ],
+          [
+            -67.18416236028527,
+            17.946553453030077
+          ],
+          [
+            -67.24242753769435,
+            18.374460150622937
+          ],
+          [
+            -67.10067908391774,
+            18.52060110114435
+          ],
+          [
+            -66.28243445500821,
+            18.514761664295364
+          ]
+        ]
+      ]
+    }
+  }
+}

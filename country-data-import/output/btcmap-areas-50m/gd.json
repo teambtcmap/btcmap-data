@@ -1,0 +1,69 @@
+{
+  "id": "gd",
+  "tags": {
+    "type": "country",
+    "iso_a2": "GD",
+    "iso_a3": "GRD",
+    "wikidataid": "Q769",
+    "name": "Grenada",
+    "country_type": "Sovereign country",
+    "sovereignt": "Grenada",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 12.113156,
+    "lon": -61.680461,
+    "area_km2": 287,
+    "population": 112003,
+    "population:rank": 9,
+    "population:year": 2019,
+    "gdp_md": 1210,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.71552734375,
+            12.012646484374997
+          ],
+          [
+            -61.782177734375,
+            12.008447265624994
+          ],
+          [
+            -61.755761718749994,
+            12.045458984374989
+          ],
+          [
+            -61.749902343749994,
+            12.108447265624989
+          ],
+          [
+            -61.714990234374994,
+            12.18515625
+          ],
+          [
+            -61.66044921874999,
+            12.237011718749997
+          ],
+          [
+            -61.60703125,
+            12.223291015624994
+          ],
+          [
+            -61.6271484375,
+            12.053955078125
+          ],
+          [
+            -61.71552734375,
+            12.012646484374997
+          ]
+        ]
+      ]
+    }
+  }
+}

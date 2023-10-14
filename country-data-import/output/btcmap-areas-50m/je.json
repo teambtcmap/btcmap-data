@@ -1,0 +1,69 @@
+{
+  "id": "je",
+  "tags": {
+    "type": "country",
+    "iso_a2": "JE",
+    "iso_a3": "JEY",
+    "wikidataid": "Q785",
+    "name": "Jersey",
+    "country_type": "Country",
+    "sovereignt": "United Kingdom",
+    "continent": "Europe",
+    "region_un": "Europe",
+    "subregion": "Northern Europe",
+    "region_wb": "Europe & Central Asia",
+    "lat": 49.220808,
+    "lon": -2.090146,
+    "area_km2": 127,
+    "population": 107800,
+    "population:rank": 9,
+    "population:year": 2019,
+    "gdp_md": 5080,
+    "gdp_year": 2015,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2.018652343749977,
+            49.23125
+          ],
+          [
+            -2.009912109374994,
+            49.180810546874994
+          ],
+          [
+            -2.053759765624989,
+            49.169824218749994
+          ],
+          [
+            -2.091015624999983,
+            49.187402343749994
+          ],
+          [
+            -2.165673828124994,
+            49.187402343749994
+          ],
+          [
+            -2.23583984375,
+            49.1763671875
+          ],
+          [
+            -2.220507812499989,
+            49.266357421875
+          ],
+          [
+            -2.082226562499983,
+            49.25537109375
+          ],
+          [
+            -2.018652343749977,
+            49.23125
+          ]
+        ]
+      ]
+    }
+  }
+}

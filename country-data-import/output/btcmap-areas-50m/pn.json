@@ -1,0 +1,69 @@
+{
+  "id": "pn",
+  "tags": {
+    "type": "country",
+    "iso_a2": "PN",
+    "iso_a3": "PCN",
+    "wikidataid": "Q35672",
+    "name": "Pitcairn Islands",
+    "country_type": "Dependency",
+    "sovereignt": "United Kingdom",
+    "continent": "Oceania",
+    "region_un": "Oceania",
+    "subregion": "Polynesia",
+    "region_wb": "East Asia & Pacific",
+    "lat": -24.364576,
+    "lon": -128.317536,
+    "area_km2": 39,
+    "population": 54,
+    "population:rank": 1,
+    "population:year": 2016,
+    "gdp_md": 0,
+    "gdp_year": 2016,
+    "economy": "7. Least developed region",
+    "income_grp": "5. Low income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -128.290087890625,
+            -24.39736328125001
+          ],
+          [
+            -128.3,
+            -24.41259765625
+          ],
+          [
+            -128.320654296875,
+            -24.399707031250003
+          ],
+          [
+            -128.3421875,
+            -24.370703125
+          ],
+          [
+            -128.3501953125,
+            -24.340234375
+          ],
+          [
+            -128.330126953125,
+            -24.3232421875
+          ],
+          [
+            -128.30361328125,
+            -24.33359375
+          ],
+          [
+            -128.2908203125,
+            -24.36464843750001
+          ],
+          [
+            -128.290087890625,
+            -24.39736328125001
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "nu",
+  "tags": {
+    "type": "country",
+    "iso_a2": "NU",
+    "iso_a3": "NIU",
+    "wikidataid": "Q34020",
+    "name": "Niue",
+    "country_type": "Dependency",
+    "sovereignt": "New Zealand",
+    "continent": "Oceania",
+    "region_un": "Oceania",
+    "subregion": "Polynesia",
+    "region_wb": "East Asia & Pacific",
+    "lat": -19.045956,
+    "lon": -169.862565,
+    "area_km2": 197,
+    "population": 1620,
+    "population:rank": 3,
+    "population:year": 2018,
+    "gdp_md": 10,
+    "gdp_year": 2003,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -169.80341796875,
+            -19.0830078125
+          ],
+          [
+            -169.90380859375,
+            -19.13789062500001
+          ],
+          [
+            -169.94833984375,
+            -19.072851562500006
+          ],
+          [
+            -169.908740234375,
+            -18.990234375
+          ],
+          [
+            -169.861572265625,
+            -18.96865234375001
+          ],
+          [
+            -169.834033203125,
+            -18.96601562500001
+          ],
+          [
+            -169.793408203125,
+            -19.042578125
+          ],
+          [
+            -169.80341796875,
+            -19.0830078125
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "ai",
+  "tags": {
+    "type": "country",
+    "iso_a2": "AI",
+    "iso_a3": "AIA",
+    "wikidataid": "Q25228",
+    "name": "Anguilla",
+    "country_type": "Dependency",
+    "sovereignt": "United Kingdom",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 18.242979,
+    "lon": -63.026361,
+    "area_km2": 83,
+    "population": 14731,
+    "population:rank": 6,
+    "population:year": 2018,
+    "gdp_md": 175,
+    "gdp_year": 2009,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -63.001220703125,
+            18.22177734374999
+          ],
+          [
+            -63.16000976562499,
+            18.17138671875
+          ],
+          [
+            -63.1533203125,
+            18.20029296874999
+          ],
+          [
+            -63.026025390624994,
+            18.269726562499997
+          ],
+          [
+            -62.97958984374999,
+            18.264794921874994
+          ],
+          [
+            -63.001220703125,
+            18.22177734374999
+          ]
+        ]
+      ]
+    }
+  }
+}

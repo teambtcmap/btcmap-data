@@ -1,0 +1,65 @@
+{
+  "id": "tt",
+  "tags": {
+    "type": "country",
+    "iso_a2": "TT",
+    "iso_a3": "TTO",
+    "wikidataid": "Q754",
+    "name": "Trinidad and Tobago",
+    "country_type": "Sovereign country",
+    "sovereignt": "Trinidad and Tobago",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 10.9989,
+    "lon": -60.9184,
+    "area_km2": 7788,
+    "population": 1394973,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 24269,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.68,
+            10.76
+          ],
+          [
+            -61.105,
+            10.89
+          ],
+          [
+            -60.895,
+            10.855
+          ],
+          [
+            -60.935,
+            10.11
+          ],
+          [
+            -61.77,
+            10
+          ],
+          [
+            -61.95,
+            10.09
+          ],
+          [
+            -61.66,
+            10.365
+          ],
+          [
+            -61.68,
+            10.76
+          ]
+        ]
+      ]
+    }
+  }
+}

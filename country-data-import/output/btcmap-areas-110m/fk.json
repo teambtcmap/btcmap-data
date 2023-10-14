@@ -1,0 +1,73 @@
+{
+  "id": "fk",
+  "tags": {
+    "type": "country",
+    "iso_a2": "FK",
+    "iso_a3": "FLK",
+    "wikidataid": "Q9648",
+    "name": "Falkland Islands",
+    "country_type": "Disputed",
+    "sovereignt": "United Kingdom",
+    "continent": "South America",
+    "region_un": "Americas",
+    "subregion": "South America",
+    "region_wb": "Latin America & Caribbean",
+    "lat": -51.608913,
+    "lon": -58.738602,
+    "area_km2": 16348,
+    "population": 3398,
+    "population:rank": 4,
+    "population:year": 2016,
+    "gdp_md": 282,
+    "gdp_year": 2012,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "1. High income: OECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.2,
+            -51.85
+          ],
+          [
+            -60,
+            -51.25
+          ],
+          [
+            -59.15,
+            -51.5
+          ],
+          [
+            -58.55,
+            -51.1
+          ],
+          [
+            -57.75,
+            -51.55
+          ],
+          [
+            -58.05,
+            -51.9
+          ],
+          [
+            -59.4,
+            -52.2
+          ],
+          [
+            -59.85,
+            -51.85
+          ],
+          [
+            -60.7,
+            -52.3
+          ],
+          [
+            -61.2,
+            -51.85
+          ]
+        ]
+      ]
+    }
+  }
+}

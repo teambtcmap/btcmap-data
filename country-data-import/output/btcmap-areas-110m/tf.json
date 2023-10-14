@@ -1,0 +1,69 @@
+{
+  "id": "tf",
+  "tags": {
+    "type": "country",
+    "iso_a2": "TF",
+    "iso_a3": "ATF",
+    "wikidataid": "Q129003",
+    "name": "French Southern and Antarctic Lands",
+    "country_type": "Dependency",
+    "sovereignt": "France",
+    "continent": "Seven seas (open ocean)",
+    "region_un": "Africa",
+    "subregion": "Seven seas (open ocean)",
+    "region_wb": "Sub-Saharan Africa",
+    "lat": -49.303721,
+    "lon": 69.122136,
+    "area_km2": 11578,
+    "population": 140,
+    "population:rank": 1,
+    "population:year": 2017,
+    "gdp_md": 16,
+    "gdp_year": 2016,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            68.935,
+            -48.625
+          ],
+          [
+            69.58,
+            -48.94
+          ],
+          [
+            70.525,
+            -49.065
+          ],
+          [
+            70.56,
+            -49.255
+          ],
+          [
+            70.28,
+            -49.71
+          ],
+          [
+            68.745,
+            -49.775
+          ],
+          [
+            68.72,
+            -49.2425
+          ],
+          [
+            68.8675,
+            -48.83
+          ],
+          [
+            68.935,
+            -48.625
+          ]
+        ]
+      ]
+    }
+  }
+}

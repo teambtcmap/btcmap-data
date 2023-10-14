@@ -1,0 +1,69 @@
+{
+  "id": "qa",
+  "tags": {
+    "type": "country",
+    "iso_a2": "QA",
+    "iso_a3": "QAT",
+    "wikidataid": "Q846",
+    "name": "Qatar",
+    "country_type": "Sovereign country",
+    "sovereignt": "Qatar",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Western Asia",
+    "region_wb": "Middle East & North Africa",
+    "lat": 25.237383,
+    "lon": 51.143509,
+    "area_km2": 11376,
+    "population": 2832067,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 175837,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            50.81010827006958,
+            24.754742539971378
+          ],
+          [
+            50.74391076030369,
+            25.482424221289396
+          ],
+          [
+            51.013351678273494,
+            26.006991685484195
+          ],
+          [
+            51.28646162293606,
+            26.11458201751587
+          ],
+          [
+            51.58907881043726,
+            25.80111277923338
+          ],
+          [
+            51.60670047384881,
+            25.21567047779874
+          ],
+          [
+            51.38960778179063,
+            24.62738597258806
+          ],
+          [
+            51.11241539897702,
+            24.556330878186724
+          ],
+          [
+            50.81010827006958,
+            24.754742539971378
+          ]
+        ]
+      ]
+    }
+  }
+}

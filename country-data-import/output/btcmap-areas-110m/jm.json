@@ -1,0 +1,77 @@
+{
+  "id": "jm",
+  "tags": {
+    "type": "country",
+    "iso_a2": "JM",
+    "iso_a3": "JAM",
+    "wikidataid": "Q766",
+    "name": "Jamaica",
+    "country_type": "Sovereign country",
+    "sovereignt": "Jamaica",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 18.137124,
+    "lon": -77.318767,
+    "area_km2": 12530,
+    "population": 2948279,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 16458,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -77.56960079619921,
+            18.490525417550487
+          ],
+          [
+            -76.89661861846213,
+            18.400866807524082
+          ],
+          [
+            -76.36535905628554,
+            18.160700588447597
+          ],
+          [
+            -76.19965857614164,
+            17.886867173732966
+          ],
+          [
+            -76.9025614081757,
+            17.868237819891746
+          ],
+          [
+            -77.20634131540348,
+            17.70111623785982
+          ],
+          [
+            -77.76602291534061,
+            17.86159739834224
+          ],
+          [
+            -78.33771928578561,
+            18.225967922432233
+          ],
+          [
+            -78.21772661000388,
+            18.454532782459196
+          ],
+          [
+            -77.79736467152563,
+            18.524218451404778
+          ],
+          [
+            -77.56960079619921,
+            18.490525417550487
+          ]
+        ]
+      ]
+    }
+  }
+}

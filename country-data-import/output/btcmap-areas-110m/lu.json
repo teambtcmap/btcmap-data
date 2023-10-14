@@ -1,0 +1,61 @@
+{
+  "id": "lu",
+  "tags": {
+    "type": "country",
+    "iso_a2": "LU",
+    "iso_a3": "LUX",
+    "wikidataid": "Q32",
+    "name": "Luxembourg",
+    "country_type": "Sovereign country",
+    "sovereignt": "Luxembourg",
+    "continent": "Europe",
+    "region_un": "Europe",
+    "subregion": "Western Europe",
+    "region_wb": "Europe & Central Asia",
+    "lat": 49.733732,
+    "lon": 6.07762,
+    "area_km2": 2413,
+    "population": 619896,
+    "population:rank": 11,
+    "population:year": 2019,
+    "gdp_md": 71104,
+    "gdp_year": 2019,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "1. High income: OECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.043073357781111,
+            50.128051662794235
+          ],
+          [
+            6.242751092156993,
+            49.90222565367873
+          ],
+          [
+            6.186320428094177,
+            49.463802802114515
+          ],
+          [
+            5.897759230176348,
+            49.44266714130711
+          ],
+          [
+            5.674051954784829,
+            49.529483547557504
+          ],
+          [
+            5.782417433300907,
+            50.09032786722122
+          ],
+          [
+            6.043073357781111,
+            50.128051662794235
+          ]
+        ]
+      ]
+    }
+  }
+}

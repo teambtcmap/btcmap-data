@@ -1,0 +1,73 @@
+{
+  "id": "cw",
+  "tags": {
+    "type": "country",
+    "iso_a2": "CW",
+    "iso_a3": "CUW",
+    "wikidataid": "Q25279",
+    "name": "Cura\u00e7ao",
+    "country_type": "Country",
+    "sovereignt": "Netherlands",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 12.145039,
+    "lon": -68.920578,
+    "area_km2": 431,
+    "population": 157538,
+    "population:rank": 9,
+    "population:year": 2019,
+    "gdp_md": 3101,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -68.75107421874999,
+            12.059765625
+          ],
+          [
+            -68.80332031249999,
+            12.045458984374989
+          ],
+          [
+            -68.9951171875,
+            12.141845703125
+          ],
+          [
+            -69.15380859375,
+            12.2984375
+          ],
+          [
+            -69.15888671875,
+            12.380273437499994
+          ],
+          [
+            -69.11845703124999,
+            12.373242187499997
+          ],
+          [
+            -69.07675781249999,
+            12.342041015625
+          ],
+          [
+            -69.013134765625,
+            12.231347656249994
+          ],
+          [
+            -68.827392578125,
+            12.158544921874991
+          ],
+          [
+            -68.75107421874999,
+            12.059765625
+          ]
+        ]
+      ]
+    }
+  }
+}

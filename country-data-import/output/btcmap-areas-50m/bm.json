@@ -1,0 +1,65 @@
+{
+  "id": "bm",
+  "tags": {
+    "type": "country",
+    "iso_a2": "BM",
+    "iso_a3": "BMU",
+    "wikidataid": "Q23635",
+    "name": "Bermuda",
+    "country_type": "Dependency",
+    "sovereignt": "United Kingdom",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Northern America",
+    "region_wb": "North America",
+    "lat": 32.296592,
+    "lon": -64.763573,
+    "area_km2": 66,
+    "population": 63918,
+    "population:rank": 8,
+    "population:year": 2019,
+    "gdp_md": 7484,
+    "gdp_year": 2019,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -64.73027343749999,
+            32.29345703125
+          ],
+          [
+            -64.82011718749999,
+            32.259619140625
+          ],
+          [
+            -64.84506835937499,
+            32.2623046875
+          ],
+          [
+            -64.86284179687499,
+            32.273876953125
+          ],
+          [
+            -64.77119140625,
+            32.30771484375
+          ],
+          [
+            -64.69462890624999,
+            32.3869140625
+          ],
+          [
+            -64.66831054687499,
+            32.38193359375
+          ],
+          [
+            -64.73027343749999,
+            32.29345703125
+          ]
+        ]
+      ]
+    }
+  }
+}

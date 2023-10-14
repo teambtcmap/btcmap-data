@@ -1,0 +1,73 @@
+{
+  "id": "lc",
+  "tags": {
+    "type": "country",
+    "iso_a2": "LC",
+    "iso_a3": "LCA",
+    "wikidataid": "Q760",
+    "name": "Saint Lucia",
+    "country_type": "Sovereign country",
+    "sovereignt": "Saint Lucia",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 13.892371,
+    "lon": -60.980094,
+    "area_km2": 553,
+    "population": 182790,
+    "population:rank": 9,
+    "population:year": 2019,
+    "gdp_md": 2122,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -60.89521484375,
+            13.821972656249997
+          ],
+          [
+            -60.951416015625,
+            13.717578125
+          ],
+          [
+            -61.06064453124999,
+            13.783105468749994
+          ],
+          [
+            -61.073144531249994,
+            13.865576171874991
+          ],
+          [
+            -61.06357421874999,
+            13.915576171875003
+          ],
+          [
+            -60.99667968749999,
+            14.0109375
+          ],
+          [
+            -60.944580078125,
+            14.072851562499991
+          ],
+          [
+            -60.908105468749994,
+            14.093359375
+          ],
+          [
+            -60.88676757812499,
+            14.011132812499994
+          ],
+          [
+            -60.89521484375,
+            13.821972656249997
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "ms",
+  "tags": {
+    "type": "country",
+    "iso_a2": "MS",
+    "iso_a3": "MSR",
+    "wikidataid": "Q13353",
+    "name": "Montserrat",
+    "country_type": "Dependency",
+    "sovereignt": "United Kingdom",
+    "continent": "North America",
+    "region_un": "Americas",
+    "subregion": "Caribbean",
+    "region_wb": "Latin America & Caribbean",
+    "lat": 16.73717,
+    "lon": -62.188252,
+    "area_km2": 80,
+    "population": 4649,
+    "population:rank": 4,
+    "population:year": 2019,
+    "gdp_md": 44,
+    "gdp_year": 2006,
+    "economy": "6. Developing region",
+    "income_grp": "4. Lower middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.1484375,
+            16.74033203124999
+          ],
+          [
+            -62.154248046875,
+            16.681201171875003
+          ],
+          [
+            -62.221630859375,
+            16.699511718750003
+          ],
+          [
+            -62.223046875,
+            16.7515625
+          ],
+          [
+            -62.191357421875,
+            16.804394531249997
+          ],
+          [
+            -62.17578125,
+            16.8095703125
+          ],
+          [
+            -62.1484375,
+            16.74033203124999
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "ps",
+  "tags": {
+    "type": "country",
+    "iso_a2": "PS",
+    "iso_a3": "PSE",
+    "wikidataid": "Q23792",
+    "name": "Palestine",
+    "country_type": "Indeterminate",
+    "sovereignt": "Israel",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Western Asia",
+    "region_wb": "Middle East & North Africa",
+    "lat": 32.047431,
+    "lon": 35.291341,
+    "area_km2": 5050,
+    "population": 4685306,
+    "population:rank": 12,
+    "population:year": 2019,
+    "gdp_md": 16276,
+    "gdp_year": 2018,
+    "economy": "6. Developing region",
+    "income_grp": "4. Lower middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.397560662586045,
+            31.489086005167582
+          ],
+          [
+            34.92740848159457,
+            31.353435370401414
+          ],
+          [
+            34.970506626125996,
+            31.61677846936081
+          ],
+          [
+            35.22589155451243,
+            31.754341132121766
+          ],
+          [
+            34.97464074070933,
+            31.866582343059722
+          ],
+          [
+            35.183930291491436,
+            32.53251068778894
+          ],
+          [
+            35.54566531753454,
+            32.393992011030576
+          ],
+          [
+            35.5452519060762,
+            31.78250478772084
+          ],
+          [
+            35.397560662586045,
+            31.489086005167582
+          ]
+        ]
+      ]
+    }
+  }
+}

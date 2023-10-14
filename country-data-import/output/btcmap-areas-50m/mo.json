@@ -1,0 +1,69 @@
+{
+  "id": "mo",
+  "tags": {
+    "type": "country",
+    "iso_a2": "MO",
+    "iso_a3": "MAC",
+    "wikidataid": "Q14773",
+    "name": "Macao S.A.R",
+    "country_type": "Country",
+    "sovereignt": "China",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Eastern Asia",
+    "region_wb": "East Asia & Pacific",
+    "lat": 22.129735,
+    "lon": 113.556038,
+    "area_km2": 23,
+    "population": 640445,
+    "population:rank": 11,
+    "population:year": 2019,
+    "gdp_md": 53859,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.47890625000002,
+            22.195556640625
+          ],
+          [
+            113.48105468750003,
+            22.217480468749997
+          ],
+          [
+            113.494140625,
+            22.24155273437499
+          ],
+          [
+            113.52705078125001,
+            22.24594726562499
+          ],
+          [
+            113.54814453124999,
+            22.222607421874997
+          ],
+          [
+            113.54550781250003,
+            22.221484375
+          ],
+          [
+            113.49882812499999,
+            22.20166015625
+          ],
+          [
+            113.48417968749999,
+            22.19775390625
+          ],
+          [
+            113.47890625000002,
+            22.195556640625
+          ]
+        ]
+      ]
+    }
+  }
+}

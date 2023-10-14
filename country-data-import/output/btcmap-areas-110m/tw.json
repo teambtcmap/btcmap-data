@@ -1,0 +1,69 @@
+{
+  "id": "cn-tw",
+  "tags": {
+    "type": "country",
+    "iso_a2": "CN-TW",
+    "iso_a3": "TWN",
+    "wikidataid": "Q865",
+    "name": "Taiwan",
+    "country_type": "Sovereign country",
+    "sovereignt": "Taiwan",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "Eastern Asia",
+    "region_wb": "East Asia & Pacific",
+    "lat": 23.652408,
+    "lon": 120.868204,
+    "area_km2": 34526,
+    "population": 23568378,
+    "population:rank": 15,
+    "population:year": 2020,
+    "gdp_md": 1127000,
+    "gdp_year": 2016,
+    "economy": "2. Developed region: nonG7",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            121.77781782438993,
+            24.3942735865194
+          ],
+          [
+            121.17563235889274,
+            22.790857245367167
+          ],
+          [
+            120.74707970589623,
+            21.970571397382113
+          ],
+          [
+            120.22008344938368,
+            22.81486094816674
+          ],
+          [
+            120.1061885926124,
+            23.556262722258236
+          ],
+          [
+            120.69467980355225,
+            24.538450832613737
+          ],
+          [
+            121.49504438688878,
+            25.295458889257386
+          ],
+          [
+            121.95124393116146,
+            24.997595933527037
+          ],
+          [
+            121.77781782438993,
+            24.3942735865194
+          ]
+        ]
+      ]
+    }
+  }
+}

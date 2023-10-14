@@ -1,0 +1,69 @@
+{
+  "id": "sg",
+  "tags": {
+    "type": "country",
+    "iso_a2": "SG",
+    "iso_a3": "SGP",
+    "wikidataid": "Q334",
+    "name": "Singapore",
+    "country_type": "Sovereign country",
+    "sovereignt": "Singapore",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "South-Eastern Asia",
+    "region_wb": "East Asia & Pacific",
+    "lat": 1.366587,
+    "lon": 103.816925,
+    "area_km2": 486,
+    "population": 5703569,
+    "population:rank": 13,
+    "population:year": 2019,
+    "gdp_md": 372062,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            103.9697265625,
+            1.331445312499994
+          ],
+          [
+            103.81992187500003,
+            1.265380859375
+          ],
+          [
+            103.65019531249999,
+            1.325537109374991
+          ],
+          [
+            103.70527343750001,
+            1.4234375
+          ],
+          [
+            103.81796875000003,
+            1.447070312499989
+          ],
+          [
+            103.90898437499999,
+            1.415966796874997
+          ],
+          [
+            103.96083984375002,
+            1.392236328124994
+          ],
+          [
+            103.99638671874999,
+            1.365234375
+          ],
+          [
+            103.9697265625,
+            1.331445312499994
+          ]
+        ]
+      ]
+    }
+  }
+}

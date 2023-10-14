@@ -1,0 +1,65 @@
+{
+  "id": "bn",
+  "tags": {
+    "type": "country",
+    "iso_a2": "BN",
+    "iso_a3": "BRN",
+    "wikidataid": "Q921",
+    "name": "Brunei",
+    "country_type": "Sovereign country",
+    "sovereignt": "Brunei",
+    "continent": "Asia",
+    "region_un": "Asia",
+    "subregion": "South-Eastern Asia",
+    "region_wb": "East Asia & Pacific",
+    "lat": 4.448298,
+    "lon": 114.551943,
+    "area_km2": 10770,
+    "population": 433285,
+    "population:rank": 10,
+    "population:year": 2019,
+    "gdp_md": 13469,
+    "gdp_year": 2019,
+    "economy": "6. Developing region",
+    "income_grp": "2. High income: nonOECD",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            115.45071048386981,
+            5.447729803891534
+          ],
+          [
+            115.40570031134361,
+            4.955227565933839
+          ],
+          [
+            115.34746097215066,
+            4.316636053887009
+          ],
+          [
+            114.8695573263154,
+            4.348313706881925
+          ],
+          [
+            114.65959598191353,
+            4.007636826997754
+          ],
+          [
+            114.20401655482837,
+            4.525873928236805
+          ],
+          [
+            114.59996137904872,
+            4.900011298029966
+          ],
+          [
+            115.45071048386981,
+            5.447729803891534
+          ]
+        ]
+      ]
+    }
+  }
+}

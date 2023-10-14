@@ -1,0 +1,73 @@
+{
+  "id": "tv",
+  "tags": {
+    "type": "country",
+    "iso_a2": "TV",
+    "iso_a3": "TUV",
+    "wikidataid": "Q672",
+    "name": "Tuvalu",
+    "country_type": "Sovereign country",
+    "sovereignt": "Tuvalu",
+    "continent": "Oceania",
+    "region_un": "Oceania",
+    "subregion": "Polynesia",
+    "region_wb": "East Asia & Pacific",
+    "lat": -8.513717,
+    "lon": 179.209587,
+    "area_km2": 10,
+    "population": 11646,
+    "population:rank": 6,
+    "population:year": 2019,
+    "gdp_md": 47,
+    "gdp_year": 2019,
+    "economy": "7. Least developed region",
+    "income_grp": "3. Upper middle income",
+    "geo_json": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            179.21367187500005,
+            -8.52421875
+          ],
+          [
+            179.20058593750002,
+            -8.534960937500003
+          ],
+          [
+            179.19570312500002,
+            -8.534765625
+          ],
+          [
+            179.20087890625,
+            -8.512109375
+          ],
+          [
+            179.19794921875,
+            -8.488671875
+          ],
+          [
+            179.19853515625005,
+            -8.470019531250003
+          ],
+          [
+            179.20302734375002,
+            -8.46630859375
+          ],
+          [
+            179.21162109375,
+            -8.488085937500003
+          ],
+          [
+            179.21660156250005,
+            -8.514843750000011
+          ],
+          [
+            179.21367187500005,
+            -8.52421875
+          ]
+        ]
+      ]
+    }
+  }
+}
