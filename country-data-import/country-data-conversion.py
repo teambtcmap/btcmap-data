@@ -7,11 +7,11 @@
 import os
 import json
 from area import area
+from geojson_rewind import rewind
 
 # Set the working directory to the script's directory
 script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
-print(script_directory)
 
 # Specify the input directory containing the GeoJSON files
 input_directory_path = 'input/geojson-regions-50m'
@@ -27,6 +27,9 @@ def extract_elements(feature):
     # Calculate the area of the geometry
     area_m2 = area(feature["geometry"])
     area_km2 = round(area_m2 / 1_000_000)
+
+    #Ensure imported GeoJSON follows the RHR
+    geo_json = rewind(feature["geometry"])
     
     extracted_feature = {
         "id": id_lower,
@@ -45,7 +48,7 @@ def extract_elements(feature):
             "region_un": feature["properties"].get("region_un", ""),
             "lat": feature["properties"].get("label_y", ""),
             "lon": feature["properties"].get("label_x", ""),
-            "area_km2": area_km2,  # Include the area in square meters
+            "area_km2": area_km2,
             "population": feature["properties"].get("pop_est", ""),
             "population:rank": feature["properties"].get("pop_rank", ""),
             "population:year": feature["properties"].get("pop_year", ""),
@@ -53,7 +56,7 @@ def extract_elements(feature):
             "gdp_year": feature["properties"].get("gdp_year", ""),
             "economy": feature["properties"].get("economy", ""),
             "income_grp": feature["properties"].get("income_grp", ""),
-            "geo_json": feature["geometry"]  # Include the full geometry in the output
+            "geo_json": geo_json
         }
     }
     
