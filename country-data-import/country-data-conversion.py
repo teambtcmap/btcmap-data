@@ -1,9 +1,6 @@
 #This script takes GeoJSON country definitions sourced from https://github.com/AshKyd/geojson-regions and converts them to the BTC Map format.
 #The area of the GeoJSON is calculated in KM^2 at the same time.
 
-#TODO
-# Switch to the https://public.opendatasoft.com/explore/dataset/ne_10m_admin_0_countries/api/ dataset.
-
 import os
 import json
 from area import area
