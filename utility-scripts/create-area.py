@@ -4,6 +4,7 @@ import sys
 import os
 from area import area
 from geojson_rewind import rewind
+from python_rclone import Rclone
 
 # Set the working directory to the script's directory
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +20,7 @@ if not btcmap_api_token:
 # Define your variables
 # Empty variables will be ignored and will not create empty elements in the JSON
 
-#Required
+#Required variable
 area_name = "Portland Bitcoin Group"
 alias = "portland_bitcoin_group" #Usually in the format area-name.
 area_type = "community" #community or country
@@ -27,6 +28,8 @@ continent = "north-america" #Lowercase, hyphen-seperated. europe|north-america|s
 icon_type = "webp"
 population = None
 population_date = None
+
+#Optional variables
 
 organization = None
 language = None
@@ -128,6 +131,24 @@ response = requests.post(url, headers=headers, data=json_payload)
 
 # Check if the request was successful
 if response.status_code == 200:
-    print(f"Created area.")
+    print(f"Created area: {response.text}")
+
+    # Now upload area icon
+
+    # Initialize Rclone with the remote configuration name
+    rclone = Rclone()
+
+    # Define the source (local) and destination (remote)
+    source = script_directory+alias+"."+icon_type
+    destination = "btcmap-api:/srv/http/static.btcmap.org/images"
+
+    # Use the sync method to transfer files
+    rclone.sync(source, destination)
+
+    # Check the result
+    if rclone.check():
+        print("File transferred successfully.")
+    else:
+        print("Error transferring file.")
 else:
     print(f"Error creating area: {response.text}")
