@@ -1,4 +1,4 @@
-#This script retrieves the current list of community emails
+#This script generate county level stats
 
 import requests
 import json
@@ -7,16 +7,16 @@ import os
 from area import area as area_calc
 
 # Get the bearer token from the environment variable
-#btcmap_api_token = os.getenv("BTCMAP_API_TOKEN")
+btcmap_api_token = os.getenv("BTCMAP_API_TOKEN")
 
-#if not btcmap_api_token:
-#    print("Please set the BTCMAP_API_TOKEN environment variable.")
-#    sys.exit(1)
+if not btcmap_api_token:
+    print("Please set the BTCMAP_API_TOKEN environment variable.")
+    sys.exit(1)
 
 # Define the API URL to fetch all areas
 url = "https://api.btcmap.org/areas"
 headers = {
-    #'Authorization': f'Bearer {btcmap_api_token}',
+    'Authorization': f'Bearer {btcmap_api_token}',
     'Content-Type': 'application/json'
 }
 
@@ -31,9 +31,11 @@ if response.status_code != 200:
 areas = response.json()
 
 # Define the area type to filter (replace with your values)
-area_type_filter = "community"
+area_type_filter = "country"
 
-# Now, iterate through the features and treat each one as an area
+countries = []
+
+# Iterate through the areas and get emails
 for id in areas:
     tags = id.get('tags', None)
     area_type = tags.get('type')
@@ -46,5 +48,3 @@ for id in areas:
         if email is not None and email != "":
     
             print(f"{email},")
-
-       
