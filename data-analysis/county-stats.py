@@ -8,6 +8,8 @@ class Area:
         self.id = id
         self.tags = tags
         self.reports = []
+        self.area_km2 = None
+        self.population = None
 
     def get_alias(self):
         alias = self.tags.get('url_alias', {})
@@ -15,6 +17,10 @@ class Area:
 
     def add_report(self, report):
         self.reports.append(report)
+
+    def set_area_info(self, area_km2, population):
+        self.area_km2 = area_km2
+        self.population = population
 
     def get_latest_report(self):
         if self.reports:
@@ -35,9 +41,6 @@ class Report:
         self.up_to_date_elements = report_data['tags'].get('up_to_date_elements')
         self.up_to_date_percent = report_data['tags'].get('up_to_date_percent')
 
-# Define the area objects list globally
-area_objects = []
-
 # Fetch area data and reports
 def get_countries():
     url = "https://api.btcmap.org/areas"
@@ -53,6 +56,7 @@ def get_countries():
 
     areas = response.json()
     area_filter = "country"
+    area_objects = []
     for data in areas:
         tags = data.get('tags', {})
         area_type = tags.get('type')
@@ -64,6 +68,34 @@ def get_countries():
 
     return area_objects
 
+def get_area_info(area_objects):
+    url = "https://api.btcmap.org/areas"
+    headers = {
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        print(f"Error fetching area information: {response.text}")
+        sys.exit(1)
+
+    area_data = response.json()
+    for area_info in area_data:
+        area_id = area_info['id']
+        for area in area_objects:
+            if area_id == area.id:
+                area_km2 = area_info.get('tags', {}).get('area_km2')
+                population = area_info.get('tags', {}).get('population')
+                area.set_area_info(area_km2, population)
+
+# Fetch area data first
+area_objects = get_countries()
+
+# Fetch area information after area data is fetched
+get_area_info(area_objects)
+
+# Fetch reports after area data and area information are fetched
 def get_reports():
     url = "https://api.btcmap.org/reports"
     headers = {
@@ -83,18 +115,15 @@ def get_reports():
             if area_id == area.id:
                 area.add_report(Report(id))
 
+# Fetch reports
+get_reports()
+
 # Set the working directory to the script's directory
 script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # Define the CSV file path
 csv_file_path = "county_stats.csv"
-
-# Fetch area data first
-area_objects = get_countries()
-
-# Fetch reports after area data is fetched
-get_reports()
 
 # Create and open the CSV file for writing
 with open(csv_file_path, mode="w", newline="") as csv_file:
@@ -105,8 +134,8 @@ with open(csv_file_path, mode="w", newline="") as csv_file:
         if latest_report:
             unique_keys.update(vars(latest_report).keys())
     
-    # Define the CSV fieldnames including unique keys
-    fieldnames = ["Country ID", "Latest Report ID", "Latest Report Date"] + list(unique_keys)
+    # Define the CSV fieldnames including unique keys and area information
+    fieldnames = ["Country ID", "Latest Report ID", "Latest Report Date", "Area (km2)", "Population"] + list(unique_keys)
     
     # Create a CSV writer
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -121,7 +150,9 @@ with open(csv_file_path, mode="w", newline="") as csv_file:
             row = {
                 "Country ID": country.id,
                 "Latest Report ID": latest_report.id,
-                "Latest Report Date": latest_report.date
+                "Latest Report Date": latest_report.date,
+                "Area (km2)": country.area_km2,
+                "Population": country.population
             }
             row.update(vars(latest_report))
             csv_writer.writerow(row)
