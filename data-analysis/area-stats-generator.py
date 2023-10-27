@@ -13,6 +13,7 @@ class Area:
         self.area_km2 = tags.get('area_km2')
         self.merchants_per_population = None
         self.merchants_per_km2 = None
+        self.avg_verification_age = None
 
     def get_alias(self):
         alias = self.tags.get('url_alias', {})
@@ -42,13 +43,19 @@ class Report:
 
     def parse_date(self, date_string):
         if date_string:
-            date_formats = ['%Y-%m-%dT%H:%M:%S.%f000000000Z', '%Y-%m-%dT%H:%M:%S.%fZ']
+
+            #Terrible hack because strptime is not handling decimal seconds well.
+            date_only = date_string.split('T')[0]  # Extract date part
+
+            date_formats = ['%Y-%m-%d']
+
             for date_format in date_formats:
                 try:
-                    return datetime.strptime(date_string, date_format)
+                    return datetime.strptime(date_only, date_format)
                 except ValueError:
-                    pass
+                    print(f"Failed to parse {date_only} with format {date_format}")
         return None
+
 
     def avg_verification_age(self):
         if self.avg_verification_date:
@@ -90,7 +97,7 @@ def get_areas():
 
 def get_reports(areas):
     
-    updated_since_date = "2023-10-20"
+    updated_since_date = "2023-10-26"
 
     url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
     
@@ -115,13 +122,17 @@ def calculate_metrics(areas):
     for area in areas:
         latest_report = area.get_latest_report()
         if latest_report:
+
+            #Calulate average verification age
             area.avg_verification_age = latest_report.avg_verification_age()
 
+            # Calculate merchant denisty per capita
             if area.population and area.population != '0':
                 area.merchants_per_population = latest_report.total_elements / float(area.population)
             else:
                 area.merchants_per_population = None
 
+            # Calculate merchant denisty per km2
             if area.area_km2 and area.area_km2 != '0':
                 area.merchants_per_km2 = latest_report.total_elements / float(area.area_km2)
             else:
