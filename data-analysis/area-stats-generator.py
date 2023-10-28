@@ -102,8 +102,8 @@ def get_areas():
         "name": "Global",
         "population:date": "2021-02-01",
         "url_alias": "global",
-        "population": "6000000000",
-        "area_km2": "149000000"
+        "population": "8000000000",
+        "area_km2": "148900000"
     }"""
     global_tags = json.loads(global_json)
     id = ""
@@ -115,7 +115,7 @@ def get_areas():
 
 def get_reports(areas):
     
-    updated_since_date = "2023-10-26"
+    updated_since_date = "2023-10-28"
 
     url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
     
