@@ -142,10 +142,10 @@ def calculate_metrics(areas):
         latest_report = area.get_latest_report()
         if latest_report:
 
-            #Calulate total *merchants*, excluding ATMs
+            #Calculate total *merchants*, excluding ATMs
             area.total_merchants = latest_report.total_elements - latest_report.total_elements_atms
 
-            #Calulate average verification age
+            #Calculate average verification age
             if latest_report.average_verification_date:
                 current_date = datetime.now()
                 area.average_verification_age = (current_date - latest_report.average_verification_date).days
@@ -154,13 +154,13 @@ def calculate_metrics(areas):
 
             # Calculate merchant denisty per capita
             if area.population and area.population != '0':
-                area.merchants_per_population = latest_report.total_elements / float(area.population)
+                area.merchants_per_population = area.total_merchants / float(area.population)
             else:
                 area.merchants_per_population = None
 
             # Calculate merchant denisty per km2
             if area.area_km2 and area.area_km2 != '0':
-                area.merchants_per_km2 = latest_report.total_elements / float(area.area_km2)
+                area.merchants_per_km2 = area.total_merchants / float(area.area_km2)
             else:
                 area.merchants_per_km2 = None
 
