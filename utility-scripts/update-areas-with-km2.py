@@ -37,11 +37,11 @@ area_type_filter = "community"
 # Now, iterate through the features and treat each one as an area
 for id in areas:
     tags = id.get('tags', None)
-    area_alias = tags.get('url_alias')
+    area = tags.get('url_alias')
     area_type = tags.get('type')
-    update_url = f"https://api.btcmap.org/areas/{area_alias}/tags"
+    update_url = f"https://api.btcmap.org/areas/{area}/tags"
 
-    if area_alias == area_type_filter:
+    if area_type == area_type_filter:
         geojson = tags.get('geo_json', None)
 
         if geojson is not None:
@@ -63,13 +63,13 @@ for id in areas:
                 response = requests.patch(update_url, headers=headers, data=payload)
 
                 if response.status_code == 200:
-                    print(f"Updated 'km2' for area ID {area_alias} to {area_km2} km2")
+                    print(f"Updated 'km2' for area ID {area} to {area_km2} km2")
                 else:
-                    print(f"Error updating {area_alias}: {response.text}")
+                    print(f"Error updating {area}: {response.text}")
             
             else:
-                print(f"{area_alias} has an 0 KM2 value")
+                print(f"{area} has an 0 KM2 value")
         
         else:
 
-            print(f"{area_alias} does not have a geojson")
+            print(f"{area} does not have a geojson")
