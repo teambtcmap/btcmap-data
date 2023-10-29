@@ -4,6 +4,7 @@ import os
 import sys
 from datetime import datetime
 import json
+import matplotlib.pyplot as plt
 
 class Area:
     def __init__(self, id, tags):
@@ -82,19 +83,21 @@ def get_areas():
     for id in areas:
         tags = id.get('tags', {})
         area_type = tags.get('type')
+        deleted = tags.get('deleted_at') != ""
 
-        if area_type == "country":
-            id = id['id']
-            area = Area(id, tags)
-            country_areas.append(area)
-        elif area_type == "community":
-            id = id['id']
-            area = Area(id, tags)
-            community_areas.append(area)
-        elif area_type == "" or area_type is None:
-            id = id['id']
-            area = Area(id, tags)
-            other_areas.append(area)
+        if not deleted: #Only process areas that have not been deleted
+            if area_type == "country":  
+                id = id['id']
+                area = Area(id, tags)
+                country_areas.append(area)
+            elif area_type == "community":
+                id = id['id']
+                area = Area(id, tags)
+                community_areas.append(area)
+            else:
+                id = id['id']
+                area = Area(id, tags)
+                other_areas.append(area)
 
     #Create a global area
     global_json = """
@@ -115,9 +118,10 @@ def get_areas():
 
 def get_reports(areas):
     
-    updated_since_date = "2023-10-28"
+    #updated_since_date = "2023-10-28"
+    #url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
 
-    url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+    url = "https://api.btcmap.org/reports"
     
     headers = {
         'Content-Type': 'application.json'
@@ -163,6 +167,25 @@ def calculate_metrics(areas):
                 area.merchants_per_km2 = area.total_merchants / float(area.area_km2)
             else:
                 area.merchants_per_km2 = None
+
+
+def plot_total_elements_over_time(areas):
+    for area in areas:
+        x = [report.date for report in area.reports]
+        y = [report.total_elements for report in area.reports]
+        plt.plot(x, y, label=area.id)
+
+    plt.xlabel('Date')
+    plt.ylabel('Total Elements')
+    plt.title('Total Elements Over Time')
+    plt.legend()
+
+    # Adjust the following path and filename as needed
+    filename = 'total_elements_chart.png'
+    plt.savefig(filename)
+
+    #plt.show()  # Optionally display the chart on the screen
+
 
 def write_to_csv(areas, csv_file_path):
     with open(csv_file_path, mode="w", newline="") as csv_file:
@@ -238,6 +261,8 @@ def main():
     calculate_metrics(country_areas)
     calculate_metrics(community_areas)
     calculate_metrics(other_areas)
+
+    plot_total_elements_over_time(community_areas)
 
     global_csv_file_path = f"{script_directory}/global_stats.csv"
     country_csv_file_path = f"{script_directory}/country_stats.csv"
