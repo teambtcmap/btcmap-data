@@ -83,21 +83,21 @@ def get_areas():
     for id in areas:
         tags = id.get('tags', {})
         area_type = tags.get('type')
-        deleted = tags.get('deleted_at') != ""
+        #deleted = 'deleted_at' in id and id['deleted_at'] == ""
 
-        if not deleted: #Only process areas that have not been deleted
-            if area_type == "country":  
-                id = id['id']
-                area = Area(id, tags)
-                country_areas.append(area)
-            elif area_type == "community":
-                id = id['id']
-                area = Area(id, tags)
-                community_areas.append(area)
-            else:
-                id = id['id']
-                area = Area(id, tags)
-                other_areas.append(area)
+        #if not deleted: #Only process areas that have not been deleted
+        if area_type == "country":  
+            id = id['id']
+            area = Area(id, tags)
+            country_areas.append(area)
+        elif area_type == "community":
+            id = id['id']
+            area = Area(id, tags)
+            community_areas.append(area)
+        else:
+            id = id['id']
+            area = Area(id, tags)
+            other_areas.append(area)
 
     #Create a global area
     global_json = """
@@ -118,10 +118,10 @@ def get_areas():
 
 def get_reports(areas):
     
-    #updated_since_date = "2023-10-28"
-    #url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+    updated_since_date = "2023-10-29"
+    url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
 
-    url = "https://api.btcmap.org/reports"
+    #url = "https://api.btcmap.org/reports"
     
     headers = {
         'Content-Type': 'application.json'
