@@ -23,7 +23,7 @@ def extract_elements(feature):
 
     # Calculate the area of the geometry
     area_m2 = area(feature["geometry"])
-    area_km2 = round(area_m2 / 1_000_000)
+    area_km2 = round((area_m2 / 1_000_000),2)
 
     #Ensure imported GeoJSON follows the RHR
     geo_json = rewind(feature["geometry"])

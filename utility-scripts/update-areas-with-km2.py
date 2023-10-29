@@ -32,7 +32,7 @@ areas = response.json()
 
 # Define the area type and area ID to filter (replace with your values)
 area_type_filter = "community"
-area_alias_filter = "bansko-bitcoin"
+#area_filter = "bitcoin-e-aqui"
 
 # Now, iterate through the features and treat each one as an area
 for id in areas:
@@ -41,14 +41,14 @@ for id in areas:
     area_type = tags.get('type')
     update_url = f"https://api.btcmap.org/areas/{area_alias}/tags"
 
-    if area_type == area_type_filter:
+    if area_alias == area_type_filter:
         geojson = tags.get('geo_json', None)
 
         if geojson is not None:
                       
             # Calculate the area of the geometry
             area_m2 = area_calc(geojson)
-            area_km2 = round(area_m2 / 1_000_000)
+            area_km2 = round((area_m2 / 1_000_000),2)
 
             if area_km2 != 0:
                 
