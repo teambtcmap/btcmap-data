@@ -9,18 +9,18 @@ import matplotlib.pyplot as plt
 class Area:
     def __init__(self, id, tags):
         self.id = id
+        self.alias = tags.get('url_alias')
+        self.name = tags.get('name')
         self.tags = tags
         self.reports = []
         self.population = tags.get('population')
         self.area_km2 = tags.get('area_km2')
-        self.merchants_per_population = None
+        self.merchants_per_capita = None
         self.merchants_per_km2 = None
         self.average_verification_age = None
+        self.weighted_average_verification_age = None
         self.total_merchants = None
-
-    def get_alias(self):
-        alias = self.tags.get('url_alias', {})
-        return alias
+        self.score = None
 
     def add_report(self, report):
         self.reports.append(report)
@@ -60,20 +60,43 @@ class Report:
                     print(f"Failed to parse {date_only} with format {date_format}")
         return None
 
+# Function to check if a JSON file exists and load data from it
+def load_json_from_file(file_name):
+    if os.path.exists(file_name):
+        with open(file_name, 'r') as file:
+            data = json.load(file)
+            return data
+    else:
+        return None
+
+# Function to save JSON data to a file
+def save_json_to_file(data, file_name):
+    with open(file_name, 'w') as file:
+        json.dump(data, file)
 
 def get_areas():
-    url = "https://api.btcmap.org/areas"
-    headers = {
-        'Content-Type': 'application.json'
-    }
+    
+    # Check if areas.json exists and load data
+    areas = load_json_from_file('areas.json')
 
-    response = requests.get(url, headers=headers)
+    if areas is None:
+        # areas.json doesn't exist, make API call and save data to the file
+        
+        url = "https://api.btcmap.org/areas"
+        headers = {
+            'Content-Type': 'application.json'
+        }
 
-    if response.status_code != 200:
-        print(f"Error fetching areas: {response.text}")
-        sys.exit(1)
+        response = requests.get(url, headers=headers)
 
-    areas = response.json()
+        if response.status_code != 200:
+            print(f"Error fetching areas: {response.text}")
+            sys.exit(1)
+
+        areas = response.json()
+
+    # Save the data to areas.json
+    save_json_to_file(areas, 'areas.json')
  
     global_area = []
     country_areas = []
@@ -85,6 +108,7 @@ def get_areas():
         area_type = tags.get('type')
         #deleted = 'deleted_at' in id and id['deleted_at'] == ""
 
+        #ToDo make this IF work
         #if not deleted: #Only process areas that have not been deleted
         if area_type == "country":  
             id = id['id']
@@ -99,14 +123,15 @@ def get_areas():
             area = Area(id, tags)
             other_areas.append(area)
 
-    #Create a global area
+    #Link this in with the global area Igor created
+    # #Create a global area
     global_json = """
     {
         "name": "Global",
         "population:date": "2021-02-01",
         "url_alias": "global",
         "population": "8000000000",
-        "area_km2": "148900000"
+        "area_km2": 148900000
     }"""
     global_tags = json.loads(global_json)
     id = ""
@@ -118,23 +143,31 @@ def get_areas():
 
 def get_reports(areas):
     
-    updated_since_date = "2023-10-29"
-    url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+    updated_since_date = "2023-11-01"
 
-    #url = "https://api.btcmap.org/reports"
-    
-    headers = {
-        'Content-Type': 'application.json'
-    }
+     # Check if areas.json exists and load data
+    reports = load_json_from_file('reports.json')
 
-    response = requests.get(url, headers=headers)
+    if reports is None:
+        # reports.json doesn't exist, make API call and save data to the file
+        
+        url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+        headers = {
+            'Content-Type': 'application.json'
+        }
 
-    if response.status_code != 200:
-        print(f"Error fetching reports: {response.text}")
-        sys.exit(1)
+        response = requests.get(url, headers=headers)
 
-    report_data = response.json()
-    for id in report_data:
+        if response.status_code != 200:
+            print(f"Error fetching areas: {response.text}")
+            sys.exit(1)
+
+        reports = response.json()
+
+    # Save the data to areas.json
+    save_json_to_file(reports, 'reports.json')
+
+    for id in reports:
         area_id = id['area_id']
 
         for area in areas:
@@ -145,28 +178,61 @@ def calculate_metrics(areas):
     for area in areas:
         latest_report = area.get_latest_report()
         if latest_report:
-
-            #Calculate total *merchants*, excluding ATMs
+            # Calculate total *merchants*, excluding ATMs
             area.total_merchants = latest_report.total_elements - latest_report.total_elements_atms
 
-            #Calculate average verification age
+            # Calculate average verification age
             if latest_report.average_verification_date:
                 current_date = datetime.now()
                 area.average_verification_age = (current_date - latest_report.average_verification_date).days
             else:
                 area.average_verification_age = None
 
-            # Calculate merchant denisty per capita
-            if area.population and area.population != '0':
-                area.merchants_per_population = area.total_merchants / float(area.population)
-            else:
-                area.merchants_per_population = None
+            # Calculate a weighted average verification age assuming all outdated elements do not have an average verification date
+            average_outdated_element_age = 2 * 365  # This should be modified in time to use the last date a bitcoin tag was added to an element should a verification date not be present. This will get more inaccurate over time from Nov 2023, which is 12-months after the verification tags started being added
 
-            # Calculate merchant denisty per km2
+            if (latest_report.up_to_date_elements is not None and area.average_verification_age is not None and latest_report.outdated_elements is not None):
+                weighted_average_verification_age = ((latest_report.up_to_date_elements * area.average_verification_age) + (latest_report.outdated_elements * average_outdated_element_age)) / latest_report.total_elements if latest_report.total_elements > 0 else None
+                area.weighted_average_verification_age = weighted_average_verification_age
+            else:
+                area.weighted_average_verification_age = None
+
+            # Calculate merchant density per capita
+            if area.population and area.population != '0':
+                area.merchants_per_capita = area.total_merchants / float(area.population)
+            else:
+                area.merchants_per_capita = None
+
+            # Calculate merchant density per km2
             if area.area_km2 and area.area_km2 != '0':
-                area.merchants_per_km2 = area.total_merchants / float(area.area_km2)
+                area.merchants_per_km2 = area.total_merchants / area.area_km2
             else:
                 area.merchants_per_km2 = None
+
+            # Calculate area score based on the current set of areas
+            max_total_merchants = max((other_area.total_merchants or 0) for other_area in areas)
+            max_weighted_average_verification_age = max((other_area.weighted_average_verification_age or 0) for other_area in areas)
+
+            if max_total_merchants == 0:
+                normalized_total_merchants = 0
+            else:
+                normalized_total_merchants = area.total_merchants / max_total_merchants
+
+            if max_weighted_average_verification_age == 0 or area.weighted_average_verification_age is None:
+                normalized_weighted_average_verification_age = 0
+            else:
+                normalized_weighted_average_verification_age = area.weighted_average_verification_age / max_weighted_average_verification_age
+
+            #Sum of the weights should be 1
+            weight_total_merchants = 0.3
+            weight_weighted_average_verification_age = 0.7
+
+            if area.weighted_average_verification_age is not None:
+                area.score = (weight_total_merchants * normalized_total_merchants) + (weight_weighted_average_verification_age * (1 - normalized_weighted_average_verification_age))
+            else:
+                # Assign a low score when the weighted_average_verification_age is None
+                area.score = 0.1  # You can adjust the low score value as needed
+         
 
 
 def plot_total_elements_over_time(areas):
@@ -182,7 +248,7 @@ def plot_total_elements_over_time(areas):
 
     # Adjust the following path and filename as needed
     filename = 'total_elements_chart.png'
-    plt.savefig(filename)
+    #plt.savefig(filename)
 
     #plt.show()  # Optionally display the chart on the screen
 
@@ -193,6 +259,7 @@ def write_to_csv(areas, csv_file_path):
         fieldnames = [
             "id",
             "url_alias",
+            "name",
             "population",
             "area_km2",
             "id (Latest Report)",
@@ -210,8 +277,10 @@ def write_to_csv(areas, csv_file_path):
             "up_to_date_elements",
             "up_to_date_percent",
             "Average Verification Age (Days)",
-            "Merchants per Population",
-            "Merchants per km²"
+            "Weighted Average Verification Age (Days)",
+            "Merchants per Capita",
+            "Merchants per km²",
+            "Score"
         ]
 
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -223,7 +292,8 @@ def write_to_csv(areas, csv_file_path):
                 # Create a new dictionary containing the specified fields
                 row = {
                     "id": area.id,
-                    "url_alias": area.get_alias(),
+                    "url_alias": area.alias,
+                    "name": area.name,
                     "population": area.population,
                     "area_km2": area.area_km2,
                     "id (Latest Report)": latest_report.id,
@@ -240,9 +310,11 @@ def write_to_csv(areas, csv_file_path):
                     "total_elements_onchain": latest_report.total_elements_onchain,
                     "up_to_date_elements": latest_report.up_to_date_elements,
                     "up_to_date_percent": latest_report.up_to_date_percent,
-                    "Average Verification Age (Days)": area.average_verification_age,
-                    "Merchants per Population": area.merchants_per_population,
-                    "Merchants per km²": area.merchants_per_km2
+                    "Average Verification Age (Days)": str(area.average_verification_age),
+                    "Weighted Average Verification Age (Days)": round(area.weighted_average_verification_age, 2) if area.weighted_average_verification_age is not None else 0,
+                    "Merchants per Capita": "{:.10f}".format(area.merchants_per_capita) if area.merchants_per_capita is not None else 0,
+                    "Merchants per km²": "{:.10f}".format(area.merchants_per_km2) if area.merchants_per_km2 is not None else 0,
+                    "Score": area.score
                 }
 
                 csv_writer.writerow(row)
