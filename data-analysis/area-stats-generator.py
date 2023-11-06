@@ -213,30 +213,45 @@ def calculate_metrics(areas):
                 area.merchants_per_km2 = area.total_merchants / area.area_km2
             else:
                 area.merchants_per_km2 = None
-        
 
-            # Calculate area score based on the current set of areas
 
-            # Filter out areas with None values for weighted_total_merchants
-            valid_areas = [area for area in areas if area.weighted_total_merchants is not None]
+            # Calculate area score based on weighted total merchants and relative size
+
+            # Filter areas with valid weighted_total_merchants and area_km2
+            valid_areas = [area for area in areas if area.weighted_total_merchants is not None and area.area_km2 is not None]
 
             if valid_areas:
                 max_weighted_total_merchants = max(area.weighted_total_merchants for area in valid_areas)
-
-                if max_weighted_total_merchants == 0:
-                    for area in areas:
-                        area.score = 0
-                else:
-                    for area in areas:
-                        if area.weighted_total_merchants is not None:
-                            normalized_score = area.weighted_total_merchants / max_weighted_total_merchants
-                            area.score = normalized_score
+                max_area_size = max(area.area_km2 for area in valid_areas)
             else:
-                # Handle the case where there are no valid areas with non-None values
-                for area in areas:
-            
-                    area.score = 0
+                max_weighted_total_merchants = 0  # Handle the case when there are no valid values
+                max_area_size = 0  # Handle the case when there are no valid values
 
+            if max_weighted_total_merchants != 0:  # Check if max_weighted_total_merchants is not 0
+                weighted_total_merchants_normalized = area.weighted_total_merchants / max_weighted_total_merchants
+            else:
+                weighted_total_merchants_normalized = 0  # Handle the division by zero case
+
+            if max_area_size != 0:  # Check if max_area_size is not 0
+                # Check for None values and set them to 0
+                area_size_normalized = 1 - (area.area_km2 or 0) / max_area_size  # Larger areas get smaller weights
+            else:
+                area_size_normalized = 0  # Handle the division by zero case
+
+            # Adjust these weight values as needed
+            weight_weighted_total_merchants = 0.7
+            weight_area_size = 0.3
+
+            score = (
+                (weight_weighted_total_merchants * weighted_total_merchants_normalized) +
+                (weight_area_size * area_size_normalized)
+            )
+
+            area.score = score
+
+
+
+    
 
 
             
