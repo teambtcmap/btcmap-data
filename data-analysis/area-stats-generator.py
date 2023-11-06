@@ -5,6 +5,7 @@ import sys
 from datetime import datetime
 import json
 import matplotlib.pyplot as plt
+import math
 
 class Area:
     def __init__(self, id, tags):
@@ -20,6 +21,7 @@ class Area:
         self.average_verification_age = None
         self.weighted_average_verification_age = None
         self.total_merchants = None
+        self.weighted_total_merchants = None
         self.score = None
 
     def add_report(self, report):
@@ -130,7 +132,7 @@ def get_areas():
         "name": "Global",
         "population:date": "2021-02-01",
         "url_alias": "global",
-        "population": "8000000000",
+        "population": 8000000000,
         "area_km2": 148900000
     }"""
     global_tags = json.loads(global_json)
@@ -181,6 +183,9 @@ def calculate_metrics(areas):
             # Calculate total *merchants*, excluding ATMs
             area.total_merchants = latest_report.total_elements - latest_report.total_elements_atms
 
+            # Calculate weighted merchants
+            area.weighted_total_merchants = area.total_merchants * (latest_report.up_to_date_percent / 100)
+
             # Calculate average verification age
             if latest_report.average_verification_date:
                 current_date = datetime.now()
@@ -189,7 +194,7 @@ def calculate_metrics(areas):
                 area.average_verification_age = None
 
             # Calculate a weighted average verification age assuming all outdated elements do not have an average verification date
-            average_outdated_element_age = 2 * 365  # This should be modified in time to use the last date a bitcoin tag was added to an element should a verification date not be present. This will get more inaccurate over time from Nov 2023, which is 12-months after the verification tags started being added
+            average_outdated_element_age = 1 * 365  # This should be modified in time to use the last date a bitcoin tag was added to an element should a verification date not be present. This will get more inaccurate over time from Nov 2023, which is 12-months after the verification tags started being added
 
             if (latest_report.up_to_date_elements is not None and area.average_verification_age is not None and latest_report.outdated_elements is not None):
                 weighted_average_verification_age = ((latest_report.up_to_date_elements * area.average_verification_age) + (latest_report.outdated_elements * average_outdated_element_age)) / latest_report.total_elements if latest_report.total_elements > 0 else None
@@ -208,33 +213,35 @@ def calculate_metrics(areas):
                 area.merchants_per_km2 = area.total_merchants / area.area_km2
             else:
                 area.merchants_per_km2 = None
+        
 
             # Calculate area score based on the current set of areas
-            max_total_merchants = max((other_area.total_merchants or 0) for other_area in areas)
-            max_weighted_average_verification_age = max((other_area.weighted_average_verification_age or 0) for other_area in areas)
 
-            if max_total_merchants == 0:
-                normalized_total_merchants = 0
+            # Filter out areas with None values for weighted_total_merchants
+            valid_areas = [area for area in areas if area.weighted_total_merchants is not None]
+
+            if valid_areas:
+                max_weighted_total_merchants = max(area.weighted_total_merchants for area in valid_areas)
+
+                if max_weighted_total_merchants == 0:
+                    for area in areas:
+                        area.score = 0
+                else:
+                    for area in areas:
+                        if area.weighted_total_merchants is not None:
+                            normalized_score = area.weighted_total_merchants / max_weighted_total_merchants
+                            area.score = normalized_score
             else:
-                normalized_total_merchants = area.total_merchants / max_total_merchants
+                # Handle the case where there are no valid areas with non-None values
+                for area in areas:
+            
+                    area.score = 0
 
-            if max_weighted_average_verification_age == 0 or area.weighted_average_verification_age is None:
-                normalized_weighted_average_verification_age = 0
-            else:
-                normalized_weighted_average_verification_age = area.weighted_average_verification_age / max_weighted_average_verification_age
 
-            #Sum of the weights should be 1
-            weight_total_merchants = 0.3
-            weight_weighted_average_verification_age = 0.7
 
-            if area.weighted_average_verification_age is not None:
-                area.score = (weight_total_merchants * normalized_total_merchants) + (weight_weighted_average_verification_age * (1 - normalized_weighted_average_verification_age))
-            else:
-                # Assign a low score when the weighted_average_verification_age is None
-                area.score = 0.1  # You can adjust the low score value as needed
+            
+ 
          
-
-
 def plot_total_elements_over_time(areas):
     for area in areas:
         x = [report.date for report in area.reports]
@@ -258,10 +265,18 @@ def write_to_csv(areas, csv_file_path):
         sample_row = areas[0] if areas else None
         fieldnames = [
             "id",
-            "url_alias",
             "name",
+            "Weighted Average Verification Age (Days)",
+            "Merchants per Capita",
+            "Merchants per km²",
+            "Score",
             "population",
             "area_km2",
+            "total_merchants",
+            "weighted_total_merchants",
+            "up_to_date_elements",
+            "up_to_date_percent",
+            "Average Verification Age (Days)",
             "id (Latest Report)",
             "date",
             "average_verification_date",
@@ -269,18 +284,10 @@ def write_to_csv(areas, csv_file_path):
             "legacy_elements",
             "outdated_elements",
             "total_elements",
-            "total_merchants",
             "total_elements_atms",
             "total_elements_lightning",
             "total_elements_lightning_contactless",
-            "total_elements_onchain",
-            "up_to_date_elements",
-            "up_to_date_percent",
-            "Average Verification Age (Days)",
-            "Weighted Average Verification Age (Days)",
-            "Merchants per Capita",
-            "Merchants per km²",
-            "Score"
+            "total_elements_onchain"
         ]
 
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -292,10 +299,18 @@ def write_to_csv(areas, csv_file_path):
                 # Create a new dictionary containing the specified fields
                 row = {
                     "id": area.id,
-                    "url_alias": area.alias,
                     "name": area.name,
                     "population": area.population,
+                    "Weighted Average Verification Age (Days)": round(area.weighted_average_verification_age, 2) if area.weighted_average_verification_age is not None else 0,
+                    "Merchants per Capita": "{:.10f}".format(area.merchants_per_capita) if area.merchants_per_capita is not None else 0,
+                    "Merchants per km²": "{:.10f}".format(area.merchants_per_km2) if area.merchants_per_km2 is not None else 0,
+                    "Score": area.score,
                     "area_km2": area.area_km2,
+                    "total_merchants": area.total_merchants,
+                    "weighted_total_merchants": area.weighted_total_merchants,
+                    "up_to_date_elements": latest_report.up_to_date_elements,
+                    "up_to_date_percent": latest_report.up_to_date_percent,
+                    "Average Verification Age (Days)": str(area.average_verification_age),
                     "id (Latest Report)": latest_report.id,
                     "date": latest_report.date,
                     "average_verification_date": latest_report.average_verification_date,
@@ -303,18 +318,10 @@ def write_to_csv(areas, csv_file_path):
                     "legacy_elements": latest_report.legacy_elements,
                     "outdated_elements": latest_report.outdated_elements,
                     "total_elements": latest_report.total_elements,
-                    "total_merchants": area.total_merchants,
                     "total_elements_atms": latest_report.total_elements_atms,
                     "total_elements_lightning": latest_report.total_elements_lightning,
                     "total_elements_lightning_contactless": latest_report.total_elements_lightning_contactless,
-                    "total_elements_onchain": latest_report.total_elements_onchain,
-                    "up_to_date_elements": latest_report.up_to_date_elements,
-                    "up_to_date_percent": latest_report.up_to_date_percent,
-                    "Average Verification Age (Days)": str(area.average_verification_age),
-                    "Weighted Average Verification Age (Days)": round(area.weighted_average_verification_age, 2) if area.weighted_average_verification_age is not None else 0,
-                    "Merchants per Capita": "{:.10f}".format(area.merchants_per_capita) if area.merchants_per_capita is not None else 0,
-                    "Merchants per km²": "{:.10f}".format(area.merchants_per_km2) if area.merchants_per_km2 is not None else 0,
-                    "Score": area.score
+                    "total_elements_onchain": latest_report.total_elements_onchain
                 }
 
                 csv_writer.writerow(row)
