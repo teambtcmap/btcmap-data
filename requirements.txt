@@ -1,0 +1,7 @@
+matplotlib
+requests
+area
+geojson-rewind
+geopandas
+h3
+python-rclone
