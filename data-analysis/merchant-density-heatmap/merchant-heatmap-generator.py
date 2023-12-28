@@ -50,7 +50,9 @@ h3_resolution = 2  # this is not a real unit - 0-15 valid where 0 is coarse
 gdf_h3_agg = gdf.h3.geo_to_h3_aggregate(h3_resolution, operation='count')
 gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'count'})
 gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
-gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area / 1_000 ** 2)
+m2_to_km2 = 1_000 ** 2
+gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area / m2_to_km2)
+gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:4326') # convert back to WGS84
 
 # Plot
 _, ax = plt.subplots(1, 1, figsize=(12, 8))
