@@ -50,9 +50,12 @@ h3_resolution = 2  # this is not a real unit - 0-15 valid where 0 is coarse
 gdf_h3_agg = gdf.h3.geo_to_h3_aggregate(h3_resolution, operation='count')
 gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'count'})
 gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
-gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area)
-gdf_h3_agg.plot(column='count', legend=True)
-plt.title('merchant count')
+gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area / 1_000 ** 2)
+
+# Plot
+_, ax = plt.subplots(1, 1, figsize=(8, 10))
+gdf_h3_agg.plot(column='density', legend=True, ax=ax)
+plt.title('merchant density per sq km')
 plt.savefig(script_directory / 'merchant_density.png')
 
 # Save the density data as a shapefile in the current script directory
