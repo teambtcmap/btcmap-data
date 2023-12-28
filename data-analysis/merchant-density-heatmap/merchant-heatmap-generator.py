@@ -53,7 +53,7 @@ gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
 gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area / 1_000 ** 2)
 
 # Plot
-_, ax = plt.subplots(1, 1, figsize=(8, 10))
+_, ax = plt.subplots(1, 1, figsize=(12, 8))
 gdf_h3_agg.plot(column='density', legend=True, ax=ax)
 plt.title('merchant density per sq km')
 plt.savefig(script_directory / 'merchant_density.png')
