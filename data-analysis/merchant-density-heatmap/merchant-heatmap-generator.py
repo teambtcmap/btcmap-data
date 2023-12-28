@@ -48,10 +48,10 @@ if len(gdf) == 0:
 # Step 4: Calculate hexagon-based density as merchants per square kilometer
 h3_resolution = 2  # this is not a real unit - 0-15 valid where 0 is coarse
 gdf_h3_agg = gdf.h3.geo_to_h3_aggregate(h3_resolution, operation='count')
-gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'count'})
+gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'merchant_count'})
 gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
 m2_to_km2 = 1_000 ** 2
-gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area / m2_to_km2)
+gdf_h3_agg['density'] = gdf_h3_agg['merchant_count'] / (gdf_h3_agg.area / m2_to_km2)
 gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:4326') # convert back to WGS84
 
 # Plot
@@ -65,3 +65,10 @@ script_directory = pathlib.Path(__file__).parent.absolute()
 shapefile_output = script_directory / 'merchant_density'
 gdf_h3_agg.to_file(shapefile_output)
 print(f"Merchant density exported as '{shapefile_output}'")
+
+# Save as json
+json_output = script_directory / 'merchant_density.json'
+json_h3_agg = gdf_h3_agg.to_json()
+with open(json_output, "w") as f:
+    json.dump(json_h3_agg, f)
+print(f"Merchant density exported as '{json_output}'")
