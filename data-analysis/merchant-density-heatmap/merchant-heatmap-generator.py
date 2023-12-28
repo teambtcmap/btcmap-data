@@ -1,14 +1,13 @@
 import requests
 import geopandas as gpd
-import os
+import pathlib
 import numpy as np
 import h3pandas
 import json  # Import the json module
 import matplotlib.pyplot as plt
 
-# Set the working directory to the script's directory
-script_directory = os.path.dirname(os.path.abspath(__file__))
-os.chdir(script_directory)
+# Define script directory
+script_directory = pathlib.Path(__file__).parent.absolute()
 
 # Step 1: Get Latest Merchants from btcmap.org/elements
 url = "https://api.btcmap.org/elements"  # Updated URL
@@ -52,10 +51,12 @@ gdf_h3_agg = gdf.h3.geo_to_h3_aggregate(h3_resolution, operation='count')
 gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'count'})
 gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
 gdf_h3_agg['density'] = gdf_h3_agg['count'] / (gdf_h3_agg.area)
-gdf_h3_agg.plot(column='count')
-plt.show()
+gdf_h3_agg.plot(column='count', legend=True)
+plt.title('merchant count')
+plt.savefig(script_directory / 'merchant_density.png')
 
 # Save the density data as a shapefile in the current script directory
-shapefile_output = os.path.join(script_directory, 'merchant_density.shp')
+script_directory = pathlib.Path(__file__).parent.absolute()
+shapefile_output = script_directory / 'merchant_density'
 gdf_h3_agg.to_file(shapefile_output)
 print(f"Merchant density exported as '{shapefile_output}'")
