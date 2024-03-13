@@ -24,8 +24,12 @@ for filename in os.listdir(data_directory):
     # Check if the item in the directory is a file (not a subdirectory)
     if os.path.isfile(file_path):
         # Read the content of the file
-        with open(file_path, "r") as file:
-            area_data = json.load(file)  # Load data from the file
+        with open(file_path, "r", encoding="iso-8859-1") as file:
+            try:
+                area_data = json.load(file)  # Load data from the file
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON from file {filename}: {e}")
+                continue  # Skip to the next file if JSON decoding fails
 
         # Define the API URL and headers
         url = "https://api.btcmap.org/areas"
