@@ -10,7 +10,7 @@ import math
 # Global query parameters
 UPDATED_SINCE_DATE = "2022-10-11T00:00:00.000Z"
 QUERY_LIMIT = "100000"
-REPORTS_SINCE_DATE = "2023-11-01T00:00:00.000Z"
+REPORTS_SINCE_DATE = "2022-10-01T00:00:00.000Z"
 
 class Area:
     def __init__(self, id, tags):
