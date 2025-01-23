@@ -163,13 +163,13 @@ def get_reports(areas):
 
         url = f"https://api.btcmap.org/v3/reports/?updated_since={updated_since_date}"
         headers = {
-            'Content-Type': 'application.json'
+            'Content-Type': 'application/json'
         }
 
         response = requests.get(url, headers=headers)
 
         if response.status_code != 200:
-            print(f"Error fetching areas: {response.text}")
+            print(f"Error fetching reports: {response.text}")
             sys.exit(1)
 
         reports = response.json()
