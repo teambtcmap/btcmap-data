@@ -1,0 +1,7 @@
+requests
+geopandas
+folium
+shapely
+numpy
+h3
+geojson

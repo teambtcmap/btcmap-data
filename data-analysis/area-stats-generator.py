@@ -4,7 +4,7 @@ import os
 import sys
 from datetime import datetime
 import json
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import math
 
 class Area:
@@ -356,7 +356,7 @@ def main():
     calculate_metrics(community_areas)
     calculate_metrics(other_areas)
 
-    plot_total_elements_over_time(community_areas)
+    #plot_total_elements_over_time(community_areas)
 
     global_csv_file_path = f"{script_directory}/global_stats.csv"
     country_csv_file_path = f"{script_directory}/country_stats.csv"
