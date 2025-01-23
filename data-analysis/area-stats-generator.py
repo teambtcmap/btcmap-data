@@ -91,6 +91,7 @@ def get_areas():
             'Accept': 'application/json'
         }
 
+        print(f"Making request to URL: {url}")
         response = requests.get(url, headers=headers)
 
         if response.status_code != 200:
