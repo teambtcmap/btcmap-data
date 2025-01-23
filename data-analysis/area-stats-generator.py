@@ -293,6 +293,12 @@ def plot_total_elements_over_time(areas):
 
 
 def write_to_csv(areas, csv_file_path):
+    # Debug logging for areas with None names
+    for area in areas:
+        if area.name is None:
+            print(f"Area with ID {area.id} has no name tag")
+            print(f"Area tags: {area.tags}")
+            
     with open(csv_file_path, mode="w", newline="") as csv_file:
         sample_row = areas[0] if areas else None
         fieldnames = [
