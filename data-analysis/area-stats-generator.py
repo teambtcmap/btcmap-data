@@ -188,7 +188,10 @@ def get_reports(areas):
 
         if area_id:
             for area in areas:
-                if area_id == int(area.id):
+                # Handle both empty strings and numeric IDs
+                if area.id == "" and area_id == 0:
+                    area.add_report(Report(report))
+                elif area.id != "" and area_id == int(area.id):
                     area.add_report(Report(report))
 
 def calculate_metrics(areas):
