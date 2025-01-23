@@ -138,18 +138,17 @@ def get_areas():
             area = Area(id, tags)
             other_areas.append(area)
 
-    #Link this in with the global area Igor created
-    # #Create a global area
+    #Create a global area
     global_json = """
     {
         "name": "Global",
         "population:date": "2021-02-01",
-        "url_alias": "global",
+        "url_alias": "earth",
         "population": 8000000000,
         "area_km2": 148900000
     }"""
     global_tags = json.loads(global_json)
-    id = ""
+    id = "662"
     area = Area(id, global_tags)
     global_area.append(area)
 
