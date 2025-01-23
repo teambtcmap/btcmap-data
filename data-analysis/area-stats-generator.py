@@ -84,7 +84,7 @@ def get_areas():
     if areas is None:
         # areas.json doesn't exist, make API call and save data to the file
         
-        url = "https://api.btcmap.org/areas"
+        url = "https://api.btcmap.org/v3/areas"
         headers = {
             'Content-Type': 'application.json'
         }
