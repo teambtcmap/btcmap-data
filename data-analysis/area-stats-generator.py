@@ -82,6 +82,7 @@ def get_areas():
     areas = load_json_from_file('areas.json')
 
     if areas is None:
+        print("No cached areas.json found, making API call...")
         # areas.json doesn't exist, make API call and save data to the file
 
         from urllib.parse import quote
