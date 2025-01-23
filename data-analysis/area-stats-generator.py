@@ -94,12 +94,16 @@ def get_areas():
 
         print(f"Making request to URL: {url}")
         response = requests.get(url, headers=headers)
+        print(f"Response status code: {response.status_code}")
+        print(f"Response headers: {response.headers}")
 
-        if response.status_code != 200:
-            print(f"Error fetching areas: {response.text}")
+        try:
+            areas = response.json()
+            print(f"Successfully parsed JSON response with {len(areas)} areas")
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSON: {e}")
+            print(f"Response content: {response.text}")
             sys.exit(1)
-
-        areas = response.json()
 
     # Save the data to areas.json
     save_json_to_file(areas, 'areas.json')
