@@ -161,7 +161,7 @@ def get_reports(areas):
 
     if reports is None:
         print("No cached reports.json found, making API call...")
-        
+
         url = f"https://api.btcmap.org/v3/reports?updated_since={REPORTS_SINCE_DATE}&limit={QUERY_LIMIT}"
         headers = {
             'Accept': 'application/json'
@@ -325,6 +325,7 @@ def write_to_csv(areas, csv_file_path):
 
         for area in areas:
             latest_report = area.get_latest_report()
+            print(f"Area {area.name}: has latest report: {latest_report is not None}")
             if latest_report:
                 # Create a new dictionary containing the specified fields
                 row = {
