@@ -119,12 +119,13 @@ def get_areas():
     other_areas = []
 
     for id in areas:
+        # Skip deleted areas
+        if 'deleted_at' in id and id['deleted_at'] is not None:
+            continue
+            
         tags = id.get('tags', {})
         area_type = tags.get('type')
-        #deleted = 'deleted_at' in id and id['deleted_at'] == ""
-
-        #ToDo make this IF work
-        #if not deleted: #Only process areas that have not been deleted
+        
         if area_type == "country":  
             id = id['id']
             area = Area(id, tags)
