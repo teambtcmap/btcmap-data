@@ -183,12 +183,13 @@ def get_reports(areas):
     # Save the data to areas.json
     save_json_to_file(reports, 'reports.json')
 
-    for id in reports:
-        area_id = id['area_id']
+    for report in reports:
+        area_id = report.get('tags', {}).get('area')
 
-        for area in areas:
-            if area_id == area.id:
-                area.add_report(Report(id))
+        if area_id:
+            for area in areas:
+                if area_id == area.id:
+                    area.add_report(Report(report))
 
 def calculate_metrics(areas):
     for area in areas:
