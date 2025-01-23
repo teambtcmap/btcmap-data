@@ -77,14 +77,14 @@ def save_json_to_file(data, file_name):
         json.dump(data, file)
 
 def get_areas():
-    
+
     # Check if areas.json exists and load data
     areas = load_json_from_file('areas.json')
 
     if areas is None:
         # areas.json doesn't exist, make API call and save data to the file
-        
-        url = "https://api.btcmap.org/v3/areas"
+
+        url = "https://api.btcmap.org/v3/areas?updated_since=2022-10-11T00:00:00.000Z&limit=100000"
         headers = {
             'Content-Type': 'application.json'
         }
@@ -99,7 +99,7 @@ def get_areas():
 
     # Save the data to areas.json
     save_json_to_file(areas, 'areas.json')
- 
+
     global_area = []
     country_areas = []
     community_areas = []
@@ -144,7 +144,7 @@ def get_areas():
 
 
 def get_reports(areas):
-    
+
     updated_since_date = "2023-11-01"
 
      # Check if areas.json exists and load data
@@ -152,8 +152,8 @@ def get_reports(areas):
 
     if reports is None:
         # reports.json doesn't exist, make API call and save data to the file
-        
-        url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+
+        url = f"https://api.btcmap.org/v3/reports/?updated_since={updated_since_date}"
         headers = {
             'Content-Type': 'application.json'
         }
@@ -251,12 +251,12 @@ def calculate_metrics(areas):
 
 
 
-    
 
 
-            
- 
-         
+
+
+
+
 def plot_total_elements_over_time(areas):
     for area in areas:
         x = [report.date for report in area.reports]
