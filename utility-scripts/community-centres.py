@@ -10,7 +10,7 @@ conn = sqlite3.connect('btcmap.db')
 cur = conn.cursor()
 
 # Select areas of type community
-cur.execute("SELECT id, tags FROM areas WHERE json_extract(tags, '$.type') = 'community'")
+cur.execute("SELECT id, tags FROM area WHERE json_extract(tags, '$.type') = 'community'")
 areas = cur.fetchall()
 
 for area_id, tags_str in areas:
@@ -47,7 +47,7 @@ for area_id, tags_str in areas:
     bounding_box = box(minx, miny, maxx, maxy)
 
     # Update the database with new tags
-    cur.execute("UPDATE areas SET tags = json_set(tags, '$.centroid', json(?), '$.bounding_box', json(?)) WHERE id = ?",
+    cur.execute("UPDATE area SET tags = json_set(tags, '$.centroid', json(?), '$.bounding_box', json(?)) WHERE id = ?",
                 (json.dumps({'lat': lat, 'lon': lon}), json.dumps(mapping(bounding_box)), area_id))
 
 # Commit changes and close the connection
