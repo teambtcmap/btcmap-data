@@ -1,5 +1,6 @@
 {pkgs}: {
   deps = [
+    pkgs.sqlite
     pkgs.tk
     pkgs.tcl
     pkgs.qhull
