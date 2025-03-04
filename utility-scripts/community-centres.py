@@ -55,13 +55,26 @@ for area_id, tags_str in areas:
         centroid = unified.centroid
         lat, lon = centroid.y, centroid.x
 
-        # Calculate the bounding box
+        # Calculate the bounding box coordinates
         minx, miny, maxx, maxy = unified.bounds
-        bounding_box = box(minx, miny, maxx, maxy)
-
-        # Update the database with new tags
-        cur.execute("UPDATE area SET tags = json_set(tags, '$.centroid', json(?), '$.bounding_box', json(?)) WHERE id = ?",
-                    (json.dumps({'lat': lat, 'lon': lon}), json.dumps(mapping(bounding_box)), area_id))
+        
+        # Create a bbox array in GeoJSON format [west, south, east, north]
+        bbox_array = [minx, miny, maxx, maxy]
+        
+        # First update the centroid
+        cur.execute("UPDATE area SET tags = json_set(tags, '$.centroid', json(?)) WHERE id = ?",
+                   (json.dumps({'lat': lat, 'lon': lon}), area_id))
+        
+        # Then add the bbox to the geo_json structure according to GeoJSON spec
+        cur.execute("""
+            UPDATE area 
+            SET tags = json_set(
+                tags, 
+                '$.geo_json.bbox', 
+                json(?)
+            ) 
+            WHERE id = ?
+        """, (json.dumps(bbox_array), area_id))
 
         print(f"Successfully processed area {area_id}")
 
