@@ -44,7 +44,7 @@ for area_id, tags_str in areas:
                         # Validate that all polygon arrays have content and proper structure
                         for polygon in coordinates:
                             if not polygon or not isinstance(polygon, list):
-                                raise ValueError(f"Invalid MultiPolygon structure: empty or malformed polygon")
+                                raise ValueError("Invalid MultiPolygon structure: empty or malformed polygon")
                     
                     geom = shape(geojson_data)
                     geometries.append(geom)
