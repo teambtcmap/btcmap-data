@@ -38,10 +38,19 @@ for area_id, tags_str in areas:
             else:
                 # Handle single geometry
                 try:
+                    # Check if MultiPolygon has valid structure
+                    if geojson_data.get('type') == 'MultiPolygon':
+                        coordinates = geojson_data.get('coordinates', [])
+                        # Validate that all polygon arrays have content and proper structure
+                        for polygon in coordinates:
+                            if not polygon or not isinstance(polygon, list):
+                                raise ValueError(f"Invalid MultiPolygon structure: empty or malformed polygon")
+                    
                     geom = shape(geojson_data)
                     geometries.append(geom)
                 except (ValueError, IndexError, KeyError) as e:
-                    print(f"Error processing geometry in area {area_id}: {e}")
+                    print(f"Invalid GeoJSON in area {area_id}: {e}")
+                    print(f"GeoJSON type: {geojson_data.get('type', 'unknown')}")
                     continue
 
         if not geometries:
