@@ -8,8 +8,8 @@ from shapely.geometry import mapping
 conn = sqlite3.connect('btcmap.db')
 cur = conn.cursor()
 
-# Select areas of type community
-cur.execute("SELECT id, tags FROM area WHERE json_extract(tags, '$.type') = 'community'")
+# Select all areas that are not deleted
+cur.execute("SELECT id, tags FROM area WHERE deleted_at IS NULL")
 areas = cur.fetchall()
 
 for area_id, tags_str in areas:
@@ -94,4 +94,4 @@ for area_id, tags_str in areas:
 # Commit changes and close the connection
 conn.commit()
 conn.close()
-print("Community centers updated successfully!")
+print("Area centroids and bounding boxes updated successfully!")
