@@ -1,8 +1,7 @@
 import sqlite3
 import json
-from shapely.geometry import shape, box
+from shapely.geometry import shape
 from shapely.ops import unary_union
-from shapely.geometry import mapping
 
 # Connect to SQLite database
 conn = sqlite3.connect('btcmap.db')
