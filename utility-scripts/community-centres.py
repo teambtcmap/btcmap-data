@@ -73,6 +73,9 @@ for area_id, tags_str in areas:
         # First update the centroid
         cur.execute("UPDATE area SET tags = json_set(tags, '$.centroid', json(?)) WHERE id = ?",
                    (json.dumps({'lat': lat, 'lon': lon}), area_id))
+
+        # Remove the existing lat and lon tags
+        cur.execute("UPDATE area SET tags = json_remove(tags, '$.lat', '$.lon') WHERE id = ?", (area_id,))
         
         # Then add the bbox to the geo_json structure according to GeoJSON spec
         cur.execute("""
