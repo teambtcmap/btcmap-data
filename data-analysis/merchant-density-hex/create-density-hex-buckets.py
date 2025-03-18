@@ -27,10 +27,13 @@ if response.status_code == 200:
 
             # Only process entries with valid location data
             if lon is not None and lat is not None:
-                hex_id = h3.geo_to_h3(lat, lon, 8)  # Adjust the resolution as needed
-                hexagon_merchant_count[hex_id] = hexagon_merchant_count.get(hex_id, 0) + 1
+                # Adjust the resolution as needed
+                hex_id = h3.geo_to_h3(lat, lon, 8)
+                hexagon_merchant_count[hex_id] = hexagon_merchant_count.get(
+                    hex_id, 0) + 1
 
-        # Create a list of dictionaries with hex center coordinates and merchant count
+        # Create a list of dictionaries with hex center coordinates and
+        # merchant count
         hexagon_data = []
         for hex_id, merchant_count in hexagon_merchant_count.items():
             lat, lon = h3.h3_to_geo(hex_id)

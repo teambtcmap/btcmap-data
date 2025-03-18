@@ -17,7 +17,8 @@ for area_id, tags_str in areas:
 
         # Check if geo_json exists in tags
         if 'geo_json' not in tags:
-            print(f"Area ID {area_id} does not have geo_json data, skipping...")
+            print(
+                f"Area ID {area_id} does not have geo_json data, skipping...")
             continue
 
         geojson_data = tags['geo_json']
@@ -32,7 +33,8 @@ for area_id, tags_str in areas:
                         geom = shape(feature['geometry'])
                         geometries.append(geom)
                     except (ValueError, IndexError, KeyError) as e:
-                        print(f"Error processing feature in area {area_id}: {e}")
+                        print(
+                            f"Error processing feature in area {area_id}: {e}")
                         continue
             else:
                 # Handle single geometry
@@ -40,16 +42,19 @@ for area_id, tags_str in areas:
                     # Check if MultiPolygon has valid structure
                     if geojson_data.get('type') == 'MultiPolygon':
                         coordinates = geojson_data.get('coordinates', [])
-                        # Validate that all polygon arrays have content and proper structure
+                        # Validate that all polygon arrays have content and
+                        # proper structure
                         for polygon in coordinates:
                             if not polygon or not isinstance(polygon, list):
-                                raise ValueError("Invalid MultiPolygon structure: empty or malformed polygon")
-                    
+                                raise ValueError(
+                                    "Invalid MultiPolygon structure: empty or malformed polygon")
+
                     geom = shape(geojson_data)
                     geometries.append(geom)
                 except (ValueError, IndexError, KeyError) as e:
                     print(f"Invalid GeoJSON in area {area_id}: {e}")
-                    print(f"GeoJSON type: {geojson_data.get('type', 'unknown')}")
+                    print(
+                        f"GeoJSON type: {geojson_data.get('type', 'unknown')}")
                     continue
 
         if not geometries:
@@ -65,25 +70,28 @@ for area_id, tags_str in areas:
 
         # Calculate the bounding box coordinates
         minx, miny, maxx, maxy = unified.bounds
-        
+
         # Create a bbox array in GeoJSON format [west, south, east, north]
         bbox_array = [minx, miny, maxx, maxy]
-        
+
         # First update the centroid
         cur.execute("UPDATE area SET tags = json_set(tags, '$.centroid', json(?)) WHERE id = ?",
-                   (json.dumps({'lat': lat, 'lon': lon}), area_id))
+                    (json.dumps({'lat': lat, 'lon': lon}), area_id))
 
         # Remove the existing lat and lon tags
-        cur.execute("UPDATE area SET tags = json_remove(tags, '$.lat', '$.lon') WHERE id = ?", (area_id,))
-        
+        cur.execute(
+            "UPDATE area SET tags = json_remove(tags, '$.lat', '$.lon') WHERE id = ?",
+            (area_id,
+             ))
+
         # Then add the bbox to the geo_json structure according to GeoJSON spec
         cur.execute("""
-            UPDATE area 
+            UPDATE area
             SET tags = json_set(
-                tags, 
-                '$.geo_json.bbox', 
+                tags,
+                '$.geo_json.bbox',
                 json(?)
-            ) 
+            )
             WHERE id = ?
         """, (json.dumps(bbox_array), area_id))
 

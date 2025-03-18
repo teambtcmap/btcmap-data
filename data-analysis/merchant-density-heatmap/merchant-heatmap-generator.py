@@ -32,7 +32,8 @@ if response.status_code == 200:
 
         if element_info:
             # Create a GeoDataFrame from the location data
-            gdf = gpd.GeoDataFrame(element_info, geometry=gpd.points_from_xy([float(e['lon']) for e in element_info], [float(e['lat']) for e in element_info]))
+            gdf = gpd.GeoDataFrame(element_info, geometry=gpd.points_from_xy(
+                [float(e['lon']) for e in element_info], [float(e['lat']) for e in element_info]))
 
             # Define the hexagonal grid size in kilometers (adjust as needed)
             grid_size_km = 10.0
@@ -40,18 +41,27 @@ if response.status_code == 200:
             # Create a hexagonal grid over the extent of the merchant data
             xmin, ymin, xmax, ymax = gdf.geometry.total_bounds
             grid = gpd.GeoDataFrame()
-            grid['geometry'] = [h3.h3_to_geo(hex_id) for hex_id in h3.h3.polyfill(xmin, ymin, xmax, ymax, grid_size_km)]
-            grid['hex_id'] = [h3.geo_to_h3(lon, lat, 8) for lon, lat in grid['geometry']]
+            grid['geometry'] = [
+                h3.h3_to_geo(hex_id) for hex_id in h3.h3.polyfill(
+                    xmin, ymin, xmax, ymax, grid_size_km)]
+            grid['hex_id'] = [h3.geo_to_h3(lon, lat, 8)
+                              for lon, lat in grid['geometry']]
 
             # Calculate hexagon-based density as merchants per square kilometer
             density = []
             for hex_id in grid['hex_id']:
-                count = sum(1 for hex_id in gdf.geometry.apply(lambda point: h3.geo_to_h3(point.x, point.y, 8) == hex_id))
-                density.append(count / (grid_size_km ** 2))  # Merchants per square kilometer
+                count = sum(
+                    1 for hex_id in gdf.geometry.apply(
+                        lambda point: h3.geo_to_h3(
+                            point.x, point.y, 8) == hex_id))
+                # Merchants per square kilometer
+                density.append(count / (grid_size_km ** 2))
             grid['density'] = density
 
-            # Save the density data as a shapefile in the current script directory
-            shapefile_output = os.path.join(script_directory, 'merchant_density.shp')
+            # Save the density data as a shapefile in the current script
+            # directory
+            shapefile_output = os.path.join(
+                script_directory, 'merchant_density.shp')
             grid.to_file(shapefile_output)
 
             print(f"Merchant density exported as '{shapefile_output}'")

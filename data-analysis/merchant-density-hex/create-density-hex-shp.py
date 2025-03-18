@@ -38,9 +38,11 @@ if response.status_code == 200:
                 center = Point(lon, lat)
 
                 # Create a Polygon geometry for the hexagon
-                polygon = Polygon(h3.h3_to_geo_boundary(hex_id))  # Get the hexagon boundary
+                polygon = Polygon(h3.h3_to_geo_boundary(
+                    hex_id))  # Get the hexagon boundary
 
-                # If the hex_id doesn't exist in hexagon_features, create an entry
+                # If the hex_id doesn't exist in hexagon_features, create an
+                # entry
                 if hex_id not in hexagon_features:
                     hexagon_features[hex_id] = {
                         "type": "Feature",
@@ -51,7 +53,8 @@ if response.status_code == 200:
                         "geometry": {
                             "type": "GeometryCollection",
                             "geometries": [
-                                mapping(center),  # Convert center to GeoJSON format
+                                mapping(center),
+                                # Convert center to GeoJSON format
                             ],
                         },
                     }
@@ -69,7 +72,8 @@ if response.status_code == 200:
         }
 
         # Specify the output file path with the script directory
-        output_file_path = os.path.join(script_directory, "hexagon_merchant_data.geojson")
+        output_file_path = os.path.join(
+            script_directory, "hexagon_merchant_data.geojson")
 
         # Save the GeoJSON data with both hex center and hex polygon
         with open(output_file_path, "w") as json_file:

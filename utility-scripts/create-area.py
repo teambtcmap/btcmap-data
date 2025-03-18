@@ -127,6 +127,7 @@ if response.status_code == 200:
     if 'result' in response_data:
         print(f"Created {area_name}.")
     else:
-        print(f"Error creating area: {response_data.get('error', 'Unknown error')}")
+        print(
+            f"Error creating area: {response_data.get('error', 'Unknown error')}")
 else:
     print(f"HTTP Error: {response.status_code} - {response.text}")

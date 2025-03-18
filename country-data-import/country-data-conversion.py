@@ -1,5 +1,5 @@
-#This script takes GeoJSON country definitions sourced from https://github.com/AshKyd/geojson-regions and converts them to the BTC Map format.
-#The area of the GeoJSON is calculated in KM^2 at the same time.
+# This script takes GeoJSON country definitions sourced from https://github.com/AshKyd/geojson-regions and converts them to the BTC Map format.
+# The area of the GeoJSON is calculated in KM^2 at the same time.
 
 import os
 import json
@@ -17,17 +17,19 @@ input_directory_path = 'input/geojson-regions-50m'
 output_directory_path = 'output/btcmap-areas-50m'
 
 # Function to extract elements from a GeoJSON feature
+
+
 def extract_elements(feature):
     # Convert "id" to lowercase
     id_lower = feature["properties"].get("iso_a2", "").lower()
 
     # Calculate the area of the geometry
     area_m2 = area(feature["geometry"])
-    area_km2 = round((area_m2 / 1_000_000),2)
+    area_km2 = round((area_m2 / 1_000_000), 2)
 
-    #Ensure imported GeoJSON follows the RHR
+    # Ensure imported GeoJSON follows the RHR
     geo_json = rewind(feature["geometry"])
-    
+
     extracted_feature = {
         "id": id_lower,
         "tags": {
@@ -56,42 +58,47 @@ def extract_elements(feature):
             "geo_json": geo_json
         }
     }
-    
+
     return extracted_feature
+
 
 # Iterate through files in the directory
 for filename in os.listdir(input_directory_path):
     if filename.endswith(".geojson"):
         file_path = os.path.join(input_directory_path, filename)
-        
+
         # Load the GeoJSON file
         with open(file_path, 'r') as file:
             geojson_data = json.load(file)
-        
+
         # Check if "features" key exists in the GeoJSON data
         if "features" in geojson_data:
             # Process each feature in the GeoJSON data
             for feature in geojson_data['features']:
                 extracted_feature = extract_elements(feature)
                 id_lower = extracted_feature["id"]
-                
+
                 # Create an output filename in the format id.json
                 output_filename = f"{id_lower}.json"
-                
+
                 # Write the extracted feature to a separate JSON file
-                output_file_path = os.path.join(output_directory_path, output_filename)
+                output_file_path = os.path.join(
+                    output_directory_path, output_filename)
                 with open(output_file_path, 'w') as output_file:
                     json.dump(extracted_feature, output_file, indent=2)
         else:
-            # If there is no "features" key, assume the entire file is a single feature
+            # If there is no "features" key, assume the entire file is a single
+            # feature
             extracted_feature = extract_elements(geojson_data)
             id_lower = extracted_feature["id"]
-            
+
             # Create an output filename in the format id.json
             output_filename = f"{id_lower}.json"
-            
-            # Write the extracted feature to a separate JSON file in the output directory
-            output_file_path = os.path.join(output_directory_path, output_filename)
+
+            # Write the extracted feature to a separate JSON file in the output
+            # directory
+            output_file_path = os.path.join(
+                output_directory_path, output_filename)
             with open(output_file_path, 'w') as output_file:
                 json.dump(extracted_feature, output_file, indent=2)
 

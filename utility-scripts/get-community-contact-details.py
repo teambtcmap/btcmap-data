@@ -1,4 +1,4 @@
-#Gets email, twitter and nosrt contact details for communities.
+# Gets email, twitter and nosrt contact details for communities.
 
 import requests
 import csv
@@ -53,6 +53,9 @@ with open('areas_data.csv', 'w', newline='') as csvfile:
             if twitter_username:
                 twitter_username = f'@{twitter_username}'
 
-            writer.writerow({'Area Alias': area_alias, 'Email': email, 'Twitter': twitter_username, 'Nostr': nostr})
+            writer.writerow({'Area Alias': area_alias,
+                             'Email': email,
+                             'Twitter': twitter_username,
+                             'Nostr': nostr})
 
 print("CSV file 'community_contact_details.csv' has been created.")
