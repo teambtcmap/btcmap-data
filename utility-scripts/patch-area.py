@@ -1,4 +1,5 @@
-#This script updates BTC Map areas of a given type with the KM^2 area of its GeoJSON.
+# This script updates BTC Map areas of a given type with the KM^2 area of
+# its GeoJSON.
 
 import requests
 import json
@@ -21,7 +22,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-#Tags for area
+# Tags for area
 tags = """
 {
   "tags":
@@ -345,4 +346,3 @@ if response.status_code == 200:
     print(f"Successfully patched {id}")
 else:
     print(f"Error updating {id}: {response.text}")
-            
