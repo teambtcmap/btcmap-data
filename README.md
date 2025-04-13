@@ -12,7 +12,7 @@ All location submissions from [btcmap.org/add-location](https://btcmap.org/add-l
 
 You can filter the issues by these labels (see links above for issues that have yet to be assigned).
 
-Anyone can participate, you can check out the [Wiki](https://wiki.btcmap.org/general/tagging-instructions.html) for more details on how to add/edit locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
+Anyone can participate, you can check out the [Wiki](https://github.com/teambtcmap/btcmap-general/wiki/Tagging-Merchants) for more details on how to add/edit locations to OpenStreetMap and become a Shadowy Supertagger 🥷.
 
 Thanks for your contribution to the bitcoin mapping community!
 
