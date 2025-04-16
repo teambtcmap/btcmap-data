@@ -17,7 +17,7 @@ input_directory_path = 'input/geojson-regions-50m'
 output_directory_path = 'output/btcmap-areas-50m'
 
 # Function to extract elements from a GeoJSON feature
-def extract_elements(feature):
+def extract_elements(feature) -> None:
     # Convert "id" to lowercase
     id_lower = feature["properties"].get("iso_a2", "").lower()
 
