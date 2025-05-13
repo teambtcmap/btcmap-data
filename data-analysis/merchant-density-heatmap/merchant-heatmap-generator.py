@@ -1,63 +1,74 @@
 import requests
 import geopandas as gpd
-import os
+import pathlib
 import numpy as np
-import h3
+import h3pandas
 import json  # Import the json module
+import matplotlib.pyplot as plt
 
-# Set the working directory to the script's directory
-script_directory = os.path.dirname(os.path.abspath(__file__))
-os.chdir(script_directory)
+# Define script directory
+script_directory = pathlib.Path(__file__).parent.absolute()
 
 # Step 1: Get Latest Merchants from btcmap.org/elements
 url = "https://api.btcmap.org/elements"  # Updated URL
 response = requests.get(url)
 
 # Check if the response status code indicates success
-if response.status_code == 200:
-    try:
-        # Attempt to decode the JSON response
-        data = response.json()
+if response.status_code != 200:
+    raise RuntimeError(
+        f"Failed to retrieve data. Status code: {response.status_code}"
+    )
+try:
+    # Attempt to decode the JSON response
+    data = response.json()
+except json.JSONDecodeError:
+    raise RuntimeError("Error decoding JSON response.")
 
-        # Step 2: Extract Element ID and Position (Lon, Lat)
-        element_info = []
-        for item in data:
-            element_id = item.get('id', None)
-            lon = item['osm_json'].get('lon', None)
-            lat = item['osm_json'].get('lat', None)
+# Step 2: Extract Element ID and Position (Lon, Lat)
+ids = []
+lats = []
+lons = []
+for item in data:
+    osm_json = item['osm_json']
+    ids.append(item.get('id'))
+    lons.append(osm_json.get('lon'))
+    lats.append(osm_json.get('lat'))
 
-            # Only add entries with all necessary information
-            if element_id is not None and lon is not None and lat is not None:
-                element_info.append({'id': element_id, 'lon': lon, 'lat': lat})
+# Step 3: build gdf of data
+gdf = gpd.GeoDataFrame(
+    data={'id': ids, 'lat': lats, 'lon': lons},
+    geometry=gpd.points_from_xy(lons, lats),
+    crs='EPSG:4326'  # load in google WGS84 lat/lon crs
+)
+gdf = gdf.dropna(how='any')
 
-        if element_info:
-            # Create a GeoDataFrame from the location data
-            gdf = gpd.GeoDataFrame(element_info, geometry=gpd.points_from_xy([float(e['lon']) for e in element_info], [float(e['lat']) for e in element_info]))
+if len(gdf) == 0:
+    raise RuntimeError("No valid data found in the API response.")
 
-            # Define the hexagonal grid size in kilometers (adjust as needed)
-            grid_size_km = 10.0
+# Step 4: Calculate hexagon-based density as merchants per square kilometer
+h3_resolution = 2  # this is not a real unit - 0-15 valid where 0 is coarse
+gdf_h3_agg = gdf.h3.geo_to_h3_aggregate(h3_resolution, operation='count')
+gdf_h3_agg = gdf_h3_agg[['id', 'geometry']].rename(columns={'id': 'merchant_count'})
+gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:3857') # convert to web mercator for areas
+m2_to_km2 = 1_000 ** 2
+gdf_h3_agg['density'] = gdf_h3_agg['merchant_count'] / (gdf_h3_agg.area / m2_to_km2)
+gdf_h3_agg = gdf_h3_agg.to_crs('EPSG:4326') # convert back to WGS84
 
-            # Create a hexagonal grid over the extent of the merchant data
-            xmin, ymin, xmax, ymax = gdf.geometry.total_bounds
-            grid = gpd.GeoDataFrame()
-            grid['geometry'] = [h3.h3_to_geo(hex_id) for hex_id in h3.h3.polyfill(xmin, ymin, xmax, ymax, grid_size_km)]
-            grid['hex_id'] = [h3.geo_to_h3(lon, lat, 8) for lon, lat in grid['geometry']]
+# Plot
+_, ax = plt.subplots(1, 1, figsize=(12, 8))
+gdf_h3_agg.plot(column='density', legend=True, ax=ax)
+plt.title('merchant density per sq km')
+plt.savefig(script_directory / 'merchant_density.png')
 
-            # Calculate hexagon-based density as merchants per square kilometer
-            density = []
-            for hex_id in grid['hex_id']:
-                count = sum(1 for hex_id in gdf.geometry.apply(lambda point: h3.geo_to_h3(point.x, point.y, 8) == hex_id))
-                density.append(count / (grid_size_km ** 2))  # Merchants per square kilometer
-            grid['density'] = density
+# Save the density data as a shapefile in the current script directory
+script_directory = pathlib.Path(__file__).parent.absolute()
+shapefile_output = script_directory / 'merchant_density'
+gdf_h3_agg.to_file(shapefile_output)
+print(f"Merchant density exported as '{shapefile_output}'")
 
-            # Save the density data as a shapefile in the current script directory
-            shapefile_output = os.path.join(script_directory, 'merchant_density.shp')
-            grid.to_file(shapefile_output)
-
-            print(f"Merchant density exported as '{shapefile_output}'")
-        else:
-            print("No valid data found in the API response.")
-    except json.JSONDecodeError:
-        print("Error decoding JSON response.")
-else:
-    print(f"Failed to retrieve data. Status code: {response.status_code}")
+# Save as json
+json_output = script_directory / 'merchant_density.json'
+json_h3_agg = gdf_h3_agg.to_json()
+with open(json_output, "w") as f:
+    json.dump(json_h3_agg, f)
+print(f"Merchant density exported as '{json_output}'")

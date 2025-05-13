@@ -1,7 +1,9 @@
+h3pandas
+matplotlib
 requests
+area
+geojson-rewind
 geopandas
-folium
-shapely
-numpy
 h3
-geojson
+h3pandas
+python-rclone
