@@ -13,7 +13,7 @@ from folium.plugins import HeatMap
 script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
-def fetch_merchant_data():
+def fetch_merchant_data() -> None:
     url = "https://api.btcmap.org/v2/elements?updated_since=2022-10-11T00:00:00.000Z&limit=100000"
     response = requests.get(url)
 

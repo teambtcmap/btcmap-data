@@ -13,7 +13,7 @@ QUERY_LIMIT = "100000"
 REPORTS_SINCE_DATE = "2022-10-01T00:00:00.000Z"
 
 class Area:
-    def __init__(self, id, tags):
+    def __init__(self, id, tags) -> None:
         self.id = id
         self.alias = tags.get('url_alias')
         self.name = tags.get('name')
