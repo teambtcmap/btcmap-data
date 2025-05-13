@@ -4,11 +4,16 @@ import os
 import sys
 from datetime import datetime
 import json
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import math
 
+# Global query parameters
+UPDATED_SINCE_DATE = "2022-10-11T00:00:00.000Z"
+QUERY_LIMIT = "100000"
+REPORTS_SINCE_DATE = "2022-10-01T00:00:00.000Z"
+
 class Area:
-    def __init__(self, id, tags):
+    def __init__(self, id, tags) -> None:
         self.id = id
         self.alias = tags.get('url_alias')
         self.name = tags.get('name')
@@ -77,41 +82,50 @@ def save_json_to_file(data, file_name):
         json.dump(data, file)
 
 def get_areas():
-    
+
     # Check if areas.json exists and load data
     areas = load_json_from_file('areas.json')
 
     if areas is None:
+        print("No cached areas.json found, making API call...")
         # areas.json doesn't exist, make API call and save data to the file
-        
-        url = "https://api.btcmap.org/areas"
+
+        from urllib.parse import quote
+        date = quote(UPDATED_SINCE_DATE)
+        url = f"https://api.btcmap.org/v3/areas?updated_since={date}&limit={QUERY_LIMIT}"
         headers = {
-            'Content-Type': 'application.json'
+            'Accept': 'application/json'
         }
 
+        print(f"Making request to URL: {url}")
         response = requests.get(url, headers=headers)
+        print(f"Response status code: {response.status_code}")
+        print(f"Response headers: {response.headers}")
 
-        if response.status_code != 200:
-            print(f"Error fetching areas: {response.text}")
+        try:
+            areas = response.json()
+            print(f"Successfully parsed JSON response with {len(areas)} areas")
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSON: {e}")
+            print(f"Response content: {response.text}")
             sys.exit(1)
-
-        areas = response.json()
 
     # Save the data to areas.json
     save_json_to_file(areas, 'areas.json')
- 
+
     global_area = []
     country_areas = []
     community_areas = []
     other_areas = []
 
     for id in areas:
+        # Skip deleted areas
+        if 'deleted_at' in id and id['deleted_at'] is not None:
+            continue
+            
         tags = id.get('tags', {})
         area_type = tags.get('type')
-        #deleted = 'deleted_at' in id and id['deleted_at'] == ""
-
-        #ToDo make this IF work
-        #if not deleted: #Only process areas that have not been deleted
+        
         if area_type == "country":  
             id = id['id']
             area = Area(id, tags)
@@ -125,18 +139,17 @@ def get_areas():
             area = Area(id, tags)
             other_areas.append(area)
 
-    #Link this in with the global area Igor created
-    # #Create a global area
+    #Create a global area
     global_json = """
     {
         "name": "Global",
         "population:date": "2021-02-01",
-        "url_alias": "global",
+        "url_alias": "earth",
         "population": 8000000000,
         "area_km2": 148900000
     }"""
     global_tags = json.loads(global_json)
-    id = ""
+    id = "662"
     area = Area(id, global_tags)
     global_area.append(area)
 
@@ -144,37 +157,42 @@ def get_areas():
 
 
 def get_reports(areas):
-    
-    updated_since_date = "2023-11-01"
-
-     # Check if areas.json exists and load data
     reports = load_json_from_file('reports.json')
 
     if reports is None:
-        # reports.json doesn't exist, make API call and save data to the file
-        
-        url = f"https://api.btcmap.org/reports/?updated_since={updated_since_date}"
+        print("No cached reports.json found, making API call...")
+
+        url = f"https://api.btcmap.org/v3/reports?updated_since={REPORTS_SINCE_DATE}&limit={QUERY_LIMIT}"
         headers = {
-            'Content-Type': 'application.json'
+            'Accept': 'application/json'
         }
 
+        print(f"Making request to URL: {url}")
         response = requests.get(url, headers=headers)
+        print(f"Response status code: {response.status_code}")
+        print(f"Response headers: {response.headers}")
 
-        if response.status_code != 200:
-            print(f"Error fetching areas: {response.text}")
+        try:
+            reports = response.json()
+            print(f"Successfully parsed JSON response with {len(reports)} reports")
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSON: {e}")
+            print(f"Response content: {response.text}")
             sys.exit(1)
-
-        reports = response.json()
 
     # Save the data to areas.json
     save_json_to_file(reports, 'reports.json')
 
-    for id in reports:
-        area_id = id['area_id']
+    for report in reports:
+        area_id = report.get('area_id')
 
-        for area in areas:
-            if area_id == area.id:
-                area.add_report(Report(id))
+        if area_id:
+            for area in areas:
+                # Handle both empty strings and numeric IDs
+                if area.id == "" and area_id == 0:
+                    area.add_report(Report(report))
+                elif area.id != "" and area_id == int(area.id):
+                    area.add_report(Report(report))
 
 def calculate_metrics(areas):
     for area in areas:
@@ -251,12 +269,12 @@ def calculate_metrics(areas):
 
 
 
-    
 
 
-            
- 
-         
+
+
+
+
 def plot_total_elements_over_time(areas):
     for area in areas:
         x = [report.date for report in area.reports]
@@ -276,6 +294,12 @@ def plot_total_elements_over_time(areas):
 
 
 def write_to_csv(areas, csv_file_path):
+    # Debug logging for areas with None names
+    for area in areas:
+        if area.name is None:
+            print(f"Area with ID {area.id} has no name tag")
+            print(f"Area tags: {area.tags}")
+            
     with open(csv_file_path, mode="w", newline="") as csv_file:
         sample_row = areas[0] if areas else None
         fieldnames = [
@@ -310,6 +334,7 @@ def write_to_csv(areas, csv_file_path):
 
         for area in areas:
             latest_report = area.get_latest_report()
+            print(f"Area {area.name}: has latest report: {latest_report is not None}")
             if latest_report:
                 # Create a new dictionary containing the specified fields
                 row = {
@@ -356,7 +381,7 @@ def main():
     calculate_metrics(community_areas)
     calculate_metrics(other_areas)
 
-    plot_total_elements_over_time(community_areas)
+    #plot_total_elements_over_time(community_areas)
 
     global_csv_file_path = f"{script_directory}/global_stats.csv"
     country_csv_file_path = f"{script_directory}/country_stats.csv"

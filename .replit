@@ -1,0 +1,8 @@
+run = "python"
+modules = ["python-3.11"]
+
+[deployment]
+run = ["sh", "-c", "python"]
+
+[nix]
+channel = "stable-24_05"

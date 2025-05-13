@@ -1,3 +1,4 @@
+h3pandas
 matplotlib
 requests
 area
