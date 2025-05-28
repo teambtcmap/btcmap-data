@@ -6,3 +6,15 @@ run = ["sh", "-c", "python"]
 
 [nix]
 channel = "stable-24_05"
+
+[workflows]
+runButton = "Run Area Stats Generator"
+
+[[workflows.workflow]]
+name = "Run Area Stats Generator"
+author = 23073448
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd data-analysis && python area-stats-generator.py"
