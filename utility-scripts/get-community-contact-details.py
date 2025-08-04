@@ -10,7 +10,7 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # Define the API URL to fetch all areas
-url = "https://api.btcmap.org/areas"
+url = "https://api.btcmap.org/v3/areas?updated_since=2022-01-01T00:00:00Z&limit=1000"
 headers = {
     'Content-Type': 'application/json'
 }
