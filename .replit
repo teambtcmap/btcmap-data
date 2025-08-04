@@ -18,3 +18,12 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd data-analysis && python area-stats-generator.py"
+
+[[workflows.workflow]]
+name = "Run Get Community Contacts"
+mode = "sequential"
+author = 23073448
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd utility-scripts && python get-community-contact-details.py"
