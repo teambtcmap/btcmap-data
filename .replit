@@ -8,7 +8,7 @@ run = ["sh", "-c", "python"]
 channel = "stable-24_05"
 
 [workflows]
-runButton = "Run Area Stats Generator"
+runButton = "Project"
 
 [[workflows.workflow]]
 name = "Run Area Stats Generator"
@@ -27,3 +27,35 @@ author = 23073448
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd utility-scripts && python get-community-contact-details.py"
+
+[[workflows.workflow]]
+name = "Run Heatmap Generator"
+mode = "sequential"
+author = 23073448
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd data-analysis/merchant-denisty-heatmap && python heatmap2.py"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "utility-scripts"
+
+[[workflows.workflow]]
+name = "utility-scripts"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd utility-scripts && python3 fetch-communities.py"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[agent]
+expertMode = true
