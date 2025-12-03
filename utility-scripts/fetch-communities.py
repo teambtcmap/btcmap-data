@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
-Fetch communities from BTC Map API and generate a Markdown file.
+Fetch communities from BTC Map API and print Markdown to console.
 
 Usage:
-    python fetch-communities.py <start_id> <end_id> [output_file]
+    python fetch-communities.py <start_id> <end_id>
 
 Example:
-    python fetch-communities.py 900 950 communities.md
+    python fetch-communities.py 900 950
 """
 
 import sys
 import requests
 import time
-from pathlib import Path
 
 
 def fetch_area(area_id):
@@ -49,33 +48,28 @@ def extract_community_info(area_data):
     return None
 
 
-def generate_markdown(communities, output_file):
-    """Generate markdown file with community links."""
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("# Bitcoin Communities\n\n")
-        
-        if not communities:
-            f.write("No communities found.\n")
-            return
-        
-        for community in communities:
-            link = f"- [{community['name']}](https://btcmap.org/community/{community['url_alias']})\n"
-            f.write(link)
+def generate_markdown(communities):
+    """Generate and print markdown with community links."""
+    print("\n# Bitcoin Communities\n")
     
-    print(f"✓ Generated {output_file} with {len(communities)} communities")
+    if not communities:
+        print("No communities found.")
+        return
+    
+    for community in communities:
+        print(f"- [{community['name']}](https://btcmap.org/community/{community['url_alias']})")
 
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python fetch-communities.py <start_id> <end_id> [output_file]")
+        print("Usage: python fetch-communities.py <start_id> <end_id>")
         print("\nExample:")
-        print("    python fetch-communities.py 900 950 communities.md")
+        print("    python fetch-communities.py 900 950")
         sys.exit(1)
     
     try:
         start_id = int(sys.argv[1])
         end_id = int(sys.argv[2])
-        output_file = sys.argv[3] if len(sys.argv) > 3 else "communities.md"
     except ValueError:
         print("Error: Start and end IDs must be integers")
         sys.exit(1)
@@ -84,13 +78,13 @@ def main():
         print("Error: Start ID must be less than or equal to end ID")
         sys.exit(1)
     
-    print(f"Fetching communities from BTC Map API (IDs {start_id} to {end_id})...")
+    print(f"Fetching communities from BTC Map API (IDs {start_id} to {end_id})...", file=sys.stderr)
     
     communities = []
     total_requests = end_id - start_id + 1
     
     for area_id in range(start_id, end_id + 1):
-        print(f"Fetching ID {area_id}... ({area_id - start_id + 1}/{total_requests})", end='\r')
+        print(f"Fetching ID {area_id}... ({area_id - start_id + 1}/{total_requests})", end='\r', file=sys.stderr)
         
         area_data = fetch_area(area_id)
         if area_data:
@@ -98,13 +92,11 @@ def main():
             if community_info:
                 communities.append(community_info)
         
-        # Be nice to the API - small delay between requests
         time.sleep(0.1)
     
-    print(f"\nFound {len(communities)} communities out of {total_requests} IDs")
+    print(f"\nFound {len(communities)} communities out of {total_requests} IDs", file=sys.stderr)
     
-    generate_markdown(communities, output_file)
-    print(f"\n✓ Done! Output saved to: {output_file}")
+    generate_markdown(communities)
 
 
 if __name__ == "__main__":
