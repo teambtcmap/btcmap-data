@@ -44,15 +44,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "utility-scripts"
+args = "rpc-reports"
 
 [[workflows.workflow]]
-name = "utility-scripts"
+name = "rpc-reports"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd utility-scripts && python3 fetch-communities.py"
+args = "cd utility-scripts && python rpc-reports.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
