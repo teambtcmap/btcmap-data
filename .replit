@@ -44,15 +44,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "rpc-reports"
+args = "btcmap-reports"
 
 [[workflows.workflow]]
-name = "rpc-reports"
+name = "btcmap-reports"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd utility-scripts && python rpc-reports.py"
+args = "cd utility-scripts && python run-reports.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
