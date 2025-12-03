@@ -72,8 +72,14 @@ def format_generic_table(data):
         if isinstance(data[0], dict):
             headers = list(data[0].keys())
             display_headers = [h for h in headers if h not in ('url', 'id')]
+            
+            def format_header(h):
+                if h == 'events':
+                    return 'Total'
+                return h.capitalize()
+            
             lines = []
-            lines.append("| " + " | ".join(display_headers) + " |")
+            lines.append("| " + " | ".join(format_header(h) for h in display_headers) + " |")
             lines.append("| " + " | ".join(["---"] * len(display_headers)) + " |")
             for row in data:
                 values = []
