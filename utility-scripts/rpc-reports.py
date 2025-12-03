@@ -71,11 +71,18 @@ def format_generic_table(data):
     if isinstance(data, list) and len(data) > 0:
         if isinstance(data[0], dict):
             headers = list(data[0].keys())
+            display_headers = [h for h in headers if h != 'url']
             lines = []
-            lines.append("| " + " | ".join(headers) + " |")
-            lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+            lines.append("| " + " | ".join(display_headers) + " |")
+            lines.append("| " + " | ".join(["---"] * len(display_headers)) + " |")
             for row in data:
-                values = [str(row.get(h, ""))[:50] for h in headers]
+                values = []
+                url = row.get('url', '')
+                for h in display_headers:
+                    val = str(row.get(h, ""))[:50]
+                    if h == 'name' and url:
+                        val = f"[{val}]({url})"
+                    values.append(val)
                 lines.append("| " + " | ".join(values) + " |")
             return "\n".join(lines) + "\n"
         else:
