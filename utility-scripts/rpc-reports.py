@@ -3,7 +3,8 @@ import requests
 import json
 import sys
 import os
-from datetime import datetime
+from datetime import datetime, date
+from calendar import monthrange
 
 RPC_URL = "https://api.btcmap.org/rpc"
 
@@ -95,35 +96,47 @@ def get_date_input(prompt, default=None):
     else:
         return input(f"{prompt}: ").strip()
 
+def get_previous_month_defaults():
+    """Calculate the first and last day of the previous month."""
+    today = date.today()
+    if today.month == 1:
+        prev_year = today.year - 1
+        prev_month = 12
+    else:
+        prev_year = today.year
+        prev_month = today.month - 1
+    
+    first_day = date(prev_year, prev_month, 1)
+    last_day = date(prev_year, prev_month, 30)
+    
+    return first_day.strftime("%Y-%m-%d"), last_day.strftime("%Y-%m-%d")
+
 def main():
     print("=" * 60)
     print("BTC Map RPC Reports")
     print("=" * 60)
     print()
     
-    print("Enter date range for trending reports (format: YYYY-MM-DD)")
-    trending_start = get_date_input("Trending Start Date", "2025-11-01")
-    trending_end = get_date_input("Trending End Date", "2025-11-30")
+    default_start, default_end = get_previous_month_defaults()
     
-    print()
-    print("Enter date range for the detailed report (times are inclusive)")
-    print("Format: YYYY-MM-DD (time will be set to 00:00:00Z for start and 23:59:59Z for end)")
-    report_start = get_date_input("Report Start Date", "2025-09-01")
-    report_end = get_date_input("Report End Date", "2025-09-30")
+    print("Enter date range (format: YYYY-MM-DD)")
+    print("Times are inclusive for the report RPC")
+    start_date = get_date_input("Start Date", default_start)
+    end_date = get_date_input("End Date", default_end)
     
-    report_start_iso = f"{report_start}T00:00:00Z"
-    report_end_iso = f"{report_end}T23:59:59Z"
+    start_iso = f"{start_date}T00:00:00Z"
+    end_iso = f"{end_date}T23:59:59Z"
     
     print()
     print("=" * 60)
     print()
     
     print("## Trending Countries")
-    print(f"*Period: {trending_start} to {trending_end}*")
+    print(f"*Period: {start_date} to {end_date}*")
     print()
     result = call_rpc("get_trending_countries", {
-        "period_start": trending_start,
-        "period_end": trending_end
+        "period_start": start_date,
+        "period_end": end_date
     })
     if result:
         print(format_generic_table(result))
@@ -132,11 +145,11 @@ def main():
     
     print()
     print("## Trending Communities")
-    print(f"*Period: {trending_start} to {trending_end}*")
+    print(f"*Period: {start_date} to {end_date}*")
     print()
     result = call_rpc("get_trending_communities", {
-        "period_start": trending_start,
-        "period_end": trending_end
+        "period_start": start_date,
+        "period_end": end_date
     })
     if result:
         print(format_generic_table(result))
@@ -145,11 +158,11 @@ def main():
     
     print()
     print("## Detailed Report")
-    print(f"*Period: {report_start_iso} to {report_end_iso}*")
+    print(f"*Period: {start_iso} to {end_iso}*")
     print()
     result = call_rpc("get_report", {
-        "start": report_start_iso,
-        "end": report_end_iso
+        "start": start_iso,
+        "end": end_iso
     })
     if result:
         print(format_generic_table(result))
