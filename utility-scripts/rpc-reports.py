@@ -124,6 +124,59 @@ def get_previous_month_defaults():
     
     return first_day.strftime("%Y-%m-%d"), last_day.strftime("%Y-%m-%d")
 
+def get_comparison_month(start_date_str):
+    """Calculate the previous month's date range for comparison."""
+    start = datetime.strptime(start_date_str, "%Y-%m-%d")
+    
+    if start.month == 1:
+        prev_year = start.year - 1
+        prev_month = 12
+    else:
+        prev_year = start.year
+        prev_month = start.month - 1
+    
+    first_day = date(prev_year, prev_month, 1)
+    _, last_day_num = monthrange(prev_year, prev_month)
+    last_day = date(prev_year, prev_month, min(30, last_day_num))
+    
+    return first_day.strftime("%Y-%m-%d"), last_day.strftime("%Y-%m-%d")
+
+def format_number(n):
+    """Format number with thousands separator."""
+    return f"{n:,}"
+
+def format_delta(current, previous, suffix=""):
+    """Format a comparison line: previous → current (+delta +percent%)"""
+    delta = current - previous
+    if previous != 0:
+        percent = (delta / previous) * 100
+    else:
+        percent = 0 if delta == 0 else 100
+    
+    sign = "+" if delta >= 0 else ""
+    percent_sign = "+" if percent >= 0 else ""
+    
+    return f"{format_number(previous)} → {format_number(current)} ({sign}{format_number(delta)} {percent_sign}{percent:.1f}%){suffix}"
+
+def format_report_comparison(prev_report, curr_report):
+    """Format the report comparison as markdown."""
+    metrics = [
+        ("total_places_end", "Total Bitcoin-accepting merchants", ""),
+        ("verified_places_1y_end", "Recently verified (1y)", ""),
+        ("days_since_verified_end", "Avg. days since last verification", ""),
+        ("boosts", "Merchants boosted", ""),
+        ("boosts_total_days", "Total boost duration", " days"),
+        ("comments", "Comments posted", ""),
+    ]
+    
+    lines = []
+    for key, label, suffix in metrics:
+        prev_val = prev_report.get(key, 0)
+        curr_val = curr_report.get(key, 0)
+        lines.append(f"    {label}: {format_delta(curr_val, prev_val, suffix)}")
+    
+    return "\n".join(lines)
+
 def main():
     print("=" * 60)
     print("BTC Map RPC Reports")
@@ -171,16 +224,27 @@ def main():
     
     print()
     print("## Detailed Report")
-    print(f"*Period: {start_iso} to {end_iso}*")
+    print(f"*Period: {start_date} to {end_date} (compared to previous month)*")
     print()
-    result = call_rpc("get_report", {
+    
+    prev_start, prev_end = get_comparison_month(start_date)
+    prev_start_iso = f"{prev_start}T00:00:00Z"
+    prev_end_iso = f"{prev_end}T23:59:59Z"
+    
+    curr_report = call_rpc("get_report", {
         "start": start_iso,
         "end": end_iso
     })
-    if result:
-        print(format_generic_table(result))
+    prev_report = call_rpc("get_report", {
+        "start": prev_start_iso,
+        "end": prev_end_iso
+    })
+    
+    if curr_report and prev_report:
+        print(format_report_comparison(prev_report, curr_report))
+        print()
     else:
-        print("Failed to fetch report.\n")
+        print("Failed to fetch report data.\n")
 
 if __name__ == "__main__":
     main()
