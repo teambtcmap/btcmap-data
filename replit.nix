@@ -1,5 +1,6 @@
 {pkgs}: {
   deps = [
+    pkgs.openssh
     pkgs.sqlite
     pkgs.tk
     pkgs.tcl
