@@ -5,8 +5,10 @@ import sys
 import os
 from datetime import datetime, date
 from calendar import monthrange
+import reverse_geocoder as rg
 
 RPC_URL = "https://api.btcmap.org/rpc"
+API_BASE = "https://api.btcmap.org/v3/areas"
 
 btcmap_api_token = os.getenv("BTCMAP_API_TOKEN")
 
@@ -63,7 +65,85 @@ def format_markdown_table(data, headers):
     
     return "\n".join(lines) + "\n"
 
-def format_generic_table(data):
+def calculate_centroid(geo_json):
+    """Calculate centroid from GeoJSON Polygon coordinates."""
+    if not geo_json or 'coordinates' not in geo_json:
+        return None
+    
+    coordinates = geo_json['coordinates']
+    if not coordinates or not isinstance(coordinates, list):
+        return None
+    
+    # Handle Polygon (list of rings) or MultiPolygon (list of polygons)
+    if isinstance(coordinates[0][0], list):
+        # Polygon - use first ring
+        ring = coordinates[0]
+    else:
+        # Single ring
+        ring = coordinates
+    
+    if not ring:
+        return None
+    
+    # Calculate centroid from all points
+    lats = [point[1] for point in ring if len(point) >= 2]
+    lons = [point[0] for point in ring if len(point) >= 2]
+    
+    if not lats or not lons:
+        return None
+    
+    return (sum(lats) / len(lats), sum(lons) / len(lons))
+
+
+def get_country_from_coordinates(lat, lon):
+    """Get country code from coordinates using reverse geocoding."""
+    try:
+        result = rg.search((lat, lon))
+        if result and len(result) > 0:
+            return result[0].get('cc')
+    except Exception as e:
+        print(f"Warning: Reverse geocoding failed: {e}", file=sys.stderr)
+    return None
+
+
+def country_code_to_flag_emoji(country_code):
+    """Convert 2-letter country code to flag emoji."""
+    if not country_code or len(country_code) != 2:
+        return None
+    return ''.join(chr(ord(c) + 127397) for c in country_code.upper())
+
+
+def fetch_area_geojson(area_id):
+    """Fetch area data from REST API to get GeoJSON."""
+    url = f"{API_BASE}/{area_id}"
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            return response.json()
+        return None
+    except requests.RequestException:
+        return None
+
+
+def get_community_flag(area_id):
+    """Get flag emoji for a community by its ID."""
+    area_data = fetch_area_geojson(area_id)
+    if not area_data or 'tags' not in area_data:
+        return None
+    
+    tags = area_data['tags']
+    geo_json = tags.get('geo_json')
+    if geo_json:
+        centroid = calculate_centroid(geo_json)
+        if centroid:
+            lat, lon = centroid
+            country_code = get_country_from_coordinates(lat, lon)
+            if country_code:
+                return country_code_to_flag_emoji(country_code)
+    return None
+
+
+def format_generic_table(data, is_communities=False):
     """Format any data structure as a markdown table."""
     if not data:
         return "No data returned.\n"
@@ -84,10 +164,19 @@ def format_generic_table(data):
             for row in data:
                 values = []
                 url = row.get('url', '')
+                area_id = row.get('id', '')
                 for h in display_headers:
                     val = str(row.get(h, ""))[:50]
                     if h == 'name' and url:
-                        val = f"[{val}]({url})"
+                        # Get flag for communities
+                        if is_communities and area_id:
+                            flag = get_community_flag(area_id)
+                            if flag:
+                                val = f"{flag} [{val}]({url})"
+                            else:
+                                val = f"[{val}]({url})"
+                        else:
+                            val = f"[{val}]({url})"
                     values.append(val)
                 lines.append("| " + " | ".join(values) + " |")
             return "\n".join(lines) + "\n"
@@ -218,7 +307,7 @@ def main():
         "period_end": end_date
     })
     if result:
-        print(format_generic_table(result))
+        print(format_generic_table(result, is_communities=True))
     else:
         print("Failed to fetch trending communities.\n")
     
