@@ -72,20 +72,7 @@ def extract_community_info(area_data):
     return None
 
 
-def get_country_emoji(area_data):
-    """Get country emoji from area data if available."""
-    if not area_data or 'tags' not in area_data:
-        return None
-    
-    tags = area_data['tags']
-    # Check for country code in various tag formats
-    country_code = tags.get('country_code') or tags.get('country')
-    
-    if country_code and len(country_code) == 2:
-        # Convert 2-letter country code to emoji
-        return ''.join(chr(ord(c) + 127397) for c in country_code.upper())
-    
-    return None
+
 
 
 def is_integer(s):
@@ -108,9 +95,7 @@ def generate_markdown(communities):
     print("We welcomed the following new communities over the past month.\n")
     
     for community in communities:
-        emoji = community.get('emoji', '')
-        prefix = f"{emoji} " if emoji else ""
-        print(f"- {prefix}[{community['name']}](https://btcmap.org/community/{community['url_alias']})")
+        print(f"- [{community['name']}](https://btcmap.org/community/{community['url_alias']})")
     
     print(f"\nWe now have 648+ Communities scattered across the planet. 🌎️")
 
@@ -175,10 +160,6 @@ def main():
         if area_data:
             community_info = extract_community_info(area_data)
             if community_info:
-                # Get country emoji
-                emoji = get_country_emoji(area_data)
-                if emoji:
-                    community_info['emoji'] = emoji
                 communities.append(community_info)
                 empty_count = 0  # Reset empty count on success
             else:
