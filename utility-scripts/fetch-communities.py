@@ -15,8 +15,57 @@ import sys
 import requests
 import time
 import re
+import reverse_geocoder as rg
 
 API_BASE = "https://api.btcmap.org/v3/areas"
+
+
+def calculate_centroid(geo_json):
+    """Calculate centroid from GeoJSON Polygon coordinates."""
+    if not geo_json or 'coordinates' not in geo_json:
+        return None
+    
+    coordinates = geo_json['coordinates']
+    if not coordinates or not isinstance(coordinates, list):
+        return None
+    
+    # Handle Polygon (list of rings) or MultiPolygon (list of polygons)
+    if isinstance(coordinates[0][0], list):
+        # Polygon - use first ring
+        ring = coordinates[0]
+    else:
+        # Single ring
+        ring = coordinates
+    
+    if not ring:
+        return None
+    
+    # Calculate centroid from all points
+    lats = [point[1] for point in ring if len(point) >= 2]
+    lons = [point[0] for point in ring if len(point) >= 2]
+    
+    if not lats or not lons:
+        return None
+    
+    return (sum(lats) / len(lats), sum(lons) / len(lons))
+
+
+def get_country_from_coordinates(lat, lon):
+    """Get country code from coordinates using reverse geocoding."""
+    try:
+        result = rg.search((lat, lon))
+        if result and len(result) > 0:
+            return result[0].get('cc')
+    except Exception as e:
+        print(f"Warning: Reverse geocoding failed: {e}", file=sys.stderr)
+    return None
+
+
+def country_code_to_flag_emoji(country_code):
+    """Convert 2-letter country code to flag emoji."""
+    if not country_code or len(country_code) != 2:
+        return None
+    return ''.join(chr(ord(c) + 127397) for c in country_code.upper())
 
 
 def fetch_area_by_id(area_id):
@@ -54,7 +103,7 @@ def fetch_area_by_alias(alias):
 
 
 def extract_community_info(area_data):
-    """Extract name, url_alias, and id from area data."""
+    """Extract name, url_alias, id, and country flag from area data."""
     if not area_data or 'tags' not in area_data:
         return None
     
@@ -64,11 +113,25 @@ def extract_community_info(area_data):
     area_id = area_data.get('id')
     
     if name and url_alias:
-        return {
+        community_info = {
             'id': area_id,
             'name': name,
             'url_alias': url_alias
         }
+        
+        # Get country from GeoJSON centroid
+        geo_json = tags.get('geo_json')
+        if geo_json:
+            centroid = calculate_centroid(geo_json)
+            if centroid:
+                lat, lon = centroid
+                country_code = get_country_from_coordinates(lat, lon)
+                if country_code:
+                    flag = country_code_to_flag_emoji(country_code)
+                    if flag:
+                        community_info['flag'] = flag
+        
+        return community_info
     return None
 
 
@@ -85,7 +148,7 @@ def is_integer(s):
 
 
 def generate_markdown(communities):
-    """Generate and print markdown with community links."""
+    """Generate and print markdown with community links and flags."""
     print("\n## New Communities\n")
     
     if not communities:
@@ -95,7 +158,9 @@ def generate_markdown(communities):
     print("We welcomed the following new communities over the past month.\n")
     
     for community in communities:
-        print(f"- [{community['name']}](https://btcmap.org/community/{community['url_alias']})")
+        flag = community.get('flag', '')
+        prefix = f"{flag} " if flag else ""
+        print(f"- {prefix}[{community['name']}](https://btcmap.org/community/{community['url_alias']})")
     
     print(f"\nWe now have 648+ Communities scattered across the planet. 🌎️")
 
