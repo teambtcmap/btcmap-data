@@ -245,6 +245,41 @@ def main():
         print()
     else:
         print("Failed to fetch report data.\n")
+    
+    print()
+    print("## Most Active Users")
+    print(f"*Period: {start_date} to {end_date}*")
+    print()
+    result = call_rpc("get_most_active_users", {
+        "period_start": start_date,
+        "period_end": end_date,
+        "limit": 20
+    })
+    if result and 'users' in result:
+        users = result['users']
+        headers = ['Name', 'Total Edits', 'Created', 'Updated', 'Deleted']
+        lines = []
+        lines.append("| " + " | ".join(headers) + " |")
+        lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+        for user in users:
+            name = f"[{user['name']}](https://btcmap.org/tagger/{user['id']})"
+            edits = str(user.get('edits', 0))
+            created = str(user.get('created', 0))
+            updated = str(user.get('updated', 0))
+            deleted = str(user.get('deleted', 0))
+            lines.append(f"| {name} | {edits} | {created} | {updated} | {deleted} |")
+        print("\n".join(lines))
+        print()
+        
+        # Show top 3
+        if len(users) >= 3:
+            print("Shoutout to the top 3:")
+            medals = ["🥇", "🥈", "🥉"]
+            for i, user in enumerate(users[:3]):
+                print(f"{medals[i]} **{user['name']}** with {user.get('edits', 0)} edits")
+        print()
+    else:
+        print("Failed to fetch most active users.\n")
 
 if __name__ == "__main__":
     main()
